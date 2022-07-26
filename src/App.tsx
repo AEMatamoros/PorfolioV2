@@ -1,9 +1,15 @@
 import React from "react";
-
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "./store/store";
 import DarkModeHook from "./hooks/DarkModeHook";
+
+import { decrement, increment } from "./slices/counterSlice";
 
 export default function App() {
   let { wrapperRef, handleTheme } = DarkModeHook();
+
+  const count = useSelector((state: RootState) => state.counter.value);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -50,7 +56,23 @@ export default function App() {
         </section>
       </div>
       <section className="secondSection full-wh bg-green-700 text-white">
-        <div className="child-section bg-yellow-300">Child Section 1</div>
+        <div className="child-section bg-yellow-300">
+          <div>
+            <button
+              aria-label="Increment value"
+              onClick={() => dispatch(increment())}
+            >
+              Increment
+            </button>
+            <span>{count}</span>
+            <button
+              aria-label="Decrement value"
+              onClick={() => dispatch(decrement())}
+            >
+              Decrement
+            </button>
+          </div>
+        </div>
         <div className="child-section bg-purple-300">Child Section 2</div>
       </section>
     </>
