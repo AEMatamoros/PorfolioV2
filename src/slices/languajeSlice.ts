@@ -3,10 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 
 import { ESlabels } from '../languajes/ES';
 
-export interface iTexts {
-    type:string,
-    labels:any
-}
+import { iTexts } from '../interfaces/iTexts';
 
 const initialState : iTexts = { 
     type: "ES", labels: ESlabels 

@@ -81,3 +81,26 @@ html{
 @tailwind utilities;
 
 
+@media screen and (max-width:962px) {
+  .firstSection{
+    grid-template-areas:  "main-header main-header main-header main-header main-header"
+                          "main-aside main-aside main-aside main-aside main-aside"
+                          "main-aside main-aside main-aside main-aside main-aside"
+                          "main-main main-main main-main main-main main-main"
+                          "main-main main-main main-main main-main main-main"
+                          "main-main main-main main-main main-main main-main"
+                          "main-main main-main main-main main-main main-main"
+                          "main-main main-main main-main main-main main-main"
+                          "main-main main-main main-main main-main main-main"
+                          "main-footer main-footer main-footer main-footer main-footer ";
+  }
+
+  .secondSection{
+  
+    .child-section{
+      width: 100%;
+      height: auto;
+      min-height: 50vh;
+    }
+  }
+}

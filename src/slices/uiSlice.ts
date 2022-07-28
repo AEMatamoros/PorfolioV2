@@ -1,9 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
-export interface iTheme {
-  value: string
-}
+import { iTheme } from '../interfaces/iTheme';
 
 const initialState: iTheme = {
   value: "original",
