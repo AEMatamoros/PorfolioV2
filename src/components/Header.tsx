@@ -1,11 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 
+import { iHeaderProps } from "../interfaces/iCommons";
 export default function Header({
   handleTheme,
   currentTheme,
   texts,
   handleLanguaje,
-}: any) {
+}: iHeaderProps) {
   return (
     <header className="main-header bg-green-300 dark:bg-black dark:text-white">
       <div className="header-begin dark:text-white">Logo + Data</div>
@@ -48,3 +50,10 @@ export default function Header({
     </header>
   );
 }
+
+Header.propTypes = {
+  handleTheme: PropTypes.func,
+  currentTheme: PropTypes.string,
+  texts: PropTypes.object,
+  handleLanguaje: PropTypes.func,
+};
