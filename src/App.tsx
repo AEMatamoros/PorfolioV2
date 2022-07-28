@@ -1,12 +1,18 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./store/store";
-import DarkModeHook from "./hooks/DarkModeHook";
+//Custom Hooks
+import SelecThemeHook from "./hooks/SelectThemeHook";
+import SelectLanguajeHook from "./hooks/SelectLanguajeHook";
 
 import { decrement, increment } from "./slices/counterSlice";
 
 export default function App() {
-  let { wrapperRef, handleTheme } = DarkModeHook();
+  //Theme
+  let { wrapperRef, handleTheme, currentTheme } = SelecThemeHook();
+
+  //Languaje
+  let { currentLanguaje: texts, handleLanguaje } = SelectLanguajeHook();
 
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
@@ -20,7 +26,7 @@ export default function App() {
             <div className="header-end">
               <label
                 htmlFor="toggle-darkmode"
-                className="flex items-center cursor-pointer relative mb-4"
+                className="flex items-center cursor-pointer relative"
               >
                 <input
                   type="checkbox"
@@ -30,22 +36,26 @@ export default function App() {
                 />
                 <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
                 <span className="ml-3 text-gray-900 text-sm font-medium dark:text-white">
-                  Dark Mode &nbsp;
+                  {currentTheme !== "dark"
+                    ? texts.labels.themeLight
+                    : texts.labels.themeDark}
+                  &nbsp;
                 </span>
               </label>
 
               <label
                 htmlFor="toggle-languaje"
-                className="flex items-center cursor-pointer relative mb-4"
+                className="flex items-center cursor-pointer relative"
               >
                 <input
                   type="checkbox"
                   id="toggle-languaje"
                   className="sr-only"
+                  onChange={handleLanguaje}
                 />
                 <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
                 <span className="ml-3 text-gray-900 text-sm font-medium dark:text-white">
-                  Languaje
+                  {texts.labels.languaje}
                 </span>
               </label>
             </div>
