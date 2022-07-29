@@ -9,12 +9,18 @@ export default function Header({
   handleLanguaje,
 }: iHeaderProps) {
   return (
-    <header className="main-header bg-green-300 dark:bg-black dark:text-white">
-      <div className="header-begin dark:text-white">Logo + Data</div>
+    <header className="main-header bg-main text-fontc dark:bg-black dark:text-white">
+      <div className="header-begin text-fontc dark:text-white text-lg font-extrabold ">
+        <span className="text-fontc dark:text-white">
+          {" "}
+          {texts.labels.userTitle}{" "}
+        </span>
+        |<span className="text-secondary"> {texts.labels.userJob} </span>
+      </div>
       <div className="header-end">
         <label
           htmlFor="toggle-darkmode"
-          className="flex items-center cursor-pointer relative"
+          className="flex items-center cursor-pointer relative "
         >
           <input
             type="checkbox"
@@ -22,8 +28,8 @@ export default function Header({
             className="sr-only"
             onChange={handleTheme}
           />
-          <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
-          <span className="ml-3 text-gray-900 text-sm font-medium dark:text-white">
+          <div className="toggle-bg bg-detail border-2 border-detail h-6 w-11 rounded-full"></div>
+          <span className="ml-3 text-sm font-medium text-fontc dark:text-white ">
             {currentTheme !== "dark"
               ? texts.labels.themeLight
               : texts.labels.themeDark}
@@ -41,8 +47,8 @@ export default function Header({
             className="sr-only"
             onChange={handleLanguaje}
           />
-          <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
-          <span className="ml-3 text-gray-900 text-sm font-medium dark:text-white">
+          <div className="toggle-bg bg-detail border-2 border-detail h-6 w-11 rounded-full"></div>
+          <span className="ml-3 text-fontc text-sm font-medium dark:text-white">
             {texts.labels.languaje}
           </span>
         </label>

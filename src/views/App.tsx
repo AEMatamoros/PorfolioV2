@@ -16,7 +16,7 @@ export default function App() {
   return (
     <>
       <div className="wrapper" ref={wrapperRef}>
-        <section className="firstSection full-wh bg-black ">
+        <section className="firstSection full-wh">
           <Header
             handleTheme={handleTheme}
             currentTheme={currentTheme}

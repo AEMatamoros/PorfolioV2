@@ -1,6 +1,7 @@
 export const ESlabels = {
   themeDark: "Oscuro",
   themeLight: "Original",
-  languaje: "Idioma"
-
+  languaje: "Idioma",
+  userTitle: "Alexis Matamoros",
+  userJob: "Desarrollador Web",
 };
