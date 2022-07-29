@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { ESlabels } from "../languajes/ES";
-import { ENlabels } from "../languajes/EN";
+import { ESlabels, ENlabels } from "../languajes";
 import { RootState } from "../store/store";
 import { changeLenguaje } from "../slices/languajeSlice";
 
