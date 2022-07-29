@@ -9,20 +9,20 @@ module.exports = {
       colors: {
         transparent: "transparent",
         main: {
-          900: "#F8F2EF",
-          DEFAULT: "#F8F2EF",
+          900: "#F4F2E9",
+          DEFAULT: "#F4F2E9",
         },
         secondary: {
-          900: "#A25D39",
-          DEFAULT: "#A25D39",
+          900: "#8AA899",
+          DEFAULT: "#8AA899",
         },
         detail: {
-          900: "#C3A7A1",
-          DEFAULT: "#C3A7A1",
+          900: "#F2D349",
+          DEFAULT: "#F2D349",
         },
         fontc: {
-          900: "#26221F",
-          DEFAULT: "#26221F",
+          900: "#5C6E58",
+          DEFAULT: "#5C6E58",
         },
       },
     },

@@ -4,4 +4,5 @@ export const ENlabels = {
   languaje: "Languaje",
   userTitle: "Alexis Matamoros",
   userJob: "Web Developer",
+  options: "Options",
 };

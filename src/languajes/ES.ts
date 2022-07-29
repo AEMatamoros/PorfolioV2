@@ -4,4 +4,5 @@ export const ESlabels = {
   languaje: "Idioma",
   userTitle: "Alexis Matamoros",
   userJob: "Desarrollador Web",
+  options: "Opciones",
 };

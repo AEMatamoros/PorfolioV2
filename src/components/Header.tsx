@@ -1,7 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
-
+import { Dropdown } from "flowbite-react";
 import { iHeaderProps } from "../interfaces/iCommons";
+
+import PropTypes from "prop-types";
 export default function Header({
   handleTheme,
   currentTheme,
@@ -15,43 +16,61 @@ export default function Header({
           {" "}
           {texts.labels.userTitle}{" "}
         </span>
-        |<span className="text-secondary"> {texts.labels.userJob} </span>
+        <span className="text-detail dark:text-secondary">|</span>
+        <span className="text-secondary dark:text-detail">
+          {" "}
+          {texts.labels.userJob}{" "}
+        </span>
       </div>
       <div className="header-end">
-        <label
-          htmlFor="toggle-darkmode"
-          className="flex items-center cursor-pointer relative "
+        <Dropdown
+          label={
+            <i className="fa-solid fa-sliders fa-xl active-icon dark:text-espetial"></i>
+          }
+          floatingArrow={false}
+          arrowIcon={false}
+          color="transparent"
         >
-          <input
-            type="checkbox"
-            id="toggle-darkmode"
-            className="sr-only"
-            onChange={handleTheme}
-          />
-          <div className="toggle-bg bg-detail border-2 border-detail h-6 w-11 rounded-full"></div>
-          <span className="ml-3 text-sm font-medium text-fontc dark:text-white ">
-            {currentTheme !== "dark"
-              ? texts.labels.themeLight
-              : texts.labels.themeDark}
-            &nbsp;
-          </span>
-        </label>
-
-        <label
-          htmlFor="toggle-languaje"
-          className="flex items-center cursor-pointer relative"
-        >
-          <input
-            type="checkbox"
-            id="toggle-languaje"
-            className="sr-only"
-            onChange={handleLanguaje}
-          />
-          <div className="toggle-bg bg-detail border-2 border-detail h-6 w-11 rounded-full"></div>
-          <span className="ml-3 text-fontc text-sm font-medium dark:text-white">
-            {texts.labels.languaje}
-          </span>
-        </label>
+          <Dropdown.Item>
+            <label
+              htmlFor="toggle-darkmode"
+              className="flex items-center cursor-pointer relative "
+            >
+              <input
+                type="checkbox"
+                id="toggle-darkmode"
+                className="sr-only"
+                onChange={handleTheme}
+              />
+              <div className="toggle-bg bg-detail border-2 border-detail h-6 w-11 rounded-full"></div>
+              <span className="ml-3 text-sm font-medium text-fontc dark:text-white text-center">
+                {currentTheme !== "dark" ? (
+                  <i className="fa-solid fa-sun"></i>
+                ) : (
+                  <i className="fa-solid fa-moon"></i>
+                )}
+                &nbsp;
+              </span>
+            </label>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <label
+              htmlFor="toggle-languaje"
+              className="flex items-center cursor-pointer relative"
+            >
+              <input
+                type="checkbox"
+                id="toggle-languaje"
+                className="sr-only"
+                onChange={handleLanguaje}
+              />
+              <div className="toggle-bg bg-detail border-2 border-detail h-6 w-11 rounded-full"></div>
+              <span className="ml-3 text-fontc text-sm font-medium dark:text-white">
+                {texts.labels.languaje}
+              </span>
+            </label>
+          </Dropdown.Item>
+        </Dropdown>
       </div>
     </header>
   );
