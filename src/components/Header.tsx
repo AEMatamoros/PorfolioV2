@@ -25,7 +25,7 @@ export default function Header({
       <div className="header-end">
         <Dropdown
           label={
-            <i className="fa-solid fa-sliders fa-xl active-icon dark:text-espetial"></i>
+            <i className="fa-solid fa-sliders fa-xl active-icon dark:text-espetial dark:hover:text-detail"></i>
           }
           floatingArrow={false}
           arrowIcon={false}
