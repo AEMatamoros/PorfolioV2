@@ -17,17 +17,16 @@ html{
   position: sticky;
   top: 0;
   display: grid;
-  grid-template-areas:  
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
-      "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main";
+  grid-template-areas:  "main-header main-header main-header main-header main-header main-header main-header main-header main-header main-header main-header main-header"
+                        "main-aside main-aside main-aside main-aside main-aside main-aside main-aside main-aside main-aside main-aside main-aside main-aside"
+                        "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
+                        "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
+                        "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
+                        "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
+                        "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
+                        "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
+                        "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main"
+                        "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main";
   grid-template-rows: 10vh;
   grid-template-columns: 16.6%;
   >*{
@@ -41,7 +40,6 @@ html{
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem;
-  z-index: 1;
 }
 
 .header-begin{
@@ -80,7 +78,7 @@ html{
   .child-section{
     position: relative;
     width: 50%;
-    height: 400vh;
+    height: 100vh;
   }
 
   .main-footer{

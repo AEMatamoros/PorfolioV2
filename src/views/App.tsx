@@ -15,15 +15,15 @@ export default function App() {
 
   return (
     <div ref={wrapperRef}>
-      <Header
-        handleTheme={handleTheme}
-        currentTheme={currentTheme}
-        texts={texts}
-        handleLanguaje={handleLanguaje}
-      />
       <div className="wrapper">
         <section className="firstSection full-wh">
-          {/* <Aside /> */}
+          <Header
+            handleTheme={handleTheme}
+            currentTheme={currentTheme}
+            texts={texts}
+            handleLanguaje={handleLanguaje}
+          />
+          <Aside />
           <main className="main-main bg-blue-300">Main</main>
         </section>
       </div>
