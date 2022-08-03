@@ -24,12 +24,15 @@ export default function App() {
             handleLanguaje={handleLanguaje}
           />
           <Aside />
-          <main className="main-main bg-blue-300">Main</main>
+          <main className="main-main bg-main dark:bg-black dark:text-white">
+            Main
+          </main>
         </section>
       </div>
       <section className="secondSection full-wh bg-main dark:bg-black">
-        <div className="child-section  dark:text-white">Child Section 1</div>
-        <div className="child-section  dark:text-white">Child Section 2</div>
+        <div className="child-section bg-secondary dark:bg-detail dark:text-white">
+          Child Section
+        </div>
         <footer className="main-footer bg-indigo-300 dark:bg-black dark:text-white">
           Footer
         </footer>
