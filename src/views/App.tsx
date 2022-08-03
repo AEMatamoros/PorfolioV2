@@ -14,8 +14,8 @@ export default function App() {
   let { currentLanguaje: texts, handleLanguaje } = SelectLanguajeHook();
 
   return (
-    <>
-      <div className="wrapper" ref={wrapperRef}>
+    <div ref={wrapperRef}>
+      <div className="wrapper">
         <section className="firstSection full-wh">
           <Header
             handleTheme={handleTheme}
@@ -27,11 +27,13 @@ export default function App() {
           <main className="main-main bg-blue-300">Main</main>
         </section>
       </div>
-      <section className="secondSection full-wh bg-green-700 ">
-        <div className="child-section bg-yellow-300">Child Section 1</div>
-        <div className="child-section bg-purple-300">Child Section 2</div>
-        <footer className="main-footer bg-indigo-300">Footer</footer>
+      <section className="secondSection full-wh bg-main dark:bg-black">
+        <div className="child-section  dark:text-white">Child Section 1</div>
+        <div className="child-section  dark:text-white">Child Section 2</div>
+        <footer className="main-footer bg-indigo-300 dark:bg-black dark:text-white">
+          Footer
+        </footer>
       </section>
-    </>
+    </div>
   );
 }

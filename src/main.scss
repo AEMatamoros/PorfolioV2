@@ -12,6 +12,7 @@ html{
 @tailwind components;
 @tailwind utilities;
 
+
 .firstSection{
   position: sticky;
   top: 0;
@@ -28,6 +29,9 @@ html{
                         "main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main main-main";
   grid-template-rows: 10vh;
   grid-template-columns: 16.6%;
+  >*{
+    @apply transition-all duration-300 ease-linear;
+  }
 }
 
 .main-header{
@@ -67,8 +71,12 @@ html{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  @apply transition-all duration-300 ease-linear;
+  >*{
+    @apply transition-all duration-300 ease-linear;
+  }
   .child-section{
+    position: relative;
     width: 50%;
     height: 100vh;
   }
@@ -105,6 +113,11 @@ input:checked + .toggle-bg {
 .sections-selecter:hover{
 transform: scale(1.1);
 }
+
+.blur{
+  filter:blur(8px);
+}
+
 @media screen and (max-width:962px) {
   .firstSection{
     grid-template-areas:  "main-header main-header main-header main-header main-header"
