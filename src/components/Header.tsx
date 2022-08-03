@@ -42,7 +42,7 @@ export default function Header({
                 className="sr-only"
                 onChange={handleTheme}
               />
-              <div className="toggle-bg bg-detail border-2 border-detail h-6 w-11 rounded-full"></div>
+              <div className="toggle-bg bg-secondary border-2 border-secondary h-6 w-11 rounded-full"></div>
               <span className="ml-3 text-sm font-medium text-fontc dark:text-white text-center">
                 {currentTheme !== "dark" ? (
                   <i className="fa-solid fa-sun"></i>
@@ -64,7 +64,7 @@ export default function Header({
                 className="sr-only"
                 onChange={handleLanguaje}
               />
-              <div className="toggle-bg bg-detail border-2 border-detail h-6 w-11 rounded-full"></div>
+              <div className="toggle-bg bg-secondary border-2 border-secondary h-6 w-11 rounded-full"></div>
               <span className="ml-3 text-fontc text-sm font-medium dark:text-white">
                 {texts.labels.languaje}
               </span>

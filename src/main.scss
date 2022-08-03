@@ -96,7 +96,7 @@ html{
 }
 
 input:checked + .toggle-bg {
-  @apply bg-secondary border-secondary;
+  @apply bg-detail border-detail;
 }
 .active-icon{
   transition: all .3S;
