@@ -7,4 +7,4 @@ export default defineConfig({
 });
 
 // git config --global user.name "Your Name"
-// git config --global user.email "youremail@yourdomain.com"
+// git config --global user.mail "youremail@yourdomain.com"

@@ -16,6 +16,9 @@ export default function App() {
   return (
     <div ref={wrapperRef}>
       <div className="wrapper">
+        <div
+          className={currentTheme !== "dark" ? "main-bg" : "main-bg dark-bg"}
+        ></div>
         <section className="firstSection full-wh">
           <Header
             handleTheme={handleTheme}
@@ -24,9 +27,7 @@ export default function App() {
             handleLanguaje={handleLanguaje}
           />
           <Aside />
-          <main className="main-main bg-main dark:bg-black dark:text-white">
-            Main
-          </main>
+          <main className="main-main dark:text-white px-4">Main</main>
         </section>
       </div>
       <section className="secondSection full-wh bg-main dark:bg-black">

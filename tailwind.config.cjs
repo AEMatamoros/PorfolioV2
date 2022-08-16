@@ -25,6 +25,10 @@ module.exports = {
           DEFAULT: "#5C6E58",
         },
       },
+      boxShadow: {
+        cd: "0px 15px 20px 1px rgba(0,0,0,0.75)",
+        cl: "0px 15px 20px 1px rgba(244, 242, 233,255.75)",
+      },
     },
   },
 };

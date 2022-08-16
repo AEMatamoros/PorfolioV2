@@ -10,7 +10,11 @@ export default function Header({
   handleLanguaje,
 }: iHeaderProps) {
   return (
-    <header className="main-header bg-main text-fontc dark:bg-black dark:text-white  ">
+    <header
+      className={`main-header bg-main text-fontc dark:bg-black dark:text-white ${
+        currentTheme !== "dark" ? "shadow-cl" : "shadow-cd"
+      }`}
+    >
       <div className="header-begin text-fontc dark:text-white text-lg font-extrabold ">
         <span className="text-fontc dark:text-white">
           {" "}
