@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-
-import { Sidebar } from "flowbite-react";
 import CustomIcons from "./CustomIcons";
 
 export default function CustomSidebar() {

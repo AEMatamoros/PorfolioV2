@@ -1,4 +1,3 @@
-import React from "react";
 import CustomIcons from "./shareds/CustomIcons";
 import { Link } from "react-router-dom";
 

@@ -1,17 +1,22 @@
-import React from "react";
+import { mapRange } from "gsap";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import App from "./App";
-import { Home, Proyects, Blog, Contact } from "../components";
+import { routes } from "./routes";
+
 export default function Navigation() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="" element={<Home />} />
-          <Route path="Blog" element={<Blog />} />
-          <Route path="Proyects" element={<Proyects />} />
-          <Route path="Contact" element={<Contact />} />
-        </Route>
+        {routes.map(({ path, name, Component, nested }) => {
+          return (
+            <Route path={path} element={<Component />} key={name}>
+              {nested?.map(({ path, name, Component }) => {
+                return <Route path={path} element={<Component />} key={name} />;
+              })}
+            </Route>
+          );
+        })}
+
         <Route path="/*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

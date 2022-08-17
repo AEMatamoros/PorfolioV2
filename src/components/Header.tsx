@@ -1,4 +1,3 @@
-import React from "react";
 import { Dropdown } from "flowbite-react";
 import { iHeaderProps } from "../interfaces/iCommons";
 
