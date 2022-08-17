@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-
 //Custom Hooks
 import { SelectLanguajeHook, SelectThemeHook } from "../hooks";
 
@@ -29,9 +27,7 @@ export default function App() {
           />
           <Aside />
           <main className="main-main dark:text-white px-4">
-            <Suspense fallback={<h1>Cargando</h1>}>
-              <Outlet />
-            </Suspense>
+            <Outlet />
           </main>
         </section>
       </div>

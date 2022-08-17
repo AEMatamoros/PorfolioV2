@@ -11,6 +11,8 @@ interface iRouter {
 }
 //Components
 import App from "./App";
+
+const lazyApp = lazy(() => import(/* webpackChunkName: "LazyHome" */ "./App"));
 // Lazy Components
 const lazyHome = lazy(
   () => import(/* webpackChunkName: "LazyHome" */ "../components/Home")
@@ -30,7 +32,7 @@ export const routes: iRouter[] = [
     to: "/",
     path: "/",
     name: "main",
-    Component: App,
+    Component: lazyApp,
     nested: [
       { to: "", path: "", name: "Home", Component: lazyHome },
       { to: "Blog", path: "Blog", name: "Blog", Component: lazyBlog },
