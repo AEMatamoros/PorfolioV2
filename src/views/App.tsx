@@ -5,6 +5,7 @@ import { SelectLanguajeHook, SelectThemeHook } from "../hooks";
 
 //Components
 import { Header, Aside } from "../components";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   //Theme
@@ -27,7 +28,9 @@ export default function App() {
             handleLanguaje={handleLanguaje}
           />
           <Aside />
-          <main className="main-main dark:text-white px-4">Main</main>
+          <main className="main-main dark:text-white px-4">
+            <Outlet />
+          </main>
         </section>
       </div>
       <section className="secondSection full-wh bg-main dark:bg-black">
