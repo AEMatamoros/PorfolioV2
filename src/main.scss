@@ -192,9 +192,11 @@ transform: scale(1.1);
       min-height: 50vh;
     }
   }
+}
 
+@media screen and (max-width:768px) {
   .img-container{
-  display: none;
+    display: none;
   }
 }
 
