@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Aside() {
   return (
-    <aside className="main-aside kk-main dark:kk-black flex flex-row justify-center space-x-20 items-center">
+    <aside className="main-aside kk-main dark:kk-black flex flex-row justify-center space-x-20 items-center mt-2">
       <NavLink
         className={({ isActive }) =>
           isActive

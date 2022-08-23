@@ -1,8 +1,8 @@
 import "./shareds.scss";
 
-export default function Loader() {
+export default function Loader({ bg = "", bgdark = "" }) {
   return (
-    <div className="loader-wrapper bg-main dark:bg-black">
+    <div className={`loader-wrapper ${bg} dark:${bgdark}`}>
       <div className="loader"></div>
     </div>
   );

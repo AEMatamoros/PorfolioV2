@@ -13,12 +13,12 @@ module.exports = {
           DEFAULT: "#F4F2E9",
         },
         secondary: {
-          900: "#F92649",
-          DEFAULT: "#F92649",
+          900: "#9a031e",
+          DEFAULT: "#9a031e",
         },
         detail: {
-          900: "#6292C4",
-          DEFAULT: "#6292C4",
+          900: "#2a9d8f",
+          DEFAULT: "#2a9d8f",
         },
         fontc: {
           900: "#5C6E58",

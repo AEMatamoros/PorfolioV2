@@ -1,8 +1,9 @@
+import { Suspense } from "react";
 //Custom Hooks
 import { SelectLanguajeHook, SelectThemeHook } from "../hooks";
 
 //Components
-import { Header, Aside } from "../components";
+import { Header, Aside, Loader } from "../components";
 import { Outlet } from "react-router-dom";
 
 export default function App() {
@@ -27,7 +28,9 @@ export default function App() {
           />
           <Aside />
           <main className="main-main dark:text-white px-4">
-            <Outlet />
+            <Suspense fallback={<Loader />}>
+              <Outlet />
+            </Suspense>
           </main>
         </section>
       </div>

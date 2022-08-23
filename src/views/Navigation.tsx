@@ -5,7 +5,7 @@ import { Loader } from "../components";
 export default function Navigation() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Loader bg="bg-main" bgdark="bg-black" />}>
         <Routes>
           {routes.map(({ path, name, Component, nested }) => {
             return (

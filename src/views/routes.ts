@@ -9,8 +9,6 @@ interface iRouter {
   Component: LazyExoticComponent<JSXComponent> | JSXComponent;
   nested?: iRouter[];
 }
-//Components
-import App from "./App";
 
 const lazyApp = lazy(() => import(/* webpackChunkName: "LazyHome" */ "./App"));
 // Lazy Components
