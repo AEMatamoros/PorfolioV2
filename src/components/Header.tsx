@@ -73,6 +73,11 @@ export default function Header({
               </span>
             </label>
           </Dropdown.Item>
+          <Dropdown.Item>
+            <button className="bg-secondary hover:bg-secondary-hover my-4 text-main dark:bg-detail dark:hover:bg-detail-hover font-bold py-2 px-4 rounded">
+              {texts.labels.cvButton}
+            </button>
+          </Dropdown.Item>
         </Dropdown>
       </div>
     </header>

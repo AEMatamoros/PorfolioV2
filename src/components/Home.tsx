@@ -20,9 +20,6 @@ export default function Home() {
       </div>
 
       <p className="font-bold text-center w-10/12">{texts.labels.mainMsg}</p>
-      <button className="bg-secondary hover:bg-secondary-hover my-4 text-main dark:bg-detail dark:hover:bg-detail-hover font-bold py-2 px-4 rounded">
-        {texts.labels.cvButton}
-      </button>
     </main>
   );
 }
