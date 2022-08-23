@@ -14,4 +14,5 @@ export const ENlabels = {
   organization, creativity and also easily adapt to any
   situation or work, I invite you to get to know me a little.`,
   cvButton: "Download CV",
+  frase: `"No matter how high is a mountain, there is always a way to the top."`,
 };

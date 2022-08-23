@@ -14,4 +14,5 @@ export const ESlabels = {
   organización, creatividad y además de adapto fácilmente a cualquier
   situación o trabajo, te invito a conocerme un poco.`,
   cvButton: "Descargar CV",
+  frase: `"No importa que tan alta es la montaña, siempre hay un camino a la cima."`,
 };
