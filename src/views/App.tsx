@@ -25,7 +25,10 @@ export default function App() {
             currentTheme={currentTheme}
             texts={texts}
             handleLanguaje={handleLanguaje}
-          />
+          >
+            <Header.HeaderBrand />
+            <Header.HeaderOptions />
+          </Header>
           <Aside />
           <main className="main-main dark:text-white px-4">
             <Suspense fallback={<Loader />}>

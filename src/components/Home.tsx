@@ -10,7 +10,7 @@ export default function Home() {
       </h1>
       <div className="img-container mb-4 cursor-pointer">
         <img
-          className="w-48 h-48 rounded"
+          className="w-48 h-48 rounded "
           src={profileImg}
           alt="Default avatar"
         />
