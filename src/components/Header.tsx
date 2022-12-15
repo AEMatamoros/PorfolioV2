@@ -7,10 +7,7 @@ function Brand() {
   const { texts } = useContext(HeaderContext)
   return (
     <div className="header-begin text-fontc dark:text-white text-lg font-extrabold ">
-      <span className="text-fontc dark:text-white">
-        {' '}
-        {texts.labels.userTitle}{' '}
-      </span>
+      <span className="text-fontc "> {texts.labels.userTitle} </span>
       <span className="text-secondary dark:text-detail">|</span>
       <span className="text-secondary dark:text-detail">
         {' '}
