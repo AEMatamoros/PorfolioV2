@@ -30,12 +30,12 @@ export default function App() {
             <Header.HeaderBrand />
             <Header.HeaderOptions />
           </Header>
-          <main className="main-main dark:text-white px-4 w-8/12">
+          <main className="main-main dark:text-white px-4 w-8/12 max-mov">
             <Suspense fallback={<Loader />}>
               <Outlet />
             </Suspense>
           </main>
-          <Aside className="w-4/12" />
+          <Aside className="w-4/12 max-mov hide-mov" />
         </section>
       </div>
       <section className="secondSection full-wh bg-transparent dark:bg-transparent">

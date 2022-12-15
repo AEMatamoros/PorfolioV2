@@ -11,8 +11,9 @@ export default function Aside({ className = '' }) {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'transform scale-125 transition ease-out duration-500'
-              : 'transform hover:scale-125 ease-out duration-500' + ` p-0 my-2`
+              ? 'transform scale-110 transition ease-out duration-500'
+              : 'transform hover:scale-110 ease-out duration-500' +
+                ` p-0 my-2 duration-700`
           }
           to="/"
         >
@@ -24,21 +25,9 @@ export default function Aside({ className = '' }) {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'transform scale-125 transition ease-out duration-500'
-              : 'transform hover:scale-125 ease-out duration-500' + ` p-0 my-2`
-          }
-          to="/Blog"
-        >
-          <CustomIcons
-            icon="fa-solid fa-folder-open"
-            text={texts.labels.blogTitle}
-          ></CustomIcons>
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? 'transform scale-125 transition ease-out duration-500'
-              : 'transform hover:scale-125 ease-out duration-500' + ` p-0 my-2`
+              ? 'transform scale-110 transition ease-out duration-500'
+              : 'transform hover:scale-110 ease-out duration-500' +
+                ` p-0 my-2 duration-700`
           }
           to="/Proyects"
         >
@@ -50,8 +39,9 @@ export default function Aside({ className = '' }) {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'transform scale-125 transition ease-out duration-500'
-              : 'transform hover:scale-125 ease-out duration-500' + ` p-0 my-2`
+              ? 'transform scale-110 transition ease-out duration-500'
+              : 'transform hover:scale-110 ease-out duration-500' +
+                ` p-0 my-2 duration-700`
           }
           to="/Contact"
         >
@@ -60,7 +50,21 @@ export default function Aside({ className = '' }) {
             text={texts.labels.contactTitle}
           ></CustomIcons>
         </NavLink>
-        <hr className="w-full" />
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'transform scale-110 transition ease-out duration-500'
+              : 'transform hover:scale-110 ease-out duration-500' +
+                ` p-0 my-2 duration-700`
+          }
+          to="/Blog"
+        >
+          <CustomIcons
+            icon="fa-solid fa-folder-open"
+            text={texts.labels.blogTitle}
+          ></CustomIcons>
+        </NavLink>
+        <hr className="w-full border border-1 border-black dark:border-white transition-all duration-300" />
       </div>
     </aside>
   )

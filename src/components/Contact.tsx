@@ -7,12 +7,21 @@ export default function Contact(): JSX.Element {
       <h1 className="text-6xl text-secondary dark:text-detail mt-8 mb-4">
         Contact
       </h1>
-      <p className="w-6/12">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-        voluptates nisi earum consequuntur deleniti, ab qui delectus, ex odio
-        accusamus facilis vero aliquid maxime ut animi corrupti voluptate. Hic,
-        nemo!
-      </p>
+      <div className="w-6/12 flex flex-col">
+        <span className="my-2 cursor-pointer hover:text-yellow-500 transition-all duration-500">
+          <i className="fa-solid fa-envelope-circle-check"></i>{' '}
+          Alexismatamoros1996777@gmail.com
+        </span>
+        <span className="my-2 cursor-pointer hover:text-blue-500 transition-all duration-500">
+          <i className="fa-brands fa-linkedin"></i> Alexis Matamoros
+        </span>
+        <span className="my-2 cursor-pointer hover:text-red-500 transition-all duration-500">
+          <i className="fa-brands fa-youtube"></i> Adevsis
+        </span>
+        <span className="my-2 cursor-pointer hover:text-purple-500 transition-all duration-500">
+          <i className="fa-brands fa-github"></i> AEMatamoros
+        </span>
+      </div>
     </main>
   )
 }

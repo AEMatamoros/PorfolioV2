@@ -121,7 +121,7 @@ html{
 }
 
 input:checked + .toggle-bg {
-  @apply bg-detail border-detail;
+  @apply bg-blue-500 border-blue-500;
 }
 .active-icon{
   transition: all .3S;
@@ -174,4 +174,22 @@ h1,h2,h3,h4,h5,h6{
   text-transform: uppercase;
 }
 
+.hide-desk{
+  display: none;
+}
 
+
+@media only screen and (max-width: 662px) {
+ .max-mov{
+  @apply w-full
+ }
+ .hide-mov{
+  display: none;
+}
+ .show-mov{
+  display: block;
+}
+.text-mov{
+  @apply text-sm;
+}
+}

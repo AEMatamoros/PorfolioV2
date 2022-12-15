@@ -6,7 +6,7 @@ export const ENlabels = {
   userJob: "Web Developer",
   options: "Options",
   mainTitle: "About Me",
-  mainMsg: `Welcome!, I am a Systems Engineer with an enthusiastic soul
+  mainMsg: `Welcome!, my name is Alexis Matamoros, i am a Systems Engineer with an enthusiastic soul
   skills are focused on the development of web applications with
   knowledge of Backend, Frontend and Systems technologies
   SQL/NOSQL databases, also has very good soft skills

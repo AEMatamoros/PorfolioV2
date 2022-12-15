@@ -7,14 +7,14 @@ export default function CustomIcons({
   textColor = 'text-secondary',
   hoverColor = 'text-detail',
   darkColor = 'text-white',
-  darkHoverColor = 'text-gray-400',
+  darkHoverColor = 'text-black',
   text = '',
 }: iIcons) {
   return (
     <div
       className={` ${textColor} dark:hover:${darkHoverColor} text-2xl duration-300 hover:${hoverColor} dark:${darkColor}`}
     >
-      <i className={` ${icon}  cursor-pointer sections-selecter `}></i>
+      <i className={` ${icon}  cursor-pointer  `}></i>
       <span>{text}</span>
     </div>
   )

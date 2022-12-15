@@ -6,7 +6,7 @@ export const ESlabels = {
   userJob: "Desarrollador Web",
   options: "Opciones",
   mainTitle: "Sobre Mi",
-  mainMsg: `¡Bienvenidos!, Soy Ingeniero en Sistemas con un alma entusiasta mis
+  mainMsg: `¡Bienvenidos!, mi nombre es Alexis Matamoros, soy Ingeniero en Sistemas con un alma entusiasta mis
   habilidades están enfocadas en el desarrollo de aplicaciones web con
   conocimientos sobre tecnologías de Backend, Frontend y sistemas de
   bases de datos SQL/NOSQL, además poseo muy buenas habilidades blandas

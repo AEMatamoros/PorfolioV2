@@ -6,4 +6,5 @@ export interface iIcons {
   darkColor?: string;
   darkHoverColor?: string;
   text?: string
+  hoverResize?: boolean
 }
