@@ -15,4 +15,8 @@ export const ENlabels = {
   situation or work, I invite you to get to know me a little.`,
   cvButton: "Download CV",
   frase: `"No matter how high is a mountain, there is always a way to the top."`,
+  homeTitle: "Home",
+  blogTitle: "Blog",
+  tecnologiesTitle: "Tecs",
+  contactTitle: "Contact"
 };

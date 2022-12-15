@@ -1,28 +1,29 @@
-import { Dropdown } from "flowbite-react";
-import { iHeaderProps } from "../interfaces/iCommons";
+import { Dropdown } from 'flowbite-react'
+import { iHeaderProps } from '../interfaces/iCommons'
 
-import { createContext, useContext } from "react";
+import { createContext, useContext } from 'react'
 
 function Brand() {
-  const { texts } = useContext(HeaderContext);
+  const { texts } = useContext(HeaderContext)
   return (
     <div className="header-begin text-fontc dark:text-white text-lg font-extrabold ">
       <span className="text-fontc dark:text-white">
-        {" "}
-        {texts.labels.userTitle}{" "}
+        {' '}
+        {texts.labels.userTitle}{' '}
       </span>
-      <span className="text-detail dark:text-secondary">|</span>
+      <span className="text-secondary dark:text-detail">|</span>
       <span className="text-secondary dark:text-detail">
-        {" "}
-        {texts.labels.userJob}{" "}
+        {' '}
+        {texts.labels.userJob}{' '}
       </span>
     </div>
-  );
+  )
 }
 
 function HeaderOptions() {
-  const { handleTheme, currentTheme, handleLanguaje, texts } =
-    useContext(HeaderContext);
+  const { handleTheme, currentTheme, handleLanguaje, texts } = useContext(
+    HeaderContext,
+  )
   return (
     <div className="header-end">
       <Dropdown
@@ -44,9 +45,9 @@ function HeaderOptions() {
               className="sr-only"
               onChange={handleTheme}
             />
-            <div className="toggle-bg bg-secondary border-2 border-secondary h-6 w-11 rounded-full"></div>
+            <div className="toggle-bg bg-fontc border-2 border-fontc h-6 w-11 rounded-full"></div>
             <span className="ml-3 text-sm font-medium text-fontc dark:text-white text-center">
-              {currentTheme !== "dark" ? (
+              {currentTheme !== 'dark' ? (
                 <i className="fa-solid fa-sun"></i>
               ) : (
                 <i className="fa-solid fa-moon"></i>
@@ -66,23 +67,23 @@ function HeaderOptions() {
               className="sr-only"
               onChange={handleLanguaje}
             />
-            <div className="toggle-bg bg-secondary border-2 border-secondary h-6 w-11 rounded-full"></div>
+            <div className="toggle-bg bg-fontc border-2 border-fontc h-6 w-11 rounded-full"></div>
             <span className="ml-3 text-fontc text-sm font-medium dark:text-white">
               {texts.labels.languaje}
             </span>
           </label>
         </Dropdown.Item>
         <Dropdown.Item>
-          <button className="bg-secondary hover:bg-secondary-hover my-4 text-main dark:bg-detail dark:hover:bg-detail-hover font-bold py-2 px-4 rounded">
+          <button className="bg-secondary hover:bg-secondary-hover my-4 text-main dark:text-fontc dark:bg-detail dark:hover:bg-detail-hover font-bold py-2 px-4 rounded">
             {texts.labels.cvButton}
           </button>
         </Dropdown.Item>
       </Dropdown>
     </div>
-  );
+  )
 }
 
-export const HeaderContext = createContext({} as iHeaderProps);
+export const HeaderContext = createContext({} as iHeaderProps)
 export default function Header({
   children,
   handleTheme,
@@ -90,7 +91,7 @@ export default function Header({
   texts,
   handleLanguaje,
 }: iHeaderProps) {
-  const { Provider } = HeaderContext;
+  const { Provider } = HeaderContext
 
   return (
     <Provider
@@ -102,15 +103,15 @@ export default function Header({
       }}
     >
       <header
-        className={`main-header bg-main text-fontc dark:bg-black dark:text-white ${
-          currentTheme !== "dark" ? "shadow-cl" : "shadow-cd"
+        className={`main-header bg-main text-fontc dark:bg-black dark:text-white h-16 w-full ${
+          currentTheme !== 'dark' ? 'shadow-cl' : 'shadow-cd'
         }`}
       >
         {children}
       </header>
     </Provider>
-  );
+  )
 }
 
-Header.HeaderBrand = Brand;
-Header.HeaderOptions = HeaderOptions;
+Header.HeaderBrand = Brand
+Header.HeaderOptions = HeaderOptions
