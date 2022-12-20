@@ -6,6 +6,7 @@ import { SelectLanguajeHook, SelectThemeHook } from "../hooks";
 import { Header, Aside, Loader } from "../components";
 import { Outlet } from "react-router-dom";
 import Portfolio from "../components/Portfolio";
+import Footer from "../components/shareds/Footer";
 
 export default function App() {
   //Theme
@@ -48,9 +49,8 @@ export default function App() {
           }`}
         >
           <Portfolio></Portfolio>
-          <footer className="main-footer bg-white dark:bg-black dark:text-white">
-            Footer
-          </footer>
+
+          <Footer></Footer>
         </div>
       </section>
     </div>

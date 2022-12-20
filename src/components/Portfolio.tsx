@@ -15,8 +15,8 @@ export default function Portfolio() {
         Proyectos
       </h1>
       <div className="card-container w-full flex flex-wrap p-3 ">
-        {tecs.map((tec) => (
-          <div className="p-2  sm:w-full md:w-4/12 ">
+        {tecs.map((tec, index) => (
+          <div className="p-2  sm:w-full md:w-4/12 " key={index}>
             <div className="card transform hover:scale-105 transition-all duration-300 flex justify-center cursor-pointer">
               <div className="shadow-2xl  bg-black dark:bg-white text-white dark:text-black ">
                 <a href="#!">

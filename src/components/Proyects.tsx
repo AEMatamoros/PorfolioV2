@@ -47,8 +47,8 @@ export default function Proyects(): JSX.Element {
         Tecnologies
       </h1>
       <div className="card-container w-full flex flex-wrap p-3">
-        {tecs.map((tec) => (
-          <div className=" p-1 w-2/12">
+        {tecs.map((tec, index) => (
+          <div className=" p-1 w-2/12" key={index}>
             <div
               className={
                 "card h-36 bg-white dark:bg-black shadow-lg transform hover:scale-105 cursor-pointer transition-all duration-700 flex flex-col justify-center items-center " +
