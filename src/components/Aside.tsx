@@ -1,8 +1,8 @@
-import CustomIcons from './shareds/CustomIcons'
-import { NavLink } from 'react-router-dom'
-import { SelectLanguajeHook } from '../hooks'
-export default function Aside({ className = '' }) {
-  let { currentLanguaje: texts } = SelectLanguajeHook()
+import CustomIcons from "./shareds/CustomIcons";
+import { NavLink } from "react-router-dom";
+import { SelectLanguajeHook } from "../hooks";
+export default function Aside({ className = "" }) {
+  let { currentLanguaje: texts } = SelectLanguajeHook();
   return (
     <aside
       className={` kk-main dark:kk-black m-0 p-0 ${className} relative h-full flex `}
@@ -11,8 +11,8 @@ export default function Aside({ className = '' }) {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'transform scale-110 transition ease-out duration-500'
-              : 'transform hover:scale-110 ease-out duration-500' +
+              ? "transform scale-110 transition ease-out duration-500"
+              : "transform hover:scale-110 ease-out duration-500" +
                 ` p-0 my-2 duration-700`
           }
           to="/"
@@ -25,8 +25,8 @@ export default function Aside({ className = '' }) {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'transform scale-110 transition ease-out duration-500'
-              : 'transform hover:scale-110 ease-out duration-500' +
+              ? "transform scale-110 transition ease-out duration-500"
+              : "transform hover:scale-110 ease-out duration-500" +
                 ` p-0 my-2 duration-700`
           }
           to="/Proyects"
@@ -39,8 +39,8 @@ export default function Aside({ className = '' }) {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'transform scale-110 transition ease-out duration-500'
-              : 'transform hover:scale-110 ease-out duration-500' +
+              ? "transform scale-110 transition ease-out duration-500"
+              : "transform hover:scale-110 ease-out duration-500" +
                 ` p-0 my-2 duration-700`
           }
           to="/Contact"
@@ -53,8 +53,8 @@ export default function Aside({ className = '' }) {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'transform scale-110 transition ease-out duration-500'
-              : 'transform hover:scale-110 ease-out duration-500' +
+              ? "transform scale-110 transition ease-out duration-500"
+              : "transform hover:scale-110 ease-out duration-500" +
                 ` p-0 my-2 duration-700`
           }
           to="/Blog"
@@ -67,5 +67,5 @@ export default function Aside({ className = '' }) {
         <hr className="w-full border border-1 border-black dark:border-white transition-all duration-300" />
       </div>
     </aside>
-  )
+  );
 }

@@ -1,26 +1,30 @@
-import { Dropdown } from 'flowbite-react'
-import { iHeaderProps } from '../interfaces/iCommons'
-import Aside from './Aside'
-import { createContext, useContext } from 'react'
+import { Dropdown } from "flowbite-react";
+import { iHeaderProps } from "../interfaces/iCommons";
+import Aside from "./Aside";
+import { createContext, useContext } from "react";
 
 function Brand() {
-  const { texts } = useContext(HeaderContext)
+  const { texts } = useContext(HeaderContext);
   return (
     <div className="header-begin text-fontc dark:text-white text-lg font-extrabold ">
-      <span className="text-fontc "> {texts.labels.userTitle} </span>
-      <span className="text-secondary dark:text-detail">|</span>
-      <span className="text-secondary dark:text-detail">
-        {' '}
-        {texts.labels.userJob}{' '}
+      <span className="header-text text-fontc hide-mov">
+        {" "}
+        {texts.labels.userTitle}{" "}
       </span>
+      <span className="header-text text-fontc hide-desk show-mov">AM</span>
+      <span className="header-text text-secondary dark:text-detail">|</span>
+      <span className="header-text text-secondary dark:text-detail hide-mov">
+        {" "}
+        {texts.labels.userJob}{" "}
+      </span>
+      <span className="header-text text-fontc hide-desk show-mov">Dev</span>
     </div>
-  )
+  );
 }
 
 function HeaderOptions() {
-  const { handleTheme, currentTheme, handleLanguaje, texts } = useContext(
-    HeaderContext,
-  )
+  const { handleTheme, currentTheme, handleLanguaje, texts } =
+    useContext(HeaderContext);
   return (
     <div className="header-end">
       <Dropdown
@@ -44,7 +48,7 @@ function HeaderOptions() {
             />
             <div className="toggle-bg bg-fontc border-2 border-fontc h-6 w-11 rounded-full"></div>
             <span className="ml-3 text-sm font-medium text-fontc dark:text-white text-center">
-              {currentTheme !== 'dark' ? (
+              {currentTheme !== "dark" ? (
                 <i className="fa-solid fa-sun"></i>
               ) : (
                 <i className="fa-solid fa-moon"></i>
@@ -77,10 +81,10 @@ function HeaderOptions() {
         </Dropdown.Item>
       </Dropdown>
     </div>
-  )
+  );
 }
 
-export const HeaderContext = createContext({} as iHeaderProps)
+export const HeaderContext = createContext({} as iHeaderProps);
 export default function Header({
   children,
   handleTheme,
@@ -88,7 +92,7 @@ export default function Header({
   texts,
   handleLanguaje,
 }: iHeaderProps) {
-  const { Provider } = HeaderContext
+  const { Provider } = HeaderContext;
 
   return (
     <Provider
@@ -101,14 +105,14 @@ export default function Header({
     >
       <header
         className={`main-header bg-main text-fontc dark:bg-black dark:text-white h-16 w-full ${
-          currentTheme !== 'dark' ? 'shadow-cl' : 'shadow-cd'
+          currentTheme !== "dark" ? "shadow-cl" : "shadow-cd"
         }`}
       >
         {children}
       </header>
     </Provider>
-  )
+  );
 }
 
-Header.HeaderBrand = Brand
-Header.HeaderOptions = HeaderOptions
+Header.HeaderBrand = Brand;
+Header.HeaderOptions = HeaderOptions;

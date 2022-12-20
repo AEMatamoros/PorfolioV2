@@ -1,7 +1,7 @@
-import { SelectLanguajeHook } from '../hooks'
-import profileImg from '../assets/img/profile.jpg'
+import { SelectLanguajeHook } from "../hooks";
+import profileImg from "../assets/img/profile.jpg";
 export default function Home() {
-  let { currentLanguaje: texts } = SelectLanguajeHook()
+  let { currentLanguaje: texts } = SelectLanguajeHook();
 
   return (
     <section className="flex flex-col px-4 justify-center items-center w-100 h-full">
@@ -14,10 +14,10 @@ export default function Home() {
         alt="Default avatar"
       />
 
-      <p className=" text-center w-6/12 my-4 max-mov">{texts.labels.mainMsg}</p>
+      <p className=" text-center w-8/12 my-4 max-mov">{texts.labels.mainMsg}</p>
       <button className="bg-black dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white hover:bg-white border border-1 border-black text-white hover:text-black font-bold py-2 px-4 rounded-full transition-all duration-300 hide-mov">
         Button
       </button>
     </section>
-  )
+  );
 }

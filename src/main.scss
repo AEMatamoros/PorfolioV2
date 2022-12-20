@@ -95,7 +95,7 @@ html{
   .child-section{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
   }
 
   .main-footer{
@@ -168,6 +168,7 @@ p{
   text-indent: 50px;
   text-align: justify;
   letter-spacing: 3px;
+  font-size: .9vw;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -180,6 +181,8 @@ h1,h2,h3,h4,h5,h6{
 
 
 @media only screen and (max-width: 662px) {
+p{font-size: .8rem;}
+
  .max-mov{
   @apply w-full
  }
@@ -187,7 +190,7 @@ h1,h2,h3,h4,h5,h6{
   display: none;
 }
  .show-mov{
-  display: block;
+  display: inline-block;
 }
 .text-mov{
   @apply text-sm;
