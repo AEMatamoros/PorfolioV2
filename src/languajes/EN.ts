@@ -18,5 +18,7 @@ export const ENlabels = {
   homeTitle: "Home",
   blogTitle: "Blog",
   tecnologiesTitle: "Tecs",
-  contactTitle: "Contact"
+  contactTitle: "Contact",
+  proyectsTitle: "Proyects",
+  footerText: "'No matter how tall the mountain is, it cannot block the sun' – Chinese Proverb."
 };

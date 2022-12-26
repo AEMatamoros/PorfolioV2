@@ -18,5 +18,7 @@ export const ESlabels = {
   homeTitle: "Inicio",
   blogTitle: "Blog",
   tecnologiesTitle: "Tecnologias",
-  contactTitle: "Contacto"
+  contactTitle: "Contacto",
+  proyectsTitle: "Proyectos",
+  footerText: "'No importa que tan alta sea la montaña, no puede bloquear el sol.' – Proverbio Chino."
 };

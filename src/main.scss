@@ -95,7 +95,7 @@ html{
   .child-section{
     position: relative;
     width: 100%;
-    height: 200vh;
+    min-height: 100vh;
   }
 
   .main-footer{
@@ -181,19 +181,23 @@ h1,h2,h3,h4,h5,h6{
 
 
 @media only screen and (max-width: 662px) {
-p{font-size: .8rem;}
+  p{
+    font-size: .8rem;
+  }
 
  .max-mov{
-  @apply w-full
- }
+    @apply w-full
+  }
  .hide-mov{
-  display: none;
-}
- .show-mov{
-  display: inline-block;
-}
-.text-mov{
-  @apply text-sm;
-}
-h1{@apply text-3xl}
+    display: none;
+  }
+  .show-mov{
+    display: inline-block;
+  }
+  .text-mov{
+    @apply text-sm;
+  }
+  h1{@apply text-3xl
+  }
+
 }

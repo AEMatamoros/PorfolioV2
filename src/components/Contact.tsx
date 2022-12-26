@@ -5,7 +5,7 @@ export default function Contact(): JSX.Element {
   return (
     <main className="flex flex-col px-4 justify-center items-center w-100 h-full">
       <h1 className="text-6xl text-secondary dark:text-detail mt-8 mb-4">
-        Contact
+        {texts.labels.contactTitle}
       </h1>
       <div className="w-6/12 flex flex-col">
         <span className="my-2 cursor-pointer hover:text-yellow-500 transition-all duration-500">
