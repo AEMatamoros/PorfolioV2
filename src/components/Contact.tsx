@@ -22,7 +22,7 @@ export default function Contact(): JSX.Element {
           href="mailto:a.matamoros@goit.global"
         >
           <i className="fa-solid fa-envelope-circle-check"></i>{' '}
-          a.matamoros@goit.global
+          A.matamoros@goit.global
         </a>
         <a
           className="my-2 cursor-pointer hover:text-blue-500 transition-all duration-500"

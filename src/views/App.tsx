@@ -16,9 +16,9 @@ export default function App() {
   let { currentLanguaje: texts, handleLanguaje } = SelectLanguajeHook()
 
   // Init in DarkMode
-  // useEffect(() => {
-  //   handleTheme()
-  // }, [])
+  useEffect(() => {
+    handleTheme()
+  }, [])
 
   return (
     <div ref={wrapperRef}>
