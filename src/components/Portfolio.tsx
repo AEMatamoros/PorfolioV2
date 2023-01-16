@@ -32,7 +32,7 @@ export default function Portfolio() {
         'Plataforma de entretenimiento.Desarrollado en Angular, NodeJS, Express, SQL.',
       img: FUTVIMG,
       icon: 'fa-light fa-e',
-      url: 'https://portalunico.iaip.gob.hn/#/homeLanding',
+      url: 'https://www.futvcr.com/',
     },
     {
       hoverColor: 'text-gray-500',
@@ -126,31 +126,40 @@ export default function Portfolio() {
       <h1 className="text-6xl text-secondary dark:text-detail mt-8 mb-4 text-center">
         {texts.labels.proyectsTitle}
       </h1>
-      <div className="card-container w-full flex flex-wrap p-3 ">
+      <div className="card-container w-full flex justify-center flex-wrap p-3 ">
         {tecs.map((tec, index) => (
-          <div className="p-2  sm:w-full md:w-3/12" key={index}>
-            <div className="card transform hover:scale-105 transition-all duration-300 flex justify-center cursor-pointer">
-              <div className="shadow-2xl  bg-white dark:bg-black text-black dark:text-white ">
-                <img className="" src={tec.img} alt="" />
+          <div
+            className="p-2 xl:w-3/12 lg:w-4/12 md:w-5/12 sm:w-full "
+            key={index}
+          >
+            <a href={tec.url} target="_blank">
+              <div className="card transform  flex justify-center cursor-pointer w-full">
+                <div className="shadow-2xl  bg-white dark:bg-black text-black dark:text-white w-full overflow-hidden">
+                  <img
+                    className="transform hover:scale-110 transition-all duration-300 w-full"
+                    src={tec.img}
+                    alt=""
+                  />
 
-                <div className="p-6">
-                  <h5 className="text-fontc  dark:text-white text-xl font-medium mb-2">
-                    {tec.name}
-                  </h5>
-                  <p className="text-fontc dark:text-white text-base mb-4">
-                    {tec.description}
-                  </p>
-                  <a href={tec.url} target="_blank">
-                    <button
-                      type="button"
-                      className=" inline-block px-6 py-2.5 bg-black text-white dark:bg-white dark:text-black dark:hover:text-white hover:text-white font-medium text-xs leading-tight uppercase shadow-md hover:bg-fontc dark:hover:bg-fontc hover:shadow-lg focus:bg-fontc focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-                    >
-                      Demo/Github
-                    </button>
-                  </a>
+                  <div className="p-6">
+                    <h5 className="text-fontc  dark:text-white text-xl font-medium mb-2">
+                      {tec.name}
+                    </h5>
+                    <p className="text-fontc dark:text-white text-base mb-4">
+                      {tec.description}
+                    </p>
+                    <a href={tec.url} target="_blank">
+                      <button
+                        type="button"
+                        className=" inline-block px-6 py-2.5 bg-black text-white dark:bg-white dark:text-black dark:hover:text-white hover:text-white font-medium text-xs leading-tight uppercase shadow-md hover:bg-fontc dark:hover:bg-fontc hover:shadow-lg focus:bg-fontc focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+                      >
+                        Demo/Github
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>
