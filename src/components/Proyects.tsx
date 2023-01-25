@@ -64,7 +64,7 @@ export default function Proyects(): JSX.Element {
           <div className=" p-1 w-2/12" key={index}>
             <div
               className={
-                'card h-36 bg-white dark:bg-black shadow-lg transform hover:scale-105 cursor-pointer transition-all duration-700 flex flex-col justify-center items-center ' +
+                'card h-36 bg-white  dark:shadow-white dark:bg-black shadow-lg transform hover:scale-105 cursor-pointer transition-all duration-700 flex flex-col justify-center items-center ' +
                 tec.hoverColor
               }
             >
@@ -82,7 +82,7 @@ export default function Proyects(): JSX.Element {
         <div className=" p-1 w-2/12">
           <div
             className={
-              'card h-36 bg-black dark:bg-white shadow-lg transform hover:scale-105 cursor-pointer transition-all duration-700 flex flex-col justify-center items-center text-indigo-500'
+              'card h-36 bg-black  dark:bg-white shadow-lg transform hover:scale-105 cursor-pointer transition-all duration-700 flex flex-col justify-center items-center text-indigo-500'
             }
           ></div>
         </div>
