@@ -12,18 +12,9 @@ interface iRouter {
 
 const lazyApp = lazy(() => import(/* webpackChunkName: "LazyHome" */ "./App"));
 // Lazy Components
-const lazyHome = lazy(
-  () => import(/* webpackChunkName: "LazyHome" */ "../components/Home")
-);
-const lazyBlog = lazy(
-  () => import(/* webpackChunkName: "LazyBlog" */ "../components/Blog")
-);
-const lazyProyects = lazy(
-  () => import(/* webpackChunkName: "LazyProyects" */ "../components/Proyects")
-);
-const lazyContact = lazy(
-  () => import(/* webpackChunkName: "LazyContact" */ "../components/Contact")
-);
+// const lazyHome = lazy(
+//   () => import(/* webpackChunkName: "LazyHome" */ "../components/Home")
+// );
 
 export const routes: iRouter[] = [
   {
@@ -32,20 +23,7 @@ export const routes: iRouter[] = [
     name: "main",
     Component: lazyApp,
     nested: [
-      { to: "", path: "", name: "Home", Component: lazyHome },
-      { to: "Blog", path: "Blog", name: "Blog", Component: lazyBlog },
-      {
-        to: "Proyects",
-        path: "Proyects",
-        name: "Proyects",
-        Component: lazyProyects,
-      },
-      {
-        to: "Contact",
-        path: "Contact",
-        name: "Contact",
-        Component: lazyContact,
-      },
+      // { to: "", path: "", name: "Home", Component: lazyHome },
     ],
   },
 ];

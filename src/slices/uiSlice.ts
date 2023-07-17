@@ -4,7 +4,7 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { iTheme } from "../interfaces/iTheme";
 
 const initialState: iTheme = {
-  value: "original",
+  value: "light",
 };
 
 export const themeSlice = createSlice({

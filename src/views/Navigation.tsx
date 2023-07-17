@@ -1,11 +1,10 @@
 import { Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { routes } from "./routes";
-import { Loader } from "../components";
 export default function Navigation() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loader bg="bg-main" bgdark="bg-black" />}>
+      <Suspense fallback={<h1>Cargando</h1>}>
         <Routes>
           {routes.map(({ path, name, Component, nested }) => {
             return (

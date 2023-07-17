@@ -12,8 +12,10 @@ export default function SelectThemeHook() {
   const handleTheme = () => {
     if (wrapperRef.current?.classList.contains("dark")) {
       wrapperRef.current?.classList.remove("dark");
-      dispatch(changeTheme("original"));
+      dispatch(changeTheme("light"));
+      console.log("in")
     } else {
+      console.log("out")
       wrapperRef.current?.classList.add("dark");
       dispatch(changeTheme("dark"));
     }
