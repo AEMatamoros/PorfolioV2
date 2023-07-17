@@ -1,3 +1,3 @@
 import Header from "./Header";
-
-export { Header };
+import Loader from "./shareds/Loader";
+export { Header, Loader };
