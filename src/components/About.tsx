@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function About({ msg }: { msg: string }) {
+export default function About({ title, msg }: { title: string, msg: string }) {
     return (
-        <section className="main__techs flex justify-center items-center dark:text-main w-6/12 p-16 text-center">
+        <section className="flex main__techs  justify-center items-center dark:text-main w-full sm:w-full md:w-full lg:w-6/12 xl:w-6/12 2xl:w-612 p-16 text-center">
             <div className="main__about__text text-2xl p-4 flex flex-col gap-16">
-                <h2 className='font-bold'>Sobre mi ...</h2>
-                <p>{msg}</p>
+                <h2 className='font-bold'>{title} ...</h2>
+                <p className='sm:text-sm md:text-2xl'>{msg}</p>
             </div>
         </section>
     )

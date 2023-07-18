@@ -13,5 +13,5 @@ export default function SelectLanguajeHook() {
       ? dispatch(changeLenguaje({ type: "ES", labels: ESlabels }))
       : dispatch(changeLenguaje({ type: "EN", labels: ENlabels }));
   };
-  return { currentLanguaje, handleLanguaje };
+  return { currentLanguaje, handleLanguaje, type: currentLanguaje.type };
 }

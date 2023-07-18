@@ -53,17 +53,17 @@ let techs = [
 export default function Techs() {
 
     return (
-        <section className="main__about flex justify-center items-center dark:text-main w-6/12 p-16 text-center">
-            <ul className="tech-container main__about__icons text-3xl flex flex-wrap gap-8">
+        <section className="main__about  flex justify-center items-center dark:text-main w-full sm:w-full md:w-full lg:w-6/12 xl:w-6/12 2xl:w-612 sm:mt-8 md:mt-8 lg:mt-0 xl:mt-0 2xl:w-612 p-16 sm:p-4 md:p-4 lg:p-16 xl:p16 text-center">
+            <ul className="tech-container  main__about__icons text-3xl flex flex-wrap justify-center items-center gap-4">
                 {techs.map((tec, index) => (
-                    <li className="p-1 w-36 " key={index} title={tec.name}>
+                    <li className=" p-1 w-5/12 sm:w-6/12 md:w-6/12 lg:w-6/12 xl:w-36 2xl:w-36" key={index} title={tec.name}>
                         <div
                             className={
-                                'tech-item card h-36 glass-bg shadow-lg transform hover:scale-110 cursor-pointer transition-all duration-300 flex flex-col justify-center items-center ' +
+                                'tech-item card  h-36 glass-bg shadow-lg transform hover:scale-110 cursor-pointer transition-all duration-300 flex flex-col justify-center items-center ' +
                                 tec.hoverColor
                             }
                         >
-                            <i className={`${tec.icon} fa-2x transform hover:scale-150`}></i>
+                            <i className={`${tec.icon} sm:fa-2x lg:fa-2x xl:fa-2x 2xl:fa-2x fa-2x transform hover:scale-150`}></i>
                             <span className='text-base font-bold mt-4'>{tec.name}</span>
                         </div>
                     </li>
