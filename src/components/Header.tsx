@@ -3,8 +3,8 @@ import { iHeaderProps } from "../interfaces/iCommons";
 
 export default function Header({ currentTheme, texts, handleTheme, handleLanguaje }: iHeaderProps) {
   return (
-    <header className="main__header w-full bg-light dark:bg-dark flex items-center justify-between p-8 sticky top-0">
-      <span className="text-dark dark:text-main text-2xl font-bold">
+    <header className="main__header w-full bg-light dark:bg-dark  flex items-center justify-between p-8 sticky top-0">
+      <span className="text-dark dark:text-main text-2xl font-bold transform hover:scale-125 cursor-pointer">
         <i className="fa-solid fa-code"></i>
       </span>
       <ul className="flex justify-end items-center gap-8 ">

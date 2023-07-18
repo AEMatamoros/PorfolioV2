@@ -7,6 +7,9 @@ $aY: 50%;
   font-family: "Inter", sans-serif, ui-sans-serif, system-ui, -apple-system;
 }
 
+* {
+  transition: all 0.3s;
+}
 html {
   padding: 0;
   margin: 0;
@@ -41,15 +44,6 @@ h6 {
   @apply text-xl;
 }
 
-p {
-  @apply text-base;
-}
-
-span,
-small {
-  @apply text-sm;
-}
-
 .main {
 }
 
@@ -65,12 +59,15 @@ small {
 }
 
 .main__about {
+  height: 100vh;
 }
 
 .main__work {
+  min-height: 100vh;
 }
 
 .main__contact {
+  height: 100vh;
 }
 
 .loader-view {
@@ -79,6 +76,18 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.glass-bg {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.proyect-img {
+  max-width: 40%;
+  height: auto;
 }
 
 .lamp {
@@ -140,5 +149,19 @@ small {
     width: 72px;
     height: 72px;
     opacity: 0;
+  }
+}
+.main__hero__text {
+  animation: appearing-text;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in;
+}
+@keyframes appearing-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
