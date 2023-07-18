@@ -4,17 +4,17 @@ import { SelectLanguajeHook, SelectThemeHook } from '../hooks'
 
 //Components
 import { Header, Hero, About, Techs, Card } from '../components'
-import AgendaIMG from '../assets/img/portfolio/agenda.png'
-import PhoenixStoreIMG from '../assets/img/portfolio/phoenixstore.png'
-import QrIMG from '../assets/img/portfolio/qr.png'
-import LecoIMG from '../assets/img/portfolio/leco.png'
-import WeatherImg from '../assets/img/portfolio/weather.png'
-import ExpenceFrontIMG from '../assets/img/portfolio/expencefront.png'
-import ExpenceBackIMG from '../assets/img/portfolio/expenceback.png'
-import CalendarIMG from '../assets/img/portfolio/calendar.png'
-import CalendarBIMG from '../assets/img/portfolio/calendarb.png'
-import PortalImg from '../assets/img/portfolio/portal.png'
-import FUTVIMG from '../assets/img/portfolio/futv.png'
+import AgendaIMG from '../assets/img/portfolio/agenda.jpg'
+import PhoenixStoreIMG from '../assets/img/portfolio/phoenixstore.jpg'
+import QrIMG from '../assets/img/portfolio/qr.jpg'
+import LecoIMG from '../assets/img/portfolio/leco.jpg'
+import WeatherImg from '../assets/img/portfolio/weather.jpg'
+import ExpenceFrontIMG from '../assets/img/portfolio/expencefront.jpg'
+import ExpenceBackIMG from '../assets/img/portfolio/expenceback.jpg'
+import CalendarIMG from '../assets/img/portfolio/calendar.jpg'
+import CalendarBIMG from '../assets/img/portfolio/calendarb.jpg'
+import PortalImg from '../assets/img/portfolio/portal.jpg'
+import FUTVIMG from '../assets/img/portfolio/futv.jpg'
 
 import NoImg from '../assets/img/portfolio/noimg.jpg'
 
@@ -157,7 +157,7 @@ export default function App() {
     <div ref={wrapperRef} className='main'>
       <main className='bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap'>
         <Header handleTheme={handleTheme} handleLanguaje={handleLanguaje} currentTheme={currentTheme} texts={texts} />
-        <Hero />
+        <Hero title={texts.labels.userTitle} subtitle={texts.labels.userJob} msg={texts.labels.mainMsg} />
 
         <About msg={texts.labels.mainMsg} />
 

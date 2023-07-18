@@ -121,6 +121,34 @@ h6 {
 .lds-ripple div:nth-child(2) {
   animation-delay: -0.5s;
 }
+
+.tech-item {
+  position: relative;
+  overflow: hidden;
+  & > span {
+    position: absolute;
+    bottom: 20px;
+  }
+  & > i {
+    opacity: 0.5;
+  }
+  &:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.1);
+    background-color: transparent;
+    border: none;
+    & > i {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+
+    & > span {
+      bottom: -20px;
+    }
+  }
+}
 @keyframes lds-ripple {
   0% {
     top: 36px;
