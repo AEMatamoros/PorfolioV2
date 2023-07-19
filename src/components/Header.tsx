@@ -6,7 +6,7 @@ export default function Header({ currentTheme, texts, handleTheme, handleLanguaj
   return (
     <header className="main__header w-full bg-light dark:bg-dark  flex items-center justify-between p-8 sticky top-0 z-50">
       {/* <i className="fa-solid fa-code"></i> */}
-      <span className="text-dark dark:text-main text-xl font-bold transform hover:scale-125 cursor-pointer">Alexis Matamoros</span>
+      <span className="text-dark dark:text-main text-xl font-bold cursor-pointer">Alexis Matamoros</span>
       <ul className="flex justify-end items-center gap-8 ">
         <li>
           {/* <label
