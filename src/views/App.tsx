@@ -46,7 +46,7 @@ export default function App() {
         <About title={texts.labels.mainTitle} msg={texts.labels.mainMsg} />
         <Techs />
         <Experience title={texts.labels.experience} currentLanguaje={type} />
-        <Portfolio title={texts.labels.mainTitle} currentLanguaje={type} />
+        <Portfolio title={texts.labels.proyectsTitle} currentLanguaje={type} />
         <Footer msg={texts.labels.footerText} />
         <GoTop />
         <span className='lamp'></span>
