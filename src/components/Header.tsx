@@ -4,7 +4,7 @@ import { scrollToTop } from '../utils/scrollTop';
 
 export default function Header({ currentTheme, texts, handleTheme, handleLanguaje }: iHeaderProps) {
   return (
-    <header className="main__header w-full bg-light dark:bg-dark  flex items-center justify-between p-8 sticky top-0 z-50">
+    <header className="main__header w-full bg-light dark:bg-dark  flex items-center justify-between p-8 sticky top-0 z-10">
       {/* <i className="fa-solid fa-code"></i> */}
       <span className="text-dark dark:text-main text-xl font-bold cursor-pointer">Alexis Matamoros</span>
       <ul className="flex justify-end items-center gap-8 ">
