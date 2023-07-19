@@ -10,7 +10,7 @@ export default function Card({ proyect, currentLanguaje }: { proyect: any, curre
             </div>
             <div className='flex flex-col sm:p-0 md:p-0 lg:p-4 xl:p-8 sm:w-full md:w-full lg:w-7/12 xl:w-7/12'>
                 <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{proyect.name}</h5>
+                    <h3 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{proyect.name}</h3>
                 </a>
                 {currentLanguaje == "ES" ? <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{proyect.descriptionES}</p>
                     : <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{proyect.descriptionEN}</p>
