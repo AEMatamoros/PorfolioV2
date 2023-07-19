@@ -9,22 +9,22 @@ import GoTop from '../components/shareds/GoTop';
 
 export default function App() {
   // Init in DarkMode, Init Lamp Effect
-  // useEffect(() => {
-  //   let pos = document.documentElement
-  //   const handleMouseMove = (event: any) => {
-  //     pos.style.setProperty("--x", event.clientX + "px")
-  //     pos.style.setProperty("--y", event.clientY + "px")
-  //   };
+  useEffect(() => {
+    let pos = document.documentElement
+    const handleMouseMove = (event: any) => {
+      pos.style.setProperty("--x", event.clientX + "px")
+      pos.style.setProperty("--y", event.clientY + "px")
+    };
 
-  //   window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
 
-  //   return () => {
-  //     window.removeEventListener(
-  //       'mousemove',
-  //       handleMouseMove
-  //     );
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener(
+        'mousemove',
+        handleMouseMove
+      );
+    };
+  }, []);
 
   useEffect(() => {
     handleTheme()
@@ -49,7 +49,7 @@ export default function App() {
         <Portfolio title={texts.labels.proyectsTitle} currentLanguaje={type} />
         <Footer msg={texts.labels.footerText} />
         <GoTop />
-        <span className='lamp'></span>
+        {currentTheme === "dark" && <span className='lamp'></span>}
       </main>
 
 
