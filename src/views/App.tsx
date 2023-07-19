@@ -49,7 +49,7 @@ export default function App() {
         <Portfolio title={texts.labels.proyectsTitle} currentLanguaje={type} />
         <Footer msg={texts.labels.footerText} />
         <GoTop />
-        {currentTheme === "dark" && <span className='lamp sm:hidden md:hidden lg:inline-block'></span>}
+        {currentTheme === "dark" && <span className='lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block'></span>}
       </main>
 
 
