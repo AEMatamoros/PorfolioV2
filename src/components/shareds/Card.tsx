@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function Card({ proyect, currentLanguaje }: { proyect: any, currentLanguaje: string }) {
     return (
 
-        <div className="custom-card sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-5/12 p-6 bg-glass border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-center items-center">
+        <div className="custom-card sm:w-full md:w-full lg:w-full xl:w-5/12 2xl:w-4/12 p-6 bg-glass border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-center items-center">
             <div className="sm:w-full md:w-full lg:w-5/12 xl:w-5/12 proyect-img-container">
                 <LazyLoadImage src={proyect.img} alt="Calendar" className='proyect-img' />
             </div>
