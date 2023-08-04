@@ -12,24 +12,25 @@ let exp = [
 export default function Experience({ title, currentLanguaje }: { title: string, currentLanguaje: string }) {
     return (
         <section className='main__exp w-full p-4 sm:p-4 md:p-4 lg:p-16 xl:p16 duration-75 flex flex-wrap gap-8 justify-center'>
-            <h2 className='font-bold w-full text-center'>{title}</h2>
-            {exp.map((place, index) => <div key={index} className="border rounded-lg p-6 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-3/12 w-full h-auto transform hover:scale-105 hover:shadow-lg" >
+            <div className="container flex flex-wrap gap-8 justify-center items-center">
+            <h2 className='font-bold w-full text-center text-main'>{title}</h2>
+            {exp.map((place, index) => <div key={index} className="experience__card p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white " >
                 <div className="flex flex-wrap items-center">
-                    <div className="w-full pt-8 flex flex-col justify-between">
+                    <div className="w-full pt-8 flex flex-col justify-between items-center">
                         <h2 className="font-bold text-2xl">{place.name}</h2>
-                        {currentLanguaje === "ES" ? <p className="text-xl leading-relaxed ">{place.descriptionES}</p> : <p className="text-xl leading-relaxed ">{place.descriptionEN}</p>}
-                        <div className="flex flex-wrap text-center pt-4 mb-2">
+                        {currentLanguaje === "ES" ? <p className="text-xl leading-relaxed text-center">{place.descriptionES}</p> : <p className="text-xl leading-relaxed ">{place.descriptionEN}</p>}
+                        <div className="flex flex-wrap justify-center items-center text-center pt-2">
                             {place.tecs.map((tec, index) => <div key={index} className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-green-400 ">{tec}</div>)}
                         </div>
-                        <ul className="text-base mt-4 list-disc list-inside  leading-relaxed">
-                            <li>{formatDate(place.time)}</li>
-                            {place.current && <li className='text-main font-semibold'>Actualidad</li>}
+                        <ul className="text-base mt-0 list-none list-inside  leading-relaxed">
+                            <li className='text-center'>{formatDate(place.time)}</li>
+                            {place.current && <li className='text-main font-semibold text-center'>Actualidad</li>}
 
                         </ul>
                     </div>
                 </div>
             </div>)}
-
+            </div>
         </section>
     )
 }

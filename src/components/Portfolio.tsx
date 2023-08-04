@@ -133,9 +133,12 @@ const proyects = [{
 export default function Portfolio({ title, currentLanguaje }: { title: string, currentLanguaje: string }) {
     return (
         <section className="main__work  w-full flex flex-col justify-center items-center p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16">
-            <h2 className='font-bold mb-4'>{title}</h2>
+            <div className="container">
+
+            <h2 className='font-bold mb-4 text-main'>{title}</h2>
             <div className="proyects-container flex flex-wrap gap-8 justify-center items-center w-full">
                 {proyects.map((proyect, index) => <Card proyect={proyect} key={index} currentLanguaje={currentLanguaje} />)}
+            </div>
             </div>
         </section>
     )
