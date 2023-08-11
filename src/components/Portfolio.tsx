@@ -37,6 +37,16 @@ const proyects = [
   },
   {
     hoverColor: "text-gray-500",
+    name: "Phoenix Store",
+    descriptionES:
+      "Ecommerce, creado con la finalidad de venta de productos varios.(La API se encuentra abajo actualmente)",
+    descriptionEN:
+      "Ecommerce, created for the purpose of selling various products. (The API is currently below)",
+    img: PhoenixStoreIMG,
+    url: "https://e-phoenixstoreunah.web.app/landing",
+  },
+  {
+    hoverColor: "text-gray-500",
     name: "Our Expences - Client",
     descriptionES:
       "Aplicacion de manejo de despensa. Desarrollado en React, TypeScript.",
@@ -87,16 +97,6 @@ const proyects = [
   },
   {
     hoverColor: "text-gray-500",
-    name: "Phoenix Store",
-    descriptionES:
-      "Ecommerce, creado con la finalidad de venta de productos varios.(La API se encuentra abajo actualmente)",
-    descriptionEN:
-      "Ecommerce, created for the purpose of selling various products. (The API is currently below)",
-    img: PhoenixStoreIMG,
-    url: "https://e-phoenixstoreunah.web.app/landing",
-  },
-  {
-    hoverColor: "text-gray-500",
     name: "QR Code Generator",
     descriptionES:
       "API para codificar una cadena como una imagen base 64 con un codigo QR, asi como encriptar y desencriptar la data dentro del mismo.Desarrollado en NODEJS, Express.",
@@ -144,20 +144,29 @@ const proyects = [
 export default function Portfolio({
   title,
   currentLanguaje,
+  currentTheme,
+  reference,
 }: {
   title: string;
   currentLanguaje: string;
+  currentTheme: any;
+  reference: any;
 }) {
   return (
-    <section className="main__work  w-full flex flex-col justify-center items-center p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16 section-hidden">
+    <section
+      className="main__work  w-full flex flex-col justify-center items-center p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16 section-hidden"
+      id="portfolio"
+      ref={reference}
+    >
       <div className="container">
-        <h2 className="font-bold mb-4 text-main">{title}</h2>
-        <div className="proyects-container flex flex-wrap gap-8 justify-between items-center w-full">
+        <h2 className="font-bold mb-4 text-pink-500 text-center">{title}</h2>
+        <div className="proyects-container flex flex-wrap justify-between items-center w-full ">
           {proyects.map((proyect, index) => (
             <Card
               proyect={proyect}
               key={index}
               currentLanguaje={currentLanguaje}
+              currentTheme={currentTheme}
             />
           ))}
         </div>

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 //Custom Hooks
 import { SelectLanguajeHook, SelectThemeHook } from "../hooks";
 
@@ -13,6 +13,7 @@ import {
 } from "../components";
 import Footer from "../components/Footer";
 import GoTop from "../components/shareds/GoTop";
+import Navigator from "../components/shareds/Navigator";
 
 export default function App() {
   // Init in DarkMode, Init Lamp Effect
@@ -71,6 +72,11 @@ export default function App() {
   //Languaje
   let { currentLanguaje: texts, handleLanguaje, type } = SelectLanguajeHook();
 
+  //Scroll Navigation
+  const heroRef = useRef(null); //represents main section
+  const aboutRef = useRef(null); //represents about section
+  const expRef = useRef(null);
+  const proyectsRef = useRef(null);
   return (
     <div ref={wrapperRef} className="main">
       <main className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap relative">
@@ -84,20 +90,32 @@ export default function App() {
           title={texts.labels.userTitle}
           subtitle={texts.labels.userJob}
           msg={texts.labels.mainHero}
+          reference={heroRef}
         />
         <GoTop />
-        <div className="w-full bg-light dark:bg-dark">
+        <div className="w-full bg-light dark:bg-dark" ref={aboutRef}>
           <div className="container flex flex-wrap ">
             <About title={texts.labels.mainTitle} msg={texts.labels.mainMsg} />
             <Techs />
           </div>
         </div>
-        <Experience title={texts.labels.experience} currentLanguaje={type} />
-        <Portfolio title={texts.labels.proyectsTitle} currentLanguaje={type} />
+        <Experience title={texts.labels.experience} currentLanguaje={type} reference={expRef}/>
+        <Portfolio
+          title={texts.labels.proyectsTitle}
+          currentLanguaje={type}
+          currentTheme={currentTheme}
+          reference={proyectsRef}
+        />
         <Footer msg={texts.labels.footerText} />
-        {currentTheme === "dark" && (
+        <Navigator
+          heroRef={heroRef}
+          aboutRef={aboutRef}
+          expRef={expRef}
+          proyectsRef={proyectsRef}
+        ></Navigator>
+        {/* {currentTheme === "dark" && (
           <span className="lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block"></span>
-        )}
+        )} */}
       </main>
     </div>
     //   <Suspense fallback={<Loader />}>

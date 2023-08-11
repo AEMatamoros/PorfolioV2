@@ -9,11 +9,13 @@ export default function Header({
   handleLanguaje,
 }: iHeaderProps) {
   return (
-    <header className="main__header w-full bg-light dark:bg-dark  flex items-center justify-between p-8 sticky top-0 z-10">
+    <header
+      className="main__header w-full bg-light dark:bg-dark  flex items-center justify-between p-8 sticky top-0 z-10"
+    >
       {/* <i className="fa-solid fa-code"></i> */}
       <nav className="container flex justify-between">
         <span
-          className="text-dark dark:text-main text-xl font-bold cursor-pointer"
+          className="text-dark dark:text-light text-xl font-bold cursor-pointer"
           onClick={scrollToTop}
         >
           Alexis Matamoros

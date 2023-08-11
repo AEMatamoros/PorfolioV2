@@ -4,41 +4,27 @@ export default function Hero({
   title,
   subtitle,
   msg,
+  reference,
 }: {
   title: string;
   subtitle: string;
   msg: string;
+  reference: any;
 }) {
   return (
-    <section className="main__hero flex flex-col justify-center w-full ">
+    <section
+      className="main__hero flex flex-col justify-center w-full "
+      id="hero"
+      ref={reference}
+    >
       <div className="main__hero__text flex flex-col justify-center items-center container m-auto text-center ">
-        <h1 className="text-main">{title}</h1>
-        <h2>{subtitle}</h2>
-        <p className="text-center mt-4">{msg} </p>
-        <ul className="flex justify-center items-center gap-4 p-8">
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/AEMatamoros"
-              className="flex flex-col"
-            >
-              <i className="fa-3x fa-brands fa-github-alt hover:text-main cursor-pointer"></i>
-              <span className="text-transparent">Github</span>
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/alexis-eduardo-matamoros-mayorquin-3a87411b5"
-              className="flex flex-col"
-            >
-              <i className="fa-3x fa-brands fa-linkedin hover:text-main cursor-pointer"></i>
-              <span className="text-transparent">LinkedIn</span>
-            </a>
-          </li>
-        </ul>
+        <h1 className="text-main text-6xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl first-text-animation">
+          {title}
+        </h1>
+        <h2 className="second-text-animation">{subtitle}</h2>
+        <p className="third-text-animation text-center mt-4 text-pink-300 ">
+          {msg}{" "}
+        </p>
       </div>
     </section>
   );

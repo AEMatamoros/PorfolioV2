@@ -41,22 +41,28 @@ let exp = [
 export default function Experience({
   title,
   currentLanguaje,
+  reference,
 }: {
   title: string;
   currentLanguaje: string;
+  reference: any;
 }) {
   return (
-    <section className="main__exp w-full p-4 sm:p-4 md:p-4 lg:p-16 xl:p16 duration-75 flex flex-wrap gap-8 justify-center section-hidden">
+    <section
+      className="main__exp w-full p-4 sm:p-4 md:p-4 lg:p-16 xl:p16 duration-75 flex flex-wrap gap-8 justify-center section-hidden"
+      id="experience"
+      ref={reference}
+    >
       <div className="container flex flex-wrap gap-8 justify-center items-center">
-        <h2 className="font-bold w-full text-center text-main">{title}</h2>
+        <h2 className="font-bold w-full text-center text-pink-500">{title}</h2>
         {exp.map((place, index) => (
           <div
             key={index}
             className="experience__card p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white "
           >
             <div className="flex flex-wrap items-center">
-              <div className="w-full pt-8 flex flex-col justify-between items-center">
-                <h2 className="font-bold text-2xl">{place.name}</h2>
+              <div className="w-full flex flex-col justify-between items-center">
+                <h3 className="font-bold text-2xl">{place.name}</h3>
                 {currentLanguaje === "ES" ? (
                   <p className="text-xl leading-relaxed text-center">
                     {place.descriptionES}
