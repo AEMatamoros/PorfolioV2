@@ -80,6 +80,8 @@ li {
 
 .main__header {
   height: 10vh;
+  position: fixed;
+  top: 0;
 }
 
 .main__hero {
@@ -273,4 +275,10 @@ li {
 .section-hidden.show:nth-last-child(odd),
 .section-hidden.show:nth-last-child(even) {
   transform: translateX(0);
+}
+
+.goTop {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
 }

@@ -1,16 +1,26 @@
 import React from "react";
 import { iHeaderProps } from "../interfaces/iCommons";
-import { scrollToTop } from '../utils/scrollTop';
+import { scrollToTop } from "../utils/scrollTop";
 
-export default function Header({ currentTheme, texts, handleTheme, handleLanguaje }: iHeaderProps) {
+export default function Header({
+  currentTheme,
+  texts,
+  handleTheme,
+  handleLanguaje,
+}: iHeaderProps) {
   return (
     <header className="main__header w-full bg-light dark:bg-dark  flex items-center justify-between p-8 sticky top-0 z-10">
       {/* <i className="fa-solid fa-code"></i> */}
       <nav className="container flex justify-between">
-      <span className="text-dark dark:text-main text-xl font-bold cursor-pointer">Alexis Matamoros</span>
-      <ul className="flex justify-end items-center gap-8 ">
-        <li>
-          {/* <label
+        <span
+          className="text-dark dark:text-main text-xl font-bold cursor-pointer"
+          onClick={scrollToTop}
+        >
+          Alexis Matamoros
+        </span>
+        <ul className="flex justify-end items-center gap-8 ">
+          <li>
+            {/* <label
             htmlFor="toggle-darkmode"
             className="flex items-center cursor-pointer relative "
           >
@@ -30,17 +40,20 @@ export default function Header({ currentTheme, texts, handleTheme, handleLanguaj
               &nbsp;
             </span>
           </label> */}
-          <span className="ml-3 text-sm font-medium text-main dark:text-white text-center cursor-pointer" onClick={handleTheme}>
-            {currentTheme !== "dark" ? (
-              <i className="fa-solid fa-sun"></i>
-            ) : (
-              <i className="fa-solid fa-moon"></i>
-            )}
-            &nbsp;
-          </span>
-        </li>
-        <li>
-          {/* <label
+            <span
+              className="ml-3 text-sm font-medium text-main dark:text-white text-center cursor-pointer"
+              onClick={handleTheme}
+            >
+              {currentTheme !== "dark" ? (
+                <i className="fa-solid fa-sun"></i>
+              ) : (
+                <i className="fa-solid fa-moon"></i>
+              )}
+              &nbsp;
+            </span>
+          </li>
+          <li>
+            {/* <label
             htmlFor="toggle-languaje"
             className="flex items-center cursor-pointer relative"
           >
@@ -55,11 +68,14 @@ export default function Header({ currentTheme, texts, handleTheme, handleLanguaj
               {texts.labels.languaje}
             </span>
           </label> */}
-          <span className="ml-3 text-main text-sm font-medium dark:text-white cursor-pointer" onClick={handleLanguaje}>
-            {texts.labels.languaje}
-          </span>
-        </li>
-      </ul>
+            <span
+              className="ml-3 text-main text-sm font-medium dark:text-white cursor-pointer"
+              onClick={handleLanguaje}
+            >
+              {texts.labels.languaje}
+            </span>
+          </li>
+        </ul>
       </nav>
     </header>
   );

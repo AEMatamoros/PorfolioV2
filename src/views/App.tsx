@@ -73,7 +73,7 @@ export default function App() {
 
   return (
     <div ref={wrapperRef} className="main">
-      <main className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap">
+      <main className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap relative">
         <Header
           handleTheme={handleTheme}
           handleLanguaje={handleLanguaje}
@@ -85,6 +85,7 @@ export default function App() {
           subtitle={texts.labels.userJob}
           msg={texts.labels.mainHero}
         />
+        <GoTop />
         <div className="w-full bg-light dark:bg-dark">
           <div className="container flex flex-wrap ">
             <About title={texts.labels.mainTitle} msg={texts.labels.mainMsg} />
@@ -94,7 +95,6 @@ export default function App() {
         <Experience title={texts.labels.experience} currentLanguaje={type} />
         <Portfolio title={texts.labels.proyectsTitle} currentLanguaje={type} />
         <Footer msg={texts.labels.footerText} />
-        <GoTop />
         {currentTheme === "dark" && (
           <span className="lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block"></span>
         )}
