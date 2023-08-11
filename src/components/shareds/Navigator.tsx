@@ -20,7 +20,7 @@ export default function Navigator({
           onClick={() => {
             handleScroll(heroRef.current);
           }}
-          className="w-16  h-16 bg-main flex justify-center gap-x-8 items-center hover:bg-pink-500 dark:text-light cursor-pointer"
+          className="w-16  h-16 bg-main flex justify-center gap-x-8 items-center hover:bg-pink-500 text-light cursor-pointer"
         >
           <i className="fa-xl fa-solid fa-house-user"></i>
         </li>
@@ -28,7 +28,7 @@ export default function Navigator({
           onClick={() => {
             handleScroll(aboutRef.current);
           }}
-          className="w-16  h-16 bg-main flex justify-center gap-x-8 items-center hover:bg-pink-500 dark:text-light cursor-pointer"
+          className="w-16  h-16 bg-main flex justify-center gap-x-8 items-center hover:bg-pink-500 text-light cursor-pointer"
         >
           <i className="fa-xl fa-regular fa-address-card"></i>
         </li>
