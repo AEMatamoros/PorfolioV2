@@ -33,7 +33,7 @@ const proyects = [
       "Entertainment platform. Developed in Angular, NodeJS, Express, SQL.",
     img: FUTVIMG,
     icon: "fa-light fa-e",
-    url: "https://portalunico.iaip.gob.hn/#/homeLanding",
+    url: "https://www.futvcr.com/",
   },
   {
     hoverColor: "text-gray-500",
