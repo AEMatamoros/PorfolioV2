@@ -23,7 +23,7 @@ export default function Hero({
               href="https://github.com/AEMatamoros"
               className="flex flex-col"
             >
-              <i className="fa-3x fa-brands fa-github-alt hover:text-main cursor-pointer transform hover:scale-110"></i>
+              <i className="fa-3x fa-brands fa-github-alt hover:text-main cursor-pointer"></i>
               <span className="text-transparent">Github</span>
             </a>
           </li>
@@ -34,7 +34,7 @@ export default function Hero({
               href="https://www.linkedin.com/in/alexis-eduardo-matamoros-mayorquin-3a87411b5"
               className="flex flex-col"
             >
-              <i className="fa-3x fa-brands fa-linkedin hover:text-main cursor-pointer transform hover:scale-110"></i>
+              <i className="fa-3x fa-brands fa-linkedin hover:text-main cursor-pointer"></i>
               <span className="text-transparent">LinkedIn</span>
             </a>
           </li>
