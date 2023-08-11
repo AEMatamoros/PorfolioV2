@@ -2,13 +2,14 @@
 
 $aX: 50%;
 $aY: 50%;
-
+// $cubic: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+$cubic: ease;
 :root {
   font-family: "Inter", sans-serif, ui-sans-serif, system-ui, -apple-system;
 }
 
 * {
-  transition: all 0.3s;
+  transition: all 0.3s $cubic;
 }
 html {
   padding: 0;
@@ -60,6 +61,7 @@ li {
   }
 }
 .main {
+  overflow: hidden;
 }
 
 .main__wrapper {
@@ -70,7 +72,7 @@ li {
 }
 
 .main__hero {
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .main__about {
@@ -95,7 +97,6 @@ li {
   justify-content: center;
   align-items: center;
 }
-
 
 .glass-bg {
   background: rgba(255, 255, 255, 0.2);
@@ -238,4 +239,27 @@ li {
 }
 .experience__card {
   min-height: 360px;
+}
+
+.section-hidden {
+  opacity: 0;
+  transition: all 0.8s $cubic;
+  filter: blur(10px);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+.section-hidden:nth-last-child(even) {
+  transform: translateX(-100%);
+}
+
+.section-hidden:nth-last-child(odd) {
+  transform: translateX(100%);
+}
+
+.section-hidden.show:nth-last-child(odd),
+.section-hidden.show:nth-last-child(even) {
+  transform: translateX(0);
 }

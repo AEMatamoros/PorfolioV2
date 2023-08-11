@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 //Custom Hooks
 import { SelectLanguajeHook, SelectThemeHook } from "../hooks";
 
@@ -16,7 +16,7 @@ import GoTop from "../components/shareds/GoTop";
 
 export default function App() {
   // Init in DarkMode, Init Lamp Effect
-  useEffect(() => {
+  useLayoutEffect(() => {
     let pos = document.documentElement;
     const handleMouseMove = (event: any) => {
       pos.style.setProperty("--x", event.clientX + "px");
@@ -30,9 +30,41 @@ export default function App() {
     };
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     handleTheme();
   }, []);
+
+  useLayoutEffect(() => {
+    // Show on Scroll Option 1
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".section-hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+    // //Show on Scroll Option 2
+    // function reveal() {
+    //   const hiddenElements = document.querySelectorAll(".section-hidden");
+    //   hiddenElements.forEach((element) => {
+    //     let windowHeight = window.innerHeight;
+    //     let revealTop = element.getBoundingClientRect().top;
+    //     let revealPoint = 150;
+    //     if (revealTop < windowHeight - revealPoint) {
+    //       element.classList.add("show");
+    //     } else {
+    //       element.classList.remove("show");
+    //     }
+    //   });
+    // }
+
+    // window.addEventListener("scroll", reveal);
+  }, []);
+
   //Theme
   let { wrapperRef, handleTheme, currentTheme } = SelectThemeHook();
 
@@ -63,7 +95,9 @@ export default function App() {
         <Portfolio title={texts.labels.proyectsTitle} currentLanguaje={type} />
         <Footer msg={texts.labels.footerText} />
         <GoTop />
-        {currentTheme === "dark" && <span className='lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block'></span>}
+        {currentTheme === "dark" && (
+          <span className="lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block"></span>
+        )}
       </main>
     </div>
     //   <Suspense fallback={<Loader />}>
