@@ -292,7 +292,7 @@ section {
 
 .section-hidden {
   opacity: 0;
-  transition: all 0.8s $cubic;
+  transition: all 1s $cubic;
   filter: blur(10px);
 }
 
