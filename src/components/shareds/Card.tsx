@@ -26,9 +26,13 @@ export default function Card({
             {proyect.descriptionEN}
           </p>
         )} */}
-        <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-light bg-transparent border-none focus:ring-4 focus:outline-none bg-main hover:bg-pink-500">
+        <a
+          href={proyect.url}
+          target="_blank"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-light bg-transparent border-none focus:ring-4 bg-main hover:bg-indigo-500 focus:outline-none focus-within:outline-none"
+        >
           {currentLanguaje == "ES" ? "Detalles" : "Details"}
-        </button>
+        </a>
       </div>
     </div>
   );

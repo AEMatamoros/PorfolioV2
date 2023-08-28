@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 //Custom Hooks
 import { SelectLanguajeHook, SelectThemeHook } from "../hooks";
 
@@ -40,6 +40,7 @@ export default function App() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          setActive(entry.target.id);
           entry.target.classList.add("show");
         } else {
           entry.target.classList.remove("show");
@@ -77,6 +78,8 @@ export default function App() {
   const aboutRef = useRef(null); //represents about section
   const expRef = useRef(null);
   const proyectsRef = useRef(null);
+  // Active Page
+  const [active, setActive] = useState("home");
   return (
     <div ref={wrapperRef} className="main">
       <main className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap relative">
@@ -93,13 +96,24 @@ export default function App() {
           reference={heroRef}
         />
         <GoTop />
-        <div className="w-full bg-light dark:bg-dark" ref={aboutRef}>
+        {/* <div className="w-full bg-light dark:bg-dark" ref={aboutRef}>
           <div className="container flex flex-wrap ">
             <About title={texts.labels.mainTitle} msg={texts.labels.mainMsg} />
             <Techs />
           </div>
-        </div>
-        <Experience title={texts.labels.experience} currentLanguaje={type} reference={expRef}/>
+        </div> */}
+        <About
+          title={texts.labels.mainTitle}
+          msg={texts.labels.mainMsg}
+          reference={aboutRef}
+        />
+        <Techs title={texts.labels.techsTitle} />
+        <div className="divider bg-main dark:bg-indigo-500 opacity-10"></div>
+        <Experience
+          title={texts.labels.experience}
+          currentLanguaje={type}
+          reference={expRef}
+        />
         <Portfolio
           title={texts.labels.proyectsTitle}
           currentLanguaje={type}
@@ -112,6 +126,7 @@ export default function App() {
           aboutRef={aboutRef}
           expRef={expRef}
           proyectsRef={proyectsRef}
+          active={active}
         ></Navigator>
         {/* {currentTheme === "dark" && (
           <span className="lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block"></span>

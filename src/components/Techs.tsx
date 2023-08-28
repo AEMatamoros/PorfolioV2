@@ -50,26 +50,32 @@ let techs = [
     icon: `fa-brands fa-github`,
   },
 ];
-export default function Techs() {
+export default function Techs({ title }: { title: string }) {
   return (
-    <section className="main__techs  flex justify-center items-center dark:text-main w-full sm:w-full md:w-full lg:w-6/12 xl:w-6/12 2xl:w-612 sm:mt-8 md:mt-8 lg:mt-0 xl:mt-0 2xl:w-612 sm:p-4 md:p-4 lg:p-8 xl:p-8 text-center section-hidden">
-      <ul className="tech-container  main__about__icons text-3xl flex flex-wrap justify-center items-center gap-4 p-4">
-        {techs.map((tec, index) => (
-          <li className="p-1 techs__standar" key={index} title={tec.name}>
-            <div
-              className={
-                "tech-item h-full w-full card  transform hover:scale-110 cursor-pointer transition-all duration-300 flex flex-col justify-center items-center " +
-                tec.hoverColor
-              }
-            >
-              <i
-                className={`${tec.icon} sm:fa-2x lg:fa-2x xl:fa-2x 2xl:fa-2x fa-2x transform hover:scale-150`}
-              ></i>
-              {/* <span className='text-base font-bold mt-4'>{tec.name}</span> */}
-            </div>
-          </li>
-        ))}
-      </ul>
+    <section
+      className="main__techs  flex justify-center items-center dark:text-main w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full sm:mt-8 md:mt-8 lg:mt-0 xl:mt-0 2xl:w-612 sm:p-4 md:p-4 lg:p-8 xl:p-8 text-center section-hidden"
+      id="techs"
+    >
+      <div className="container">
+        <h2 className="font-bold text-indigo-500">{title}</h2>
+        <ul className="tech-container  main__about__icons text-3xl flex flex-wrap justify-center items-center gap-4 p-4">
+          {techs.map((tec, index) => (
+            <li className="p-1 techs__standar" key={index} title={tec.name}>
+              <div
+                className={
+                  "tech-item h-full w-full card  transform hover:scale-110 cursor-pointer transition-all duration-300 flex flex-col justify-center items-center " +
+                  tec.hoverColor
+                }
+              >
+                <i
+                  className={`${tec.icon} sm:fa-2x lg:fa-2x xl:fa-2x 2xl:fa-2x fa-2x transform hover:scale-150`}
+                ></i>
+                {/* <span className='text-base font-bold mt-4'>{tec.name}</span> */}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

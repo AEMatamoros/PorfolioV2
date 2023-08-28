@@ -13,7 +13,7 @@ export default function Hero({
 }) {
   return (
     <section
-      className="main__hero flex flex-col justify-center w-full "
+      className="main__hero flex flex-col justify-center w-full section-hidden"
       id="hero"
       ref={reference}
     >

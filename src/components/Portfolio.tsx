@@ -159,7 +159,7 @@ export default function Portfolio({
       ref={reference}
     >
       <div className="container">
-        <h2 className="font-bold mb-4 text-pink-500 text-center">{title}</h2>
+        <h2 className="font-bold mb-4 text-indigo-500 text-center">{title}</h2>
         <div className="proyects-container flex flex-wrap justify-between items-center w-full ">
           {proyects.map((proyect, index) => (
             <Card

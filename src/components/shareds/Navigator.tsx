@@ -5,6 +5,7 @@ export default function Navigator({
   aboutRef,
   expRef,
   proyectsRef,
+  active,
 }: any) {
   const handleScroll = (ref: any) => {
     window.scrollTo({
@@ -20,33 +21,43 @@ export default function Navigator({
           onClick={() => {
             handleScroll(heroRef.current);
           }}
-          className="w-16  h-16 bg-main flex justify-center gap-x-8 items-center hover:bg-pink-500 text-light cursor-pointer"
+          className={`w-16  h-16 ${
+            active == "hero" ? "text-indigo-500" : "text-main"
+          }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
-          <i className="fa-xl fa-solid fa-house-user"></i>
+          <i className="fa-xl fa-brands fa-fort-awesome-alt"></i>
         </li>
         <li
           onClick={() => {
             handleScroll(aboutRef.current);
           }}
-          className="w-16  h-16 bg-main flex justify-center gap-x-8 items-center hover:bg-pink-500 text-light cursor-pointer"
+          className={`w-16  h-16 ${
+            active == "about" || active == "techs"
+              ? "text-indigo-500"
+              : "text-main"
+          }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
-          <i className="fa-xl fa-regular fa-address-card"></i>
+          <i className="fa-xl fa-regular fa-circle-user"></i>
         </li>
         <li
           onClick={() => {
             handleScroll(expRef.current);
           }}
-          className="w-16  h-16 bg-main flex justify-center gap-x-8 items-center hover:bg-pink-500 text-light cursor-pointer"
+          className={`w-16  h-16 ${
+            active == "experience" ? "text-indigo-500" : "text-main"
+          }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
-          <i className="fa-xl fa-solid fa-book"></i>
+          <i className="fa-xl fa-solid fa-circle-dot"></i>
         </li>
         <li
           onClick={() => {
             handleScroll(proyectsRef.current);
           }}
-          className="w-16  h-16 bg-main flex justify-center gap-x-8 items-center hover:bg-pink-500 text-light cursor-pointer"
+          className={`w-16  h-16 ${
+            active == "portfolio" ? "text-indigo-500" : "text-main"
+          }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
-          <i className="fa-xl fa-solid fa-code"></i>
+          <i className="fa-xl fa-brands fa-connectdevelop"></i>
         </li>
       </ul>
     </aside>

@@ -20,6 +20,7 @@ export const ENlabels = {
   tecnologiesTitle: "Tecs",
   contactTitle: "Contact",
   proyectsTitle: "Proyects",
+  techsTitle: "Techs",
   experience: "Experience",
   footerText: "Generated with REACT, TailwindCSS, VSCode and a lot of love.",
 };

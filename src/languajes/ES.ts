@@ -20,6 +20,7 @@ export const ESlabels = {
   tecnologiesTitle: "Tecnologias",
   contactTitle: "Contacto",
   proyectsTitle: "Proyectos",
+  techsTitle: "Tecnologias",
   experience: "Experiencia",
   footerText: "Generado con REACT, TailwindCSS, VSCode y mucho amor.",
 };

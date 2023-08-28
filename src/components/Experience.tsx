@@ -49,16 +49,18 @@ export default function Experience({
 }) {
   return (
     <section
-      className="main__exp w-full p-4 sm:p-4 md:p-4 lg:p-16 xl:p16 duration-75 flex flex-wrap gap-8 justify-center section-hidden"
+      className="main__exp w-full p-4 sm:p-4 md:p-4 lg:p-16 xl:p16 duration-75 flex flex-wrap gap-4 justify-center items-center section-hidden"
       id="experience"
       ref={reference}
     >
       <div className="container flex flex-wrap gap-8 justify-center items-center">
-        <h2 className="font-bold w-full text-center text-pink-500">{title}</h2>
+        <h2 className="font-bold w-full text-center text-indigo-500">
+          {title}
+        </h2>
         {exp.map((place, index) => (
           <div
             key={index}
-            className="experience__card p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white "
+            className="experience__card flex items-center justify-center p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white "
           >
             <div className="flex flex-wrap items-center">
               <div className="w-full flex flex-col justify-between items-center">
@@ -76,7 +78,7 @@ export default function Experience({
                   {place.tecs.map((tec, index) => (
                     <div
                       key={index}
-                      className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-green-400 "
+                      className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-indigo-400 text-white "
                     >
                       {tec}
                     </div>
