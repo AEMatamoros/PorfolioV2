@@ -131,9 +131,9 @@ export default function App() {
           proyectsRef={proyectsRef}
           active={active}
         ></Navigator>
-        {/* {currentTheme === "dark" && (
+        {currentTheme === "dark" && (
           <span className="lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block"></span>
-        )} */}
+        )}
       </main>
     </div>
     //   <Suspense fallback={<Loader />}>

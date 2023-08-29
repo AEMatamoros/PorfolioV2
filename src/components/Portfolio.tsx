@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "./index";
+import useLightbox from "../hooks/useLightbox";
 import AgendaIMG from "../assets/img/portfolio/agenda.jpg";
 import PhoenixStoreIMG from "../assets/img/portfolio/phoenixstore.jpg";
 import QrIMG from "../assets/img/portfolio/qr.jpg";
@@ -17,55 +18,55 @@ const proyects = [
     hoverColor: "text-gray-500",
     name: "Portal de Transparencia Honduras",
     descriptionES:
-      "Es una plataforma tecnológica gratuita, creada para facilitar a las personas el ejercicio del derecho de acceso a la información. Desarrollado en React, Django, ElasticSearch.",
+      "Es una plataforma tecnológica gratuita, creada para facilitar a las personas el ejercicio del derecho de acceso a la información.",
     descriptionEN:
-      "It is a free technological platform, created to make it easier for people to exercise the right of access to information. Developed in React, Django, ElasticSearch.",
+      "It is a free technological platform, created to make it easier for people to exercise the right of access to information.",
     img: PortalImg,
     icon: "fa-light fa-e",
     url: "https://portalunico.iaip.gob.hn/#/homeLanding",
+    techs: ["React", "Django", "ElasticSearch"],
   },
   {
     hoverColor: "text-gray-500",
     name: "FUTV - CMS",
     descriptionES:
-      "Plataforma de entretenimiento.Desarrollado en Angular, NodeJS, Express, SQL.",
-    descriptionEN:
-      "Entertainment platform. Developed in Angular, NodeJS, Express, SQL.",
+      "Plataforma de entretenimiento, blogs live streaming, se desarrollo tanto el client side, como el panel de adminsitracion de contenido",
+    descriptionEN: "Entertainment platform.",
     img: FUTVIMG,
     icon: "fa-light fa-e",
     url: "https://www.futvcr.com/",
+    techs: ["Angular", "NodeJS", "Express", "SQL"],
   },
   {
     hoverColor: "text-gray-500",
     name: "Phoenix Store",
     descriptionES:
-      "Ecommerce, creado con la finalidad de venta de productos varios.(La API se encuentra abajo actualmente)",
+      "Ecommerce, creado con la finalidad de venta de productos varios.",
     descriptionEN:
-      "Ecommerce, created for the purpose of selling various products. (The API is currently below)",
+      "Ecommerce, created for the purpose of selling various products.",
     img: PhoenixStoreIMG,
     url: "https://e-phoenixstoreunah.web.app/landing",
+    techs: ["Angular", "NodeJS", "Express", "SQL"],
   },
   {
     hoverColor: "text-gray-500",
     name: "Our Expences - Client",
-    descriptionES:
-      "Aplicacion de manejo de despensa. Desarrollado en React, TypeScript.",
-    descriptionEN:
-      "Pantry management application. Developed in React, TypeScript.",
+    descriptionES: "Aplicacion de manejo de despensa.",
+    descriptionEN: "Pantry management application.",
     img: ExpenceFrontIMG,
     icon: "fa-light fa-e",
     url: "https://github.com/AEMatamoros/our-expence",
+    techs: ["React", "TypeScript"],
   },
   {
     hoverColor: "text-gray-500",
     name: "Our Expences - API",
-    descriptionES:
-      "Aplicacion de manejo de despensa. Desarrollado en NESTJS, MONGO, TypeScript.",
-    descriptionEN:
-      "Pantry management application. Developed in NESTJS, MONGO, TypeScript.",
+    descriptionES: "Aplicacion de manejo de despensa.",
+    descriptionEN: "Pantry management application.",
     img: ExpenceBackIMG,
     icon: "fa-light fa-e",
     url: "https://github.com/AEMatamoros/our-expence",
+    techs: ["NESTJS", "MONGO", "TypeScript"],
   },
   {
     hoverColor: "text-gray-500",
@@ -75,15 +76,17 @@ const proyects = [
     img: CalendarIMG,
     icon: "fa-light fa-e",
     url: "https://github.com/AEMatamoros/Calendar-Frontend",
+    techs: ["React"],
   },
   {
     hoverColor: "text-gray-500",
     name: "Calendar - API",
     descriptionES: "Calendario Virtual.Desarrollado en NODEJS, Express.",
-    descriptionEN: "Virtual Calendar. Developed in NODEJS, Express.",
+    descriptionEN: "Virtual Calendar.",
     img: CalendarBIMG,
     icon: "fa-light fa-e",
     url: "https://github.com/AEMatamoros/Calendar-API",
+    techs: ["NODEJS", "Express"],
   },
   {
     hoverColor: "text-green-500",
@@ -94,6 +97,7 @@ const proyects = [
       "Virtual agenda.Developed with NodeJS, Express and the Handlebars template engine.",
     img: AgendaIMG,
     url: "https://github.com/AEMatamoros/Agenda-API",
+    techs: ["NodeJS", "Express"],
   },
   {
     hoverColor: "text-gray-500",
@@ -105,39 +109,43 @@ const proyects = [
     img: QrIMG,
     icon: "fa-light fa-e",
     url: "https://qrg-enerator-alpha.vercel.app/",
+    techs: ["NodeJS", "Express"],
   },
   {
     hoverColor: "text-gray-500",
     name: "Pa'Ya",
     descriptionES:
-      "Pagina de publicidad y venta de productos gratuita con manejo de perfiles de usuario.Desarrollado con Python, Django.",
+      "Pagina de publicidad y venta de productos gratuita con manejo de perfiles de usuario.",
     descriptionEN:
-      "Free advertising and product sales page with user profile management. Developed with Python, Django.",
+      "Free advertising and product sales page with user profile management.",
     img: NoImg,
     icon: "fa-light fa-e",
     url: "https://github.com/AEMatamoros/PA-YA",
+    techs: ["Python", "Django"],
   },
   {
     hoverColor: "text-gray-500",
     name: "LECO(Learn to code)",
     descriptionES:
-      "Aplicacion para aprender a programar de forma visual, y mostrando el codigo generado de salida como codigo de Python.Desarrollado en Go, Vue, DGraph.",
+      "Aplicacion para aprender a programar de forma visual, y mostrando el codigo generado de salida como codigo de Python.",
     descriptionEN:
-      "Application to learn to program visually, and showing the generated output code as Python code. Developed in Go, Vue, DGraph.",
+      "Application to learn to program visually, and showing the generated output code as Python code.",
     img: LecoIMG,
     icon: "fa-light fa-e",
     url: "https://github.com/AEMatamoros/PA-YA",
+    techs: ["GoLang", "Vue", "DGraph"],
   },
   {
     hoverColor: "text-gray-500",
     name: "Consume Weather API",
     descriptionES:
-      "Aplicacion que consume un API externa que brinda el clima respecto a la ubicacion actual o una ciudad.Desarrollado en REACT.",
+      "Aplicacion que consume un API externa que brinda el clima respecto a la ubicacion actual o una ciudad.",
     descriptionEN:
-      "Application that consumes an external API that provides the weather regarding the current location or a city. Developed in REACT.",
+      "Application that consumes an external API that provides the weather regarding the current location or a city.",
     img: WeatherImg,
     icon: "fa-light fa-e",
     url: "https://github.com/AEMatamoros/PA-YA",
+    techs: ["React"],
   },
 ];
 
@@ -152,25 +160,33 @@ export default function Portfolio({
   currentTheme: any;
   reference: any;
 }) {
+  const { Lightbox, handleLightboxShow, setTemplate } = useLightbox();
   return (
-    <section
-      className="main__work  w-full flex flex-col justify-center items-center p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16 section-hidden"
-      id="portfolio"
-      ref={reference}
-    >
-      <div className="container">
-        <h2 className="font-bold mb-4 text-indigo-500 text-center">{title}</h2>
-        <div className="proyects-container flex flex-wrap justify-between items-center w-full ">
-          {proyects.map((proyect, index) => (
-            <Card
-              proyect={proyect}
-              key={index}
-              currentLanguaje={currentLanguaje}
-              currentTheme={currentTheme}
-            />
-          ))}
+    <>
+      <section
+        className="main__work  w-full flex flex-col justify-center items-center p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16 section-hidden"
+        id="portfolio"
+        ref={reference}
+      >
+        <div className="container">
+          <h2 className="font-bold mb-4 text-indigo-500 text-center">
+            {title}
+          </h2>
+          <div className="proyects-container flex flex-wrap justify-between items-center w-full ">
+            {proyects.map((proyect, index) => (
+              <Card
+                proyect={proyect}
+                key={index}
+                currentLanguaje={currentLanguaje}
+                currentTheme={currentTheme}
+                handleLightboxShow={handleLightboxShow}
+                setTemplate={setTemplate}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      {Lightbox}
+    </>
   );
 }
