@@ -96,18 +96,22 @@ export default function App() {
           reference={heroRef}
         />
         <GoTop />
-        {/* <div className="w-full bg-light dark:bg-dark" ref={aboutRef}>
+        <div className="w-full bg-light dark:bg-dark" ref={aboutRef}>
           <div className="container flex flex-wrap ">
-            <About title={texts.labels.mainTitle} msg={texts.labels.mainMsg} />
-            <Techs />
+            <About
+              title={texts.labels.mainTitle}
+              msg={texts.labels.mainMsg}
+              reference={aboutRef}
+            />
+            <Techs title={texts.labels.techsTitle} />
           </div>
-        </div> */}
-        <About
+        </div>
+        {/* <About
           title={texts.labels.mainTitle}
           msg={texts.labels.mainMsg}
           reference={aboutRef}
         />
-        <Techs title={texts.labels.techsTitle} />
+        <Techs title={texts.labels.techsTitle} /> */}
         <Experience
           title={texts.labels.experience}
           currentLanguaje={type}
