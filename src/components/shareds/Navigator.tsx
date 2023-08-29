@@ -16,7 +16,7 @@ export default function Navigator({
   };
   return (
     <aside className="fixed left-8 top-1/4 ">
-      <ul className="hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex  flex-col gap-4">
+      <ul className="hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex  flex-col gap-4 relative">
         <li
           onClick={() => {
             handleScroll(heroRef.current);
@@ -26,6 +26,9 @@ export default function Navigator({
           }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
           <i className="fa-xl fa-brands fa-fort-awesome-alt"></i>
+          {active == "hero" && (
+            <i className="fa-solid fa-code-commit absolute -left-2 text-indigo-500"></i>
+          )}
         </li>
         <li
           onClick={() => {
@@ -38,6 +41,10 @@ export default function Navigator({
           }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
           <i className="fa-xl fa-regular fa-circle-user"></i>
+          {active == "about" ||
+            (active == "techs" && (
+              <i className="fa-solid fa-code-commit absolute -left-2 text-indigo-500"></i>
+            ))}
         </li>
         <li
           onClick={() => {
@@ -48,6 +55,9 @@ export default function Navigator({
           }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
           <i className="fa-xl fa-solid fa-circle-dot"></i>
+          {active == "experience" && (
+            <i className="fa-solid fa-code-commit absolute -left-2 text-indigo-500"></i>
+          )}
         </li>
         <li
           onClick={() => {
@@ -58,6 +68,9 @@ export default function Navigator({
           }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
           <i className="fa-xl fa-brands fa-connectdevelop"></i>
+          {active == "portfolio" && (
+            <i className="fa-solid fa-code-commit absolute -left-2 text-indigo-500"></i>
+          )}
         </li>
       </ul>
     </aside>

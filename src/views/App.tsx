@@ -108,7 +108,6 @@ export default function App() {
           reference={aboutRef}
         />
         <Techs title={texts.labels.techsTitle} />
-        <div className="divider bg-main dark:bg-indigo-500 opacity-10"></div>
         <Experience
           title={texts.labels.experience}
           currentLanguaje={type}
