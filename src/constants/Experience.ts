@@ -1,0 +1,36 @@
+export const EXPERIENCE = [
+  {
+    name: "GoIt",
+    descriptionEN: "Programing Teacher - FullStack",
+    descriptionES: "Maestro de programacion - FullStack",
+    time: "December 31, 2022 23:59:59",
+    tecs: ["HTML", "CSS", "REACT", "NodeJS", "Figma"],
+    current: true,
+  },
+  {
+    name: "Infatlan",
+    descriptionEN: "Sr.Front-End Developer",
+    descriptionES: "Desarrollador Sr.Front-End",
+    time: "June 6, 2022 23:59:59",
+    tecs: ["UI5", "Figma", "Angular", "React"],
+    current: true,
+  },
+  {
+    name: "Impact",
+    descriptionEN: "Web Developer",
+    descriptionES: "Desarrollador web",
+    time: "April 22, 2021 23:59:59",
+    timeEnd: "April 22, 2022 23:59:59",
+    tecs: ["REACT", "Angular", "Python", "NodeJS", "Django"],
+    current: false,
+  },
+  {
+    name: "FreeLancer",
+    descriptionEN: "Autonomous",
+    descriptionES: "Autónomo",
+    time: "March 22, 2020 23:59:59",
+    timeEnd: "March 22, 2021 23:59:59",
+    tecs: ["Mutltiples Stacks"],
+    current: false,
+  },
+];

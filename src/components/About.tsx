@@ -1,11 +1,12 @@
 import React from "react";
+import { SecondaryTitle, SecondaryDescription } from "../components";
 
 export default function About({
-  title,
+  subtitle,
   msg,
   reference,
 }: {
-  title: string;
+  subtitle: string;
   msg: string;
   reference: any;
 }) {
@@ -15,10 +16,21 @@ export default function About({
       id="about"
       ref={reference}
     >
-      <div className="container main__about__text text-2xl p-4 flex flex-col gap-16">
-        <h2 className="font-bold text-indigo-500">{title} ...</h2>
-        <p className="sm:text-sm md:text-2xl">{msg}</p>
-      </div>
+      <AboutContent subtitle={subtitle} msg={msg} />
     </section>
+  );
+}
+
+interface iAboutContent {
+  subtitle: string;
+  msg: string;
+}
+
+function AboutContent({ subtitle, msg }: iAboutContent) {
+  return (
+    <div className="container main__about__text text-2xl p-4 flex flex-col gap-16">
+      <SecondaryTitle subtitle={subtitle} />
+      <SecondaryDescription msg={msg} />
+    </div>
   );
 }

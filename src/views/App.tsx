@@ -49,22 +49,6 @@ export default function App() {
     });
     const hiddenElements = document.querySelectorAll(".section-hidden");
     hiddenElements.forEach((el) => observer.observe(el));
-    // //Show on Scroll Option 2
-    // function reveal() {
-    //   const hiddenElements = document.querySelectorAll(".section-hidden");
-    //   hiddenElements.forEach((element) => {
-    //     let windowHeight = window.innerHeight;
-    //     let revealTop = element.getBoundingClientRect().top;
-    //     let revealPoint = 150;
-    //     if (revealTop < windowHeight - revealPoint) {
-    //       element.classList.add("show");
-    //     } else {
-    //       element.classList.remove("show");
-    //     }
-    //   });
-    // }
-
-    // window.addEventListener("scroll", reveal);
   }, []);
 
   //Theme
@@ -74,15 +58,15 @@ export default function App() {
   let { currentLanguaje: texts, handleLanguaje, type } = SelectLanguajeHook();
 
   //Scroll Navigation
-  const heroRef = useRef(null); //represents main section
-  const aboutRef = useRef(null); //represents about section
+  const heroRef = useRef(null);
+  const aboutRef = useRef(null);
   const expRef = useRef(null);
   const proyectsRef = useRef(null);
   // Active Page
   const [active, setActive] = useState("home");
   return (
-    <div ref={wrapperRef} className="main">
-      <main className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap relative">
+    <main ref={wrapperRef} className="main">
+      <div className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap relative">
         <Header
           handleTheme={handleTheme}
           handleLanguaje={handleLanguaje}
@@ -99,26 +83,20 @@ export default function App() {
         <div className="w-full bg-light dark:bg-dark" ref={aboutRef}>
           <div className="container flex flex-wrap ">
             <About
-              title={texts.labels.mainTitle}
+              subtitle={texts.labels.mainTitle}
               msg={texts.labels.mainMsg}
               reference={aboutRef}
             />
-            <Techs title={texts.labels.techsTitle} />
+            <Techs subtitle={texts.labels.techsTitle} />
           </div>
         </div>
-        {/* <About
-          title={texts.labels.mainTitle}
-          msg={texts.labels.mainMsg}
-          reference={aboutRef}
-        />
-        <Techs title={texts.labels.techsTitle} /> */}
         <Experience
-          title={texts.labels.experience}
+          subtitle={texts.labels.experience}
           currentLanguaje={type}
           reference={expRef}
         />
         <Portfolio
-          title={texts.labels.proyectsTitle}
+          subtitle={texts.labels.proyectsTitle}
           currentLanguaje={type}
           currentTheme={currentTheme}
           reference={proyectsRef}
@@ -134,8 +112,8 @@ export default function App() {
         {currentTheme === "dark" && (
           <span className="lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block"></span>
         )}
-      </main>
-    </div>
+      </div>
+    </main>
     //   <Suspense fallback={<Loader />}>
     //   <Outlet />
     // </Suspense>

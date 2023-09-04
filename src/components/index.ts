@@ -8,7 +8,12 @@ import Portfolio from "./Portfolio";
 import Experience from "./Experience";
 import Footer from "./Footer";
 import GoTop from "./shareds/GoTop";
-
+import Nav from "./Nav/Nav";
+import Title from "./shareds/Title";
+import Subtitle from "./shareds/Subtitle";
+import SectionDescription from "./shareds/SectionDescription";
+import SecondaryTitle from "./shareds/SecondaryTitle";
+import SecondaryDescription from "./shareds/SecondaryDescription";
 export {
   Header,
   Loader,
@@ -20,4 +25,10 @@ export {
   Experience,
   Footer,
   GoTop,
+  Nav,
+  Title,
+  Subtitle,
+  SectionDescription,
+  SecondaryTitle,
+  SecondaryDescription,
 };

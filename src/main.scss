@@ -144,8 +144,12 @@ section {
 }
 
 .proyect-img {
+  display: block;
+  object-fit: fill;
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  min-height: 150px;
 }
 
 .lamp {
@@ -213,7 +217,6 @@ section {
 .custom-card {
   position: relative;
   overflow: hidden;
-  min-height: 183px;
   &:hover {
     cursor: pointer;
   }
