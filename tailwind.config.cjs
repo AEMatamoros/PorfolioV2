@@ -2,8 +2,6 @@ module.exports = {
   purge: ["./src/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: "class",
   variants: {},
-  plugins: [require("flowbite/plugin")],
-  content: ["node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {

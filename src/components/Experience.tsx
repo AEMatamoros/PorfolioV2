@@ -73,7 +73,9 @@ function ExpDescription({ place, currentLanguaje }: iExperienceDescription) {
           {place.descriptionES}
         </p>
       ) : (
-        <p className="text-xl leading-relaxed ">{place.descriptionEN}</p>
+        <p className="text-xl leading-relaxedtext-center">
+          {place.descriptionEN}
+        </p>
       )}
     </>
   );
