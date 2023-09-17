@@ -25,23 +25,22 @@ function TechsContent({ subtitle }: iTechsContent) {
   );
 }
 
-function TechsList({ techs }: { techs: any }) {
+function TechsList({ techs }: { techs: any[] }) {
   return (
     <ul className="tech-container  main__about__icons text-3xl flex flex-wrap justify-center items-center gap-4 p-4">
-      {techs.map((tec: any, index: number) => (
-        <TechItem tec={tec} key={index} />
+      {techs.map((tec) => (
+        <TechItem tec={tec} key={`tecname-${tec}`} />
       ))}
     </ul>
   );
 }
 interface iTechItem {
-  key: number;
   tec: any;
 }
 
-function TechItem({ key, tec }: iTechItem) {
+function TechItem({ tec }: iTechItem) {
   return (
-    <li className="p-1 techs__standar" key={key} title={tec.name}>
+    <li className="p-1 techs__standar" title={tec.name}>
       <div
         className={
           "tech-item h-full w-full card  cursor-pointer transition-all duration-300 flex flex-col justify-center items-center " +

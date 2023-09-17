@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "./index";
+import { iPortfolioProps } from "../interfaces/iPortfolioProps";
 import { PROYECTS } from "../constants/Portfolio";
 import useLightbox from "../hooks/useLightbox";
 import SecondaryTitle from "./shareds/SecondaryTitle";
@@ -8,12 +9,7 @@ export default function Portfolio({
   currentLanguaje,
   currentTheme,
   reference,
-}: {
-  subtitle: string;
-  currentLanguaje: string;
-  currentTheme: any;
-  reference: any;
-}) {
+}: iPortfolioProps) {
   const { Lightbox, handleLightboxShow, setTemplate } = useLightbox();
   return (
     <>

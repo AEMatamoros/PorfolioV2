@@ -1,16 +1,19 @@
 import React from "react";
 import formatDate from "../utils/date";
-import { EXPERIENCE } from "../constants/Experience";
 import SecondaryTitle from "./shareds/SecondaryTitle";
+import {
+  iExperienceProps,
+  iExperienceDescription,
+  IExperiencePlaceName,
+} from "../interfaces/iExperienceProps";
+import { iTechListProps, iTechName } from "../interfaces/iTechListProps";
+import { iTimeDescriptionProps, iTimeList } from "../interfaces/iTime";
+import { EXPERIENCE } from "../constants/Experience";
 export default function Experience({
   subtitle,
   currentLanguaje,
   reference,
-}: {
-  subtitle: string;
-  currentLanguaje: string;
-  reference: any;
-}) {
+}: iExperienceProps) {
   return (
     <section
       className="main__exp w-full p-4 sm:p-4 md:p-4 lg:p-16 xl:p16 duration-75 flex flex-wrap gap-4 justify-center items-center section-hidden"
@@ -39,13 +42,13 @@ function ExperienceContent({ subtitle, currentLanguaje }: iExperienceContent) {
           className="experience__card flex items-center justify-center p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white "
         >
           <div className="flex flex-wrap items-center">
-            <ExperiencePlaceName place={place} />
+            <ExperiencePlaceName placeName={place.name} />
             <div className="h-full flex flex-col justify-between w-10/12">
               <ExpDescription
                 place={place}
                 currentLanguaje={currentLanguaje}
               ></ExpDescription>
-              <TechList place={place}></TechList>
+              <TechList placeTechs={place.tecs}></TechList>
               <TimeList place={place} currentLanguaje={currentLanguaje} />
             </div>
           </div>
@@ -54,21 +57,15 @@ function ExperienceContent({ subtitle, currentLanguaje }: iExperienceContent) {
     </div>
   );
 }
-function ExperiencePlaceName({ place }: { place: any }) {
+function ExperiencePlaceName({ placeName }: IExperiencePlaceName) {
   return (
     <h3 className="w-2/12 h-full exp-decoration font-bold text-2xl transform -rotate-90 text-center flex justify-center items-center">
-      {place.name}
+      {placeName}
     </h3>
   );
 }
 
-function ExpDescription({
-  place,
-  currentLanguaje,
-}: {
-  place: any;
-  currentLanguaje: string;
-}) {
+function ExpDescription({ place, currentLanguaje }: iExperienceDescription) {
   return (
     <>
       {currentLanguaje === "ES" ? (
@@ -82,56 +79,45 @@ function ExpDescription({
   );
 }
 
-function TechList({ place }: { place: any }) {
+function TechList({ placeTechs }: iTechListProps) {
   return (
     <ul className="flex flex-wrap justify-center items-center text-center pt-2">
-      {place.tecs.map((tec: any, index: number) => (
-        <TechItem tec={tec} key={index} />
+      {placeTechs.map((tec) => (
+        <TechItem tec={tec} key={`tec-${tec}`} />
       ))}
     </ul>
   );
 }
 
-function TechItem({ tec, key }: { tec: any; key: number }) {
+function TechItem({ tec }: iTechName) {
   return (
-    <li
-      key={key}
-      className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-indigo-400 text-white opacity-70"
-    >
+    <li className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-indigo-400 text-white opacity-70">
       {tec}
     </li>
   );
 }
 
-function TimeList({
-  place,
-  currentLanguaje,
-}: {
-  place: any;
-  currentLanguaje: string;
-}) {
+function TimeList({ place, currentLanguaje }: iTimeList) {
   return (
     <ul className="text-base mt-0 list-none list-inside  leading-relaxed">
-      <TimeDescription place={place} currentLanguaje={currentLanguaje} />
+      <TimeDescription
+        time={place.time}
+        timeEnd={place.timeEnd}
+        currentLanguaje={currentLanguaje}
+      />
       {place.current && <TimeCurrent currentLanguaje={currentLanguaje} />}
     </ul>
   );
 }
 
 function TimeDescription({
-  place,
+  time,
+  timeEnd,
   currentLanguaje,
-}: {
-  place: any;
-  currentLanguaje: string;
-}) {
+}: iTimeDescriptionProps) {
   return (
     <li className="text-center">
-      {formatDate(
-        place.time,
-        place.timeEnd ? place.timeEnd : "",
-        currentLanguaje
-      )}
+      {formatDate(time, timeEnd ? timeEnd : "", currentLanguaje)}
     </li>
   );
 }

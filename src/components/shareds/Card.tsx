@@ -1,19 +1,13 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { iCard } from "../../interfaces/iCard";
 export default function Card({
   proyect,
   currentLanguaje,
   currentTheme,
   handleLightboxShow,
   setTemplate,
-}: {
-  proyect: any;
-  currentLanguaje: string;
-  currentTheme: any;
-  handleLightboxShow: any;
-  setTemplate: any;
-}) {
+}: iCard) {
   return (
     <li className="sm:w-full md:w-full lg:w-4/12 xl:w-3/12 2xl:w-3/12 custom-card">
       <LazyLoadImage src={proyect.img} alt="Calendar" className="proyect-img" />
@@ -23,7 +17,6 @@ export default function Card({
         </h3>
         <button
           onClick={() => {
-            setTemplate(JSON.stringify(proyect));
             handleLightboxShow();
             setTemplate(
               <div className="relative lightbox flex flex-col justify-center text-dark bg-light dark:bg-dark dark:text-light">
@@ -36,9 +29,9 @@ export default function Card({
                       : proyect.descriptionEN}
                   </p>
                   <div className="flex flex-wrap justify-center items-center text-center pt-2">
-                    {proyect.techs.map((tec: any, index: any) => (
+                    {proyect.techs.map((tec: string) => (
                       <div
-                        key={index}
+                        key={`tec-name-${tec}`}
                         className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-indigo-500 text-white"
                       >
                         {tec}

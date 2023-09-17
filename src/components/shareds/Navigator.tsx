@@ -27,7 +27,7 @@ export default function Navigator({
               : "text-main"
           }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
-          <i className="fa-xl fa-brands fa-fort-awesome-alt"></i>
+          <i className=" fa-brands fa-fort-awesome-alt"></i>
         </li>
         <li
           onClick={() => {
@@ -39,7 +39,7 @@ export default function Navigator({
               : "text-main"
           }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
-          <i className="fa-xl fa-regular fa-circle-user"></i>
+          <i className=" fa-regular fa-circle-user"></i>
         </li>
         <li
           onClick={() => {
@@ -51,7 +51,7 @@ export default function Navigator({
               : "text-main"
           }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
-          <i className="fa-xl fa-solid fa-circle-dot"></i>
+          <i className=" fa-solid fa-circle-dot"></i>
         </li>
         <li
           onClick={() => {
@@ -63,7 +63,7 @@ export default function Navigator({
               : "text-main"
           }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
         >
-          <i className="fa-xl fa-brands fa-connectdevelop"></i>
+          <i className=" fa-brands fa-connectdevelop"></i>
         </li>
       </ul>
     </aside>

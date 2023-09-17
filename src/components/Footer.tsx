@@ -1,6 +1,6 @@
 import React from "react";
-
-export default function Footer({ msg }: { msg: string }) {
+import { iFooterProps } from "../interfaces/iFooterProps";
+export default function Footer({ msg }: iFooterProps) {
   return (
     <footer className="main__footer bg-indigo-400 text-light p-16 flex justify-center items-center flex-col">
       <ul className="sm:w-full md:w-full lg:6/12 xl:6/12 2xl:6/12 flex justify-center gap-4 mb-8">

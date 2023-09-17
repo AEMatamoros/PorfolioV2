@@ -19,12 +19,14 @@ export default function App() {
   // Init in DarkMode, Init Lamp Effect
   useLayoutEffect(() => {
     let pos = document.documentElement;
-    const handleMouseMove = (event: any) => {
+    const handleMouseMove = (event: MouseEvent) => {
       pos.style.setProperty("--x", event.clientX + "px");
       pos.style.setProperty("--y", event.clientY + "px");
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", (e) => {
+      handleMouseMove(e);
+    });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -58,10 +60,10 @@ export default function App() {
   let { currentLanguaje: texts, handleLanguaje, type } = SelectLanguajeHook();
 
   //Scroll Navigation
-  const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const expRef = useRef(null);
-  const proyectsRef = useRef(null);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const expRef = useRef<HTMLDivElement>(null);
+  const proyectsRef = useRef<HTMLDivElement>(null);
   // Active Page
   const [active, setActive] = useState("home");
   return (
