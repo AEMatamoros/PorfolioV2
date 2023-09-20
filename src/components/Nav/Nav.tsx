@@ -38,6 +38,9 @@ function NavLogo({ scrollToTop }: iNavLogo) {
       className="text-dark dark:text-light text-xl font-bold cursor-pointer"
       onClick={scrollToTop}
     >
+      <span>
+        <i className="fa-solid fa-terminal fa-fade text-main mr-2"></i>
+      </span>{" "}
       Alexis Matamoros
     </span>
   );

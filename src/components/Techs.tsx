@@ -28,8 +28,8 @@ function TechsContent({ subtitle }: iTechsContent) {
 function TechsList({ techs }: { techs: any[] }) {
   return (
     <ul className="tech-container  main__about__icons text-3xl flex flex-wrap justify-center items-center gap-4 p-4">
-      {techs.map((tec) => (
-        <TechItem tec={tec} key={`tecname-${tec}`} />
+      {techs.map((tec, index) => (
+        <TechItem tec={tec} key={`tecname-${tec}${index}`} />
       ))}
     </ul>
   );
