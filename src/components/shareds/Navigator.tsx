@@ -23,9 +23,9 @@ export default function Navigator({
           }}
           className={`w-16  h-16 ${
             active == "hero"
-              ? "text-indigo-500 transform scale-125"
-              : "text-main"
-          }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
+              ? "text-light transform scale-125"
+              : "text-blue-500"
+          }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
         >
           <i className=" fa-brands fa-fort-awesome-alt"></i>
         </li>
@@ -35,9 +35,9 @@ export default function Navigator({
           }}
           className={`w-16  h-16 ${
             active == "about" || active == "techs"
-              ? "text-indigo-500 transform scale-125"
-              : "text-main"
-          }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
+              ? "text-light transform scale-125"
+              : "text-blue-500"
+          }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
         >
           <i className=" fa-regular fa-circle-user"></i>
         </li>
@@ -47,9 +47,9 @@ export default function Navigator({
           }}
           className={`w-16  h-16 ${
             active == "experience"
-              ? "text-indigo-500 transform scale-125"
-              : "text-main"
-          }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
+              ? "text-light transform scale-125"
+              : "text-blue-500"
+          }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
         >
           <i className=" fa-solid fa-circle-dot"></i>
         </li>
@@ -59,9 +59,9 @@ export default function Navigator({
           }}
           className={`w-16  h-16 ${
             active == "portfolio"
-              ? "text-indigo-500 transform scale-125"
-              : "text-main"
-          }  flex justify-center gap-x-8 items-center hover:text-indigo-500  cursor-pointer`}
+              ? "text-light transform scale-125"
+              : "text-blue-500"
+          }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
         >
           <i className=" fa-brands fa-connectdevelop"></i>
         </li>

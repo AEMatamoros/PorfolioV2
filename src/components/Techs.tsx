@@ -4,7 +4,7 @@ import { TECHS } from "../constants/Techs";
 export default function Techs({ subtitle }: { subtitle: string }) {
   return (
     <section
-      className="main__techs  flex justify-center items-center dark:text-main w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full sm:mt-8 md:mt-8 lg:mt-0 xl:mt-0 2xl:w-612 sm:p-4 md:p-4 lg:p-8 xl:p-8 text-center section-hidden"
+      className="main__techs  flex justify-center items-center dark:text-blue-500 w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full sm:mt-8 md:mt-8 lg:mt-0 xl:mt-0 2xl:w-612 sm:p-4 md:p-4 lg:p-8 xl:p-8 text-center section-hidden"
       id="techs"
     >
       <TechsContent subtitle={subtitle} />

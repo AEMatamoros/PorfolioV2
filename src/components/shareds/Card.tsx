@@ -32,14 +32,14 @@ export default function Card({
                     {proyect.techs.map((tec: string) => (
                       <div
                         key={`tec-name-${tec}`}
-                        className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-indigo-500 text-white"
+                        className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-blue-500 text-white"
                       >
                         {tec}
                       </div>
                     ))}
                   </div>
                   <a
-                    className="absolute right-0 top-0 float-right inline-flex items-center px-3 py-2 text-sm font-medium text-center text-light bg-transparent border-none focus:ring-4 bg-main hover:bg-indigo-500 focus:outline-none focus-within:outline-none"
+                    className="absolute right-0 top-0 float-right inline-flex items-center px-3 py-2 text-sm font-medium text-center text-light bg-transparent border-none focus:ring-4 bg-main hover:bg-blue-500 focus:outline-none focus-within:outline-none"
                     href={proyect.url}
                     target="_blank"
                   >
@@ -49,7 +49,7 @@ export default function Card({
               </div>
             );
           }}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-light bg-transparent border-none focus:ring-4 bg-main hover:bg-indigo-500 focus:outline-none focus-within:outline-none"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-light bg-transparent border-none focus:ring-4 bg-main hover:bg-blue-500 focus:outline-none focus-within:outline-none"
         >
           {currentLanguaje == "ES" ? "Detalles" : "Details"}
         </button>

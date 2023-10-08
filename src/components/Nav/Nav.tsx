@@ -39,7 +39,7 @@ function NavLogo({ scrollToTop }: iNavLogo) {
       onClick={scrollToTop}
     >
       <span>
-        <i className="fa-solid fa-terminal fa-fade text-main mr-2"></i>
+        <i className="fa-solid fa-terminal fa-fade text-blue-500 mr-2"></i>
       </span>{" "}
       Alexis Matamoros
     </span>
@@ -76,7 +76,7 @@ function NavListTheme({ handleTheme, currentTheme }: iNavListOption) {
   return (
     <li>
       <span
-        className="ml-3 text-sm font-medium text-main dark:text-white text-center cursor-pointer"
+        className="ml-3 text-sm font-medium text-blue-500 dark:text-white text-center cursor-pointer"
         onClick={handleTheme}
       >
         {currentTheme !== "dark" ? (
@@ -99,7 +99,7 @@ function NavListLanguaje({ handleLanguaje, texts }: iNavListLanguaje) {
   return (
     <li>
       <span
-        className="ml-3 text-main text-sm font-medium dark:text-white cursor-pointer"
+        className="ml-3 text-blue-500 text-sm font-medium dark:text-white cursor-pointer"
         onClick={handleLanguaje}
       >
         {texts.labels.languaje}

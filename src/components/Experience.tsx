@@ -93,7 +93,7 @@ function TechList({ placeTechs }: iTechListProps) {
 
 function TechItem({ tec }: iTechName) {
   return (
-    <li className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-indigo-400 text-white opacity-70">
+    <li className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-blue-400 text-white opacity-70">
       {tec}
     </li>
   );
@@ -126,7 +126,7 @@ function TimeDescription({
 
 function TimeCurrent({ currentLanguaje }: { currentLanguaje: string }) {
   return (
-    <li className="text-main font-semibold text-center">
+    <li className="text-blue-500 font-semibold text-center">
       {currentLanguaje == "ES" ? "Actualidad" : "Current"}
     </li>
   );

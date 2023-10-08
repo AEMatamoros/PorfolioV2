@@ -88,7 +88,7 @@ span,
 a,
 li {
   &::selection {
-    @apply bg-indigo-400;
+    @apply bg-green-400;
   }
 }
 
@@ -448,4 +448,8 @@ section {
   opacity: 0;
   pointer-events: none;
   transform: scale(0);
+}
+
+.color {
+  color: #171717;
 }
