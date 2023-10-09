@@ -9,8 +9,19 @@ import CalendarIMG from "../assets/img/portfolio/calendar.jpg";
 import CalendarBIMG from "../assets/img/portfolio/calendarb.jpg";
 import PortalImg from "../assets/img/portfolio/portal.jpg";
 import FUTVIMG from "../assets/img/portfolio/futv.jpg";
+import Barber from "../assets/img/portfolio/barber.jpg";
 import NoImg from "../assets/img/portfolio/noimg.jpg";
 export const PROYECTS = [
+  {
+    hoverColor: "text-gray-500",
+    name: "Goit - Mock",
+    descriptionES: "Proyecto Plantilla, para enseñar HTML, CSS(SASS).",
+    descriptionEN: "Template proyect to teach HTML and CSS(SASS).",
+    img: Barber,
+    icon: "fa-light fa-e",
+    url: "https://aematamoros.github.io/GoIt-Proyect/",
+    techs: ["HTML", "CSS", "SASS"],
+  },
   {
     hoverColor: "text-gray-500",
     name: "Portal de Transparencia Honduras",

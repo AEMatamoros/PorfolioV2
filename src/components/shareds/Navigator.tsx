@@ -23,7 +23,7 @@ export default function Navigator({
           }}
           className={`w-16  h-16 ${
             active == "hero"
-              ? "text-light transform scale-125"
+              ? "text-dark dark:text-light transform scale-125"
               : "text-blue-500"
           }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
         >
@@ -35,7 +35,7 @@ export default function Navigator({
           }}
           className={`w-16  h-16 ${
             active == "about" || active == "techs"
-              ? "text-light transform scale-125"
+              ? "text-dark dark:text-light transform scale-125"
               : "text-blue-500"
           }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
         >
@@ -47,7 +47,7 @@ export default function Navigator({
           }}
           className={`w-16  h-16 ${
             active == "experience"
-              ? "text-light transform scale-125"
+              ? "text-dark dark:text-light transform scale-125"
               : "text-blue-500"
           }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
         >
@@ -59,7 +59,7 @@ export default function Navigator({
           }}
           className={`w-16  h-16 ${
             active == "portfolio"
-              ? "text-light transform scale-125"
+              ? "text-dark dark:text-light transform scale-125"
               : "text-blue-500"
           }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
         >

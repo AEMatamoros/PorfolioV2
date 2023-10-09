@@ -20,7 +20,7 @@ export default function Portfolio({
       >
         <div className="container">
           <SecondaryTitle subtitle={subtitle} />
-          <ul className="proyects-container flex flex-wrap justify-between items-center w-full ">
+          <ul className="proyects-container flex flex-wrap justify-center items-center w-full border">
             {PROYECTS.map((proyect, index) => (
               <Card
                 proyect={proyect}
