@@ -38,7 +38,7 @@ interface iTechItem {
   tec: any;
 }
 
-function TechItem({ tec }: iTechItem) {
+export function TechItem({ tec }: iTechItem) {
   return (
     <li className="p-1 techs__standar" title={tec.name}>
       <div

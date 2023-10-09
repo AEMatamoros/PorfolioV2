@@ -19,7 +19,7 @@ interface iAboutContent {
   msg: string;
 }
 
-function AboutContent({ subtitle, msg }: iAboutContent) {
+export function AboutContent({ subtitle, msg }: iAboutContent) {
   return (
     <div className="container main__about__text text-2xl p-12 flex flex-col gap-16">
       <SecondaryTitle subtitle={subtitle} />

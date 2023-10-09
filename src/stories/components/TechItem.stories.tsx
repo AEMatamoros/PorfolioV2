@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Header } from "../../components";
+import { TechItem } from "../../components/Techs";
 const texts = {
   type: "ES",
   labels: {
@@ -31,51 +31,30 @@ const texts = {
 };
 
 const meta = {
-  title: "App/Header",
-  component: Header,
-  //   parameters: {
-  //     layout: "centered",
-  //   },
+  title: "App/TechItem",
+  parameters: {
+    layout: "centered",
+  },
+  component: TechItem,
   tags: ["autodocs"],
   argTypes: {
-    currentTheme: {
-      options: ["dark", "light"],
-      control: { type: "radio" },
+    tec: {
+      name: "React",
+      icon: "fa-brands fa-react",
+      hoverColor: "blue",
     },
-    texts: {},
-    handleTheme: () => {},
-    handleLanguaje: () => {},
   },
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof TechItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
-  args: {
-    currentTheme: "dark",
-    texts: texts,
-    handleTheme: () => {
-      alert("Funcion para cambiar el tema");
-    },
-    handleLanguaje: () => {
-      alert("Funcion para cambiar el idioma");
-    },
-  },
-  decorators: [
-    (StoryE) => (
-      <div className="dark">
-        <StoryE />
-      </div>
-    ),
-  ],
-};
-
 export const Light: Story = {
   args: {
-    currentTheme: "light",
-    texts: texts,
-    handleTheme: () => {},
-    handleLanguaje: () => {},
+    tec: {
+      name: "React",
+      icon: "fa-brands fa-react",
+      hoverColor: "text-blue-500",
+    },
   },
 };

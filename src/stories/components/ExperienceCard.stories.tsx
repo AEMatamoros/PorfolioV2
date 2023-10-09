@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Header } from "../../components";
+import { ExperienceCard } from "../../components/Experience";
 const texts = {
   type: "ES",
   labels: {
@@ -31,51 +31,38 @@ const texts = {
 };
 
 const meta = {
-  title: "App/Header",
-  component: Header,
-  //   parameters: {
-  //     layout: "centered",
-  //   },
+  title: "App/ExpCard",
+  parameters: {
+    layout: "centered",
+  },
+  component: ExperienceCard,
   tags: ["autodocs"],
   argTypes: {
-    currentTheme: {
-      options: ["dark", "light"],
-      control: { type: "radio" },
-    },
-    texts: {},
-    handleTheme: () => {},
-    handleLanguaje: () => {},
+    place: {},
+    currentLanguaje: ["ES"],
   },
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof ExperienceCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
+export const Light: Story = {
   args: {
-    currentTheme: "dark",
-    texts: texts,
-    handleTheme: () => {
-      alert("Funcion para cambiar el tema");
+    place: {
+      name: "WorkPlace",
+      descriptionEN: "Programing Teacher - FullStack",
+      descriptionES: "Maestro de programacion - FullStack",
+      time: "December 31, 2022 23:59:59",
+      tecs: ["HTML", "CSS", "REACT", "NodeJS", "Figma"],
+      current: true,
     },
-    handleLanguaje: () => {
-      alert("Funcion para cambiar el idioma");
-    },
+    currentLanguaje: "ES",
   },
   decorators: [
     (StoryE) => (
-      <div className="dark">
+      <div style={{ width: "100%" }}>
         <StoryE />
       </div>
     ),
   ],
-};
-
-export const Light: Story = {
-  args: {
-    currentTheme: "light",
-    texts: texts,
-    handleTheme: () => {},
-    handleLanguaje: () => {},
-  },
 };

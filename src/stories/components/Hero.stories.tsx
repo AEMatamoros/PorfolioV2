@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Header } from "../../components";
+import { HeroContent } from "../../components/Hero";
 const texts = {
   type: "ES",
   labels: {
@@ -31,51 +31,26 @@ const texts = {
 };
 
 const meta = {
-  title: "App/Header",
-  component: Header,
-  //   parameters: {
-  //     layout: "centered",
-  //   },
+  title: "App/Hero",
+  parameters: {
+    layout: "centered",
+  },
+  component: HeroContent,
   tags: ["autodocs"],
   argTypes: {
-    currentTheme: {
-      options: ["dark", "light"],
-      control: { type: "radio" },
-    },
-    texts: {},
-    handleTheme: () => {},
-    handleLanguaje: () => {},
+    title: ["Titulo"],
+    subtitle: ["Subtitulo"],
+    msg: ["Mensaje"],
   },
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof HeroContent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
-  args: {
-    currentTheme: "dark",
-    texts: texts,
-    handleTheme: () => {
-      alert("Funcion para cambiar el tema");
-    },
-    handleLanguaje: () => {
-      alert("Funcion para cambiar el idioma");
-    },
-  },
-  decorators: [
-    (StoryE) => (
-      <div className="dark">
-        <StoryE />
-      </div>
-    ),
-  ],
-};
-
 export const Light: Story = {
   args: {
-    currentTheme: "light",
-    texts: texts,
-    handleTheme: () => {},
-    handleLanguaje: () => {},
+    title: "Titulo",
+    subtitle: "Subtitulo",
+    msg: "Mensaje",
   },
 };

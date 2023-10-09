@@ -17,7 +17,7 @@ interface iHeroContent {
   subtitle: string;
   msg: string;
 }
-function HeroContent({ title, subtitle, msg }: iHeroContent) {
+export function HeroContent({ title, subtitle, msg }: iHeroContent) {
   return (
     <section className="main__hero__text flex flex-col justify-center items-center container m-auto text-center ">
       <Title title={title}></Title>
