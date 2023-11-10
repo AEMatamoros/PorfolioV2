@@ -1,13 +1,14 @@
-import ReactDOM from "react-dom/client";
-import "./main.scss";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './main.scss';
 
-import { store } from "./store/store";
+import { store } from './store/store';
 
-import { Provider } from "react-redux";
-import Navigation from "./views/Navigation";
+import { Provider } from 'react-redux';
+import Navigation from './views/Navigation';
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <Provider store={store}>
-    <Navigation />
-  </Provider>
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+    <Provider store={store}>
+        <Navigation />
+    </Provider>,
 );

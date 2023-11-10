@@ -1,6 +1,6 @@
 import React from "react";
 import { scrollToTop } from "../../utils/scrollTop";
-import { useEffect } from "react";
+
 export default function GoTop() {
   return (
     <i

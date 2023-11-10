@@ -1,4 +1,5 @@
 export interface iTexts {
-    type:string,
-    labels:any
+    type: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    labels: any;
 }

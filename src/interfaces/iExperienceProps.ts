@@ -7,6 +7,7 @@ export interface iExperienceProps {
 }
 
 export interface iExperienceDescription {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   place: any;
   currentLanguaje: string;
 }
