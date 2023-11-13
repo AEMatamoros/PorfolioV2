@@ -11,10 +11,12 @@ import {
     Techs,
     Portfolio,
     Experience,
+    LampEffect,
 } from '../components';
 import Footer from '../components/Footer';
 import GoTop from '../components/shareds/GoTop';
 import Navigator from '../components/shareds/Navigator';
+import SquaresEffect from '../components/shareds/SquaresEffect';
 
 export default function App() {
     // Init in DarkMode, Init Lamp Effect
@@ -115,11 +117,11 @@ export default function App() {
                     expRef={expRef}
                     proyectsRef={proyectsRef}
                     active={active}
+                    currentTheme={currentTheme}
                 ></Navigator>
-                {currentTheme === 'dark' && (
-                    <span className="lamp hidden sm:hidden md:hidden lg:inline-block xl:inline-block"></span>
-                )}
+                {currentTheme === 'dark' && <LampEffect />}
             </div>
+            <SquaresEffect currentTheme={currentTheme} />
         </main>
         //   <Suspense fallback={<Loader />}>
         //   <Outlet />

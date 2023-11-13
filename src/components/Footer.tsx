@@ -2,7 +2,7 @@ import React from 'react';
 import { iFooterProps } from '../interfaces/iFooterProps';
 export default function Footer({ msg }: iFooterProps) {
     return (
-        <footer className="main__footer dark:bg-white bg-dark  text-light p-16 flex justify-center items-center flex-col">
+        <footer className="main__footer   text-light p-16 flex justify-center items-center flex-col">
             <ul className="sm:w-full md:w-full lg:6/12 xl:6/12 2xl:6/12 flex justify-center gap-4 mb-8">
                 <li className="w-16 h-16 bg-blue-400 flex justify-center items-center hover:bg-blue-500 dark:text-light cursor-pointer">
                     <a

@@ -36,12 +36,12 @@ interface iNavLogo {
 function NavLogo({ scrollToTop }: iNavLogo) {
     return (
         <span
-            className="text-dark dark:text-light text-xl font-bold cursor-pointer"
+            className="text-dark dark:text-light text-xl font-bold cursor-pointer pl-8"
             onClick={scrollToTop}
         >
-            <span>
+            {/* <span>
                 <i className="fa-solid fa-terminal fa-fade text-blue-500 mr-2"></i>
-            </span>{' '}
+            </span> */}
             Alexis Matamoros
         </span>
     );

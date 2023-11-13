@@ -6,8 +6,8 @@ export default function Navigator({
     expRef,
     proyectsRef,
     active,
-} // eslint-disable-next-line @typescript-eslint/no-explicit-any
-: any) {
+    currentTheme, // eslint-disable-next-line @typescript-eslint/no-explicit-any
+}: any) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleScroll = (ref: any) => {
         window.scrollTo({
@@ -17,7 +17,9 @@ export default function Navigator({
         });
     };
     return (
-        <aside className="fixed left-8 top-1/4 ">
+        <aside
+            className={`fixed left-0 navigator bg-indigo-400 ${currentTheme}`}
+        >
             <ul className="hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex  flex-col gap-4 relative">
                 <li
                     onClick={() => {
