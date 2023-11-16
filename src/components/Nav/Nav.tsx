@@ -10,15 +10,15 @@ interface iNav {
 }
 
 export default function Nav({
-    scrollToTop,
+    // scrollToTop,
     handleTheme,
     handleLanguaje,
     currentTheme,
     texts,
 }: iNav) {
     return (
-        <nav className="container flex justify-between">
-            <NavLogo scrollToTop={scrollToTop} />
+        <nav className="nav flex justify-end">
+            {/* <NavLogo scrollToTop={scrollToTop} /> */}
             <NavList
                 handleTheme={handleTheme}
                 handleLanguaje={handleLanguaje}
@@ -29,23 +29,23 @@ export default function Nav({
     );
 }
 
-interface iNavLogo {
-    scrollToTop: () => void;
-}
+// interface iNavLogo {
+//     scrollToTop: () => void;
+// }
 
-function NavLogo({ scrollToTop }: iNavLogo) {
-    return (
-        <span
-            className="text-dark dark:text-light text-xl font-bold cursor-pointer pl-8"
-            onClick={scrollToTop}
-        >
-            {/* <span>
-                <i className="fa-solid fa-terminal fa-fade text-blue-500 mr-2"></i>
-            </span> */}
-            Alexis Matamoros
-        </span>
-    );
-}
+// function NavLogo({ scrollToTop }: iNavLogo) {
+//     return (
+//         <span
+//             className="text-dark dark:text-light text-xl font-bold cursor-pointer pl-8"
+//             onClick={scrollToTop}
+//         >
+//             {/* <span>
+//                 <i className="fa-solid fa-terminal fa-fade text-blue-500 mr-2"></i>
+//             </span> */}
+//             Alexis Matamoros
+//         </span>
+//     );
+// }
 
 interface iNavList {
     handleTheme: () => void;

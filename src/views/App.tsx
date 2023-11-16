@@ -76,6 +76,7 @@ export default function App() {
     return (
         <main ref={wrapperRef} className="main">
             <div className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap relative">
+                <SquaresEffect currentTheme={currentTheme} />
                 <Header
                     handleTheme={handleTheme}
                     handleLanguaje={handleLanguaje}
@@ -121,7 +122,6 @@ export default function App() {
                 ></Navigator>
                 {currentTheme === 'dark' && <LampEffect />}
             </div>
-            <SquaresEffect currentTheme={currentTheme} />
         </main>
         //   <Suspense fallback={<Loader />}>
         //   <Outlet />

@@ -42,7 +42,7 @@ interface iTechItem {
 
 export function TechItem({ tec }: iTechItem) {
     return (
-        <li className="p-1 techs__standar" title={tec.name}>
+        <li className="p-1 techs__standar glass-bg" title={tec.name}>
             <div
                 className={
                     'tech-item h-full w-full card  cursor-pointer transition-all duration-300 flex flex-col justify-center items-center ' +

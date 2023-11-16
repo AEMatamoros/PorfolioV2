@@ -55,7 +55,7 @@ export function ExperienceCard({
     currentLanguaje: string;
 }) {
     return (
-        <article className="experience__card flex items-center justify-center p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white ">
+        <article className="glass-bg experience__card flex items-center justify-center p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white ">
             <div className="flex flex-wrap items-center">
                 <ExperiencePlaceName placeName={place.name} />
                 <div className="h-full flex flex-col justify-between w-10/12">
@@ -86,7 +86,7 @@ function ExpDescription({ place, currentLanguaje }: iExperienceDescription) {
                     {place.descriptionES}
                 </p>
             ) : (
-                <p className="text-xl leading-relaxedtext-center">
+                <p className="text-xl leading-relaxed text-center">
                     {place.descriptionEN}
                 </p>
             )}
