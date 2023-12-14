@@ -9,7 +9,7 @@ export default function Card({
     setTemplate,
 }: iCard) {
     return (
-        <li className="sm:w-full md:w-full lg:w-4/12 xl:w-3/12 2xl:w-3/12 custom-card">
+        <li className="sm:w-full md:w-full lg:w-6/12 xl:w-6/12 2xl:w-6/12 custom-card p-4">
             <LazyLoadImage
                 src={proyect.img}
                 alt="Calendar"

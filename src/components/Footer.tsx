@@ -3,6 +3,9 @@ import { iFooterProps } from '../interfaces/iFooterProps';
 export default function Footer({ msg }: iFooterProps) {
     return (
         <footer className="main__footer z-10  text-light p-16 flex justify-center items-center flex-col">
+            <span className="text-dark dark:text-white mb-4">
+                &copy; 2023 Alexis Matamoros
+            </span>
             <ul className="sm:w-full md:w-full lg:6/12 xl:6/12 2xl:6/12 flex justify-center gap-4 mb-8">
                 <li className="w-16 h-16 bg-blue-400 flex justify-center items-center hover:bg-blue-500 dark:text-light cursor-pointer">
                     <a
@@ -41,7 +44,9 @@ export default function Footer({ msg }: iFooterProps) {
                     </a>
                 </li>
             </ul>
-            <span className="font-extrabold italic text-center">{msg}</span>
+            <span className=" text-left w-full text-dark dark:text-white">
+                {msg} - ❤️
+            </span>
         </footer>
     );
 }

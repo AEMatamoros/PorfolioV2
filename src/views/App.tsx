@@ -112,6 +112,7 @@ export default function App() {
                     proyectsRef={proyectsRef}
                     active={active}
                     currentTheme={currentTheme}
+                    texts={texts}
                 ></Navigator>
                 {currentTheme === 'dark' && <LampEffect />}
             </div>
