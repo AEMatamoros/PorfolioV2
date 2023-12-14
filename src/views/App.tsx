@@ -37,10 +37,6 @@ export default function App() {
     }, []);
 
     useLayoutEffect(() => {
-        handleTheme();
-    }, []);
-
-    useLayoutEffect(() => {
         // Show on Scroll Option 1
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -90,16 +86,13 @@ export default function App() {
                     reference={heroRef}
                 />
                 <GoTop />
-                <div className="w-full bg-light dark:bg-dark" ref={aboutRef}>
-                    <div className="container flex flex-wrap ">
-                        <About
-                            subtitle={texts.labels.mainTitle}
-                            msg={texts.labels.mainMsg}
-                            reference={aboutRef}
-                        />
-                        <Techs subtitle={texts.labels.techsTitle} />
-                    </div>
-                </div>
+
+                <About
+                    subtitle={texts.labels.mainTitle}
+                    msg={texts.labels.mainMsg}
+                    reference={aboutRef}
+                />
+                <Techs subtitle={texts.labels.techsTitle} />
                 <Experience
                     subtitle={texts.labels.experience}
                     currentLanguaje={type}

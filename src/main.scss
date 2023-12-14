@@ -119,10 +119,10 @@ section {
 }
 
 .main__about {
-    min-height: 55vh;
+    min-height: 100vh;
 }
 .main__techs {
-    min-height: 55vh;
+    min-height: 100vh;
 }
 
 .main__work {
@@ -148,7 +148,6 @@ section {
 
 .glass-bg {
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
@@ -426,8 +425,8 @@ section {
     content: '';
     width: 200px;
     height: 1px;
-    background-color: white;
     bottom: -1px;
+    @apply bg-green-400;
 }
 
 .backdrop {
@@ -465,11 +464,6 @@ li {
     list-style-type: none;
 }
 .navigator {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     height: 100vh;
     display: flex;
     justify-content: center;

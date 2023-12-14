@@ -39,7 +39,7 @@ export default function Card({
                                         {proyect.techs.map((tec: string) => (
                                             <div
                                                 key={`tec-name-${tec}`}
-                                                className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-blue-500 text-white"
+                                                className="mr-2 mb-2 px-3 py-1 text-xs bg-blue-500 text-white"
                                             >
                                                 {tec}
                                             </div>

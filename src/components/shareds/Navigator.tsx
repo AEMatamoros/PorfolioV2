@@ -17,9 +17,7 @@ export default function Navigator({
         });
     };
     return (
-        <aside
-            className={`fixed left-0 navigator bg-indigo-400 ${currentTheme}`}
-        >
+        <aside className={`fixed left-0 navigator  ${currentTheme}`}>
             <ul className="hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex  flex-col gap-4 relative">
                 <li
                     onClick={() => {

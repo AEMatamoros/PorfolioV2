@@ -55,7 +55,7 @@ export function ExperienceCard({
     currentLanguaje: string;
 }) {
     return (
-        <article className="glass-bg experience__card flex items-center justify-center p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white ">
+        <article className=" experience__card flex items-center justify-center p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white ">
             <div className="flex flex-wrap items-center">
                 <ExperiencePlaceName placeName={place.name} />
                 <div className="h-full flex flex-col justify-between w-10/12">
@@ -106,7 +106,7 @@ function TechList({ placeTechs }: iTechListProps) {
 
 function TechItem({ tec }: iTechName) {
     return (
-        <li className="mr-2 mb-2 rounded-full px-3 py-1 text-xs bg-blue-400 text-white opacity-70">
+        <li className="mr-2 mb-2 px-3 py-1 text-xs bg-blue-400 text-white opacity-70">
             {tec}
         </li>
     );
