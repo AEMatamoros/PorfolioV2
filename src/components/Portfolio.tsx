@@ -49,7 +49,11 @@ export default function Portfolio({
                             (_, index) => index + 1,
                         ).map(page => (
                             <button
-                                className="bg-blue-400 text-white  hover:bg-green-500 p-2 w-10 h-10"
+                                className={` ${
+                                    currentPage == page
+                                        ? 'bg-green-400'
+                                        : 'bg-blue-400'
+                                } text-white  hover:bg-green-500 p-2 w-10 h-10`}
                                 key={page}
                                 onClick={() => handlePageChange(page)}
                                 title={`${page}`}
