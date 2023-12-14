@@ -16,7 +16,7 @@ export default function Footer({ msg }: iFooterProps) {
                         <i className="fa-2xl fa-brands fa-linkedin-in"></i>
                     </a>
                 </li>
-                <li className="w-16 h-16 bg-blue-400 flex justify-center items-center hover:bg-blue-500 dark:text-light cursor-pointer">
+                <li className="w-16 h-16 bg-blue-400 flex justify-center items-center hover:bg-purple-500 dark:text-light cursor-pointer">
                     <a
                         target="_blank"
                         href="https://github.com/AEMatamoros"
@@ -25,22 +25,31 @@ export default function Footer({ msg }: iFooterProps) {
                         <i className="fa-2xl fa-brands fa-github"></i>
                     </a>
                 </li>
-                <li className="w-16 h-16 bg-blue-400 flex justify-center gap-x-8 items-center hover:bg-blue-500 dark:text-light cursor-pointer">
+                <li className="w-16 h-16 bg-blue-400 flex justify-center gap-x-8 items-center hover:bg-red-500 dark:text-light cursor-pointer">
                     <a
                         target="_blank"
-                        href="https://www.instagram.com/alev_stream/"
+                        href="https://www.instagram.com/wecamefromthelands/"
                         rel="noreferrer"
                     >
                         <i className="fa-2xl fa-brands fa-instagram"></i>
                     </a>
                 </li>
-                <li className="w-16 h-16 bg-blue-400 flex justify-center gap-x-8 items-center hover:bg-blue-500 dark:text-light cursor-pointer">
+                <li className="w-16 h-16 bg-blue-400 flex justify-center gap-x-8 items-center hover:bg-red-500 dark:text-light cursor-pointer">
                     <a
                         target="_blank"
                         href="https://www.youtube.com/channel/UCpLFVrIKVwnDIVUuno9TlzA"
                         rel="noreferrer"
                     >
                         <i className="fa-2xl fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li className="w-16 h-16 bg-blue-400 flex justify-center gap-x-8 items-center hover:bg-purple-500 dark:text-light cursor-pointer">
+                    <a
+                        target="_blank"
+                        href="https://www.twitch.tv/alevstream"
+                        rel="noreferrer"
+                    >
+                        <i className="fa-2xl fa-brands fa-twitch"></i>
                     </a>
                 </li>
             </ul>

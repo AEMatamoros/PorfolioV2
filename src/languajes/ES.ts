@@ -7,11 +7,7 @@ export const ESlabels = {
     options: 'Opciones',
     mainTitle: 'Sobre Mi',
     mainMsg: `Mi nombre es Alexis Matamoros, soy Ingeniero en Sistemas con un alma entusiasta mis
-  habilidades están enfocadas en el desarrollo de aplicaciones web con
-  conocimientos sobre tecnologías fullstack, poseo muy buenas habilidades blandas
-  , como buena capacidad de intercomunicación, trabajo en equipo,
-  organización, creatividad y además de adapto fácilmente a cualquier
-  situación o trabajo, te invito a conocerme un poco.`,
+  habilidades están enfocadas en el desarrollo de aplicaciones web, te invito a conocerme un poco.`,
     mainHero: `¡Hola!, bienvenido a mi mundo`,
     cvButton: 'Descargar CV',
     frase: `"No importa que tan alta es la montaña, siempre hay un camino a la cima."`,

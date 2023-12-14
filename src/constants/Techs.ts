@@ -37,7 +37,7 @@ export const TECHS = [
         icon: 'fa-brands fa-python',
     },
     { hoverColor: 'text-green-500', name: 'Django', icon: `fa-light fa-d` },
-    { hoverColor: 'text-blue-500', name: 'SQL', icon: `fa-solid fa-database` },
+    { hoverColor: 'text-blue-500', name: 'SQL', icon: `fa-solid fa-server` },
     {
         hoverColor: 'text-green-500',
         name: 'NoSQL',
