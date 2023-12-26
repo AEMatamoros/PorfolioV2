@@ -19,4 +19,7 @@ export const ENlabels = {
     techsTitle: 'Techs',
     experience: 'Experience',
     footerText: 'Generated with REACT, TailwindCSS, VSCode and a lot of love.',
+    contactFullName: 'Full Name',
+    contactEmail: 'Your email',
+    contactSubject: 'Tell me, how can i help you?',
 };

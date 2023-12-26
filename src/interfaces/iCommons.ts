@@ -6,5 +6,6 @@ export interface iHeaderProps {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     texts: any;
     handleLanguaje: () => void;
+    handleContactformOpen: () => void;
     children?: ReactElement | ReactElement[];
 }

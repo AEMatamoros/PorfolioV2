@@ -17,6 +17,7 @@ import Footer from '../components/Footer';
 import GoTop from '../components/shareds/GoTop';
 import Navigator from '../components/shareds/Navigator';
 import SquaresEffect from '../components/shareds/SquaresEffect';
+import Contact from '../components/Contact';
 
 export default function App() {
     // Init in DarkMode, Init Lamp Effect
@@ -69,6 +70,14 @@ export default function App() {
     const proyectsRef = useRef<HTMLDivElement>(null);
     // Active Page
     const [active, setActive] = useState('home');
+    //Contact Page
+    const [showEmailForm, setShowEmailForm] = useState(false);
+    const handleContactformOpen = () => {
+        setShowEmailForm(true);
+    };
+    const handleContactformClose = () => {
+        setShowEmailForm(false);
+    };
     return (
         <main ref={wrapperRef} className="main">
             <div className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap relative">
@@ -76,6 +85,7 @@ export default function App() {
                 <Header
                     handleTheme={handleTheme}
                     handleLanguaje={handleLanguaje}
+                    handleContactformOpen={handleContactformOpen}
                     currentTheme={currentTheme}
                     texts={texts}
                 />
@@ -105,6 +115,7 @@ export default function App() {
                     reference={proyectsRef}
                 />
                 <Footer msg={texts.labels.footerText} />
+
                 <Navigator
                     heroRef={heroRef}
                     aboutRef={aboutRef}
@@ -113,7 +124,13 @@ export default function App() {
                     active={active}
                     currentTheme={currentTheme}
                     texts={texts}
+                    handleContactformOpen={handleContactformOpen}
                 ></Navigator>
+                <Contact
+                    handleContactformClose={handleContactformClose}
+                    showEmailForm={showEmailForm}
+                    texts={texts}
+                />
                 {currentTheme === 'dark' && <LampEffect />}
             </div>
         </main>

@@ -4,6 +4,7 @@ interface iNav {
     scrollToTop: () => void;
     handleTheme: () => void;
     handleLanguaje: () => void;
+    handleContactformOpen: () => void;
     currentTheme: string;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     texts: any;
@@ -14,6 +15,7 @@ export default function Nav({
     handleTheme,
     handleLanguaje,
     currentTheme,
+    handleContactformOpen,
     texts,
 }: iNav) {
     return (
@@ -22,6 +24,7 @@ export default function Nav({
             <NavList
                 handleTheme={handleTheme}
                 handleLanguaje={handleLanguaje}
+                handleContactformOpen={handleContactformOpen}
                 currentTheme={currentTheme}
                 texts={texts}
             />
@@ -50,6 +53,7 @@ export default function Nav({
 interface iNavList {
     handleTheme: () => void;
     handleLanguaje: () => void;
+    handleContactformOpen: () => void;
     currentTheme: string;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     texts: any;
@@ -58,6 +62,7 @@ interface iNavList {
 function NavList({
     handleTheme,
     handleLanguaje,
+    handleContactformOpen,
     currentTheme,
     texts,
 }: iNavList) {
@@ -68,6 +73,14 @@ function NavList({
                 currentTheme={currentTheme}
             />
             <NavListLanguaje handleLanguaje={handleLanguaje} texts={texts} />
+            <li className="block sm:block md:block lg:hidden xl:hidden 2xl:hidden">
+                <span className="ml-3 text-sm font-medium text-blue-500 dark:text-white text-center cursor-pointer">
+                    <i
+                        className="fa-regular fa-envelope"
+                        onClick={handleContactformOpen}
+                    ></i>
+                </span>
+            </li>
         </ul>
     );
 }

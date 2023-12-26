@@ -19,4 +19,7 @@ export const ESlabels = {
     techsTitle: 'Tecnologias',
     experience: 'Experiencia',
     footerText: 'Generado con REACT, TailwindCSS, VSCode y mucho amor.',
+    contactFullName: 'Nombre',
+    contactEmail: 'Correo',
+    contactSubject: 'Dime, ¿Cómo puedo ayudarte?',
 };

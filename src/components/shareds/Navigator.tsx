@@ -7,6 +7,7 @@ export default function Navigator({
     proyectsRef,
     active,
     currentTheme,
+    handleContactformOpen,
     texts, // eslint-disable-next-line @typescript-eslint/no-explicit-any
 }: any) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,6 +18,7 @@ export default function Navigator({
             behavior: 'smooth',
         });
     };
+
     return (
         <aside className={`fixed left-0 navigator  ${currentTheme}`}>
             <ul className="hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex  flex-col gap-4 relative">
@@ -72,6 +74,20 @@ export default function Navigator({
                 >
                     {/* <i className=" fa-brands fa-connectdevelop"></i> */}
                     <span>{texts.labels.proyectsTitle}</span>
+                </li>
+                <li
+                    onClick={() => {
+                        handleContactformOpen();
+                    }}
+                    className={`w-28  h-28 ${
+                        active == 'hero'
+                            ? 'text-dark dark:text-light transform scale-125 font-bold'
+                            : 'text-blue-500'
+                    }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
+                >
+                    <span>
+                        <i className="fa-regular fa-envelope"></i>
+                    </span>
                 </li>
             </ul>
         </aside>

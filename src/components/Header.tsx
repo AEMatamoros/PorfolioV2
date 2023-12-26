@@ -7,6 +7,7 @@ export default function Header({
     texts,
     handleTheme,
     handleLanguaje,
+    handleContactformOpen,
 }: iHeaderProps) {
     return (
         <header className="main__header w-full   flex items-center justify-between p-8 sticky top-0 z-10">
@@ -14,6 +15,7 @@ export default function Header({
                 scrollToTop={scrollToTop}
                 handleTheme={handleTheme}
                 handleLanguaje={handleLanguaje}
+                handleContactformOpen={handleContactformOpen}
                 currentTheme={currentTheme}
                 texts={texts}
             />
