@@ -4,7 +4,7 @@ import { iHeroProps } from '../interfaces/iHeroProps';
 export default function Hero({ title, subtitle, msg, reference }: iHeroProps) {
     return (
         <section
-            className="main__hero flex flex-col justify-center w-full section-hidden p-20"
+            className="main__hero flex flex-col justify-center w-full section-hidden p-8 sm:p-8 md:p-8 lg:p-20 xl:p-20"
             id="hero"
             ref={reference}
         >
