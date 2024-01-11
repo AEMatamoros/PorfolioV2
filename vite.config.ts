@@ -5,11 +5,5 @@ import pluginPurgeCss from '@mojojoejo/vite-plugin-purgecss';
 
 export default defineConfig({
     base: '/PorfolioV2/',
-    plugins: [
-        react(),
-        pluginRewriteAll(),
-        pluginPurgeCss({
-            variables: true,
-        }),
-    ],
+    plugins: [react(), pluginRewriteAll(), pluginPurgeCss({})],
 });
