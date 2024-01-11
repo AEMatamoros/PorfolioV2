@@ -14,6 +14,7 @@ export default function Footer({ msg }: iFooterProps) {
                         rel="noreferrer"
                     >
                         <i className="fa-2xl fa-brands fa-linkedin-in"></i>
+                        <span>Linked In</span>
                     </a>
                 </li>
                 <li className="w-16 h-16 bg-blue-400 flex justify-center items-center hover:bg-purple-500 dark:text-light cursor-pointer">
@@ -23,6 +24,7 @@ export default function Footer({ msg }: iFooterProps) {
                         rel="noreferrer"
                     >
                         <i className="fa-2xl fa-brands fa-github"></i>
+                        <span>Github</span>
                     </a>
                 </li>
                 <li className="w-16 h-16 bg-blue-400 flex justify-center gap-x-8 items-center hover:bg-red-500 dark:text-light cursor-pointer">
@@ -32,6 +34,7 @@ export default function Footer({ msg }: iFooterProps) {
                         rel="noreferrer"
                     >
                         <i className="fa-2xl fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
                     </a>
                 </li>
                 <li className="w-16 h-16 bg-blue-400 flex justify-center gap-x-8 items-center hover:bg-red-500 dark:text-light cursor-pointer">
@@ -41,6 +44,7 @@ export default function Footer({ msg }: iFooterProps) {
                         rel="noreferrer"
                     >
                         <i className="fa-2xl fa-brands fa-youtube"></i>
+                        <span>Youtube</span>
                     </a>
                 </li>
                 <li className="w-16 h-16 bg-blue-400 flex justify-center gap-x-8 items-center hover:bg-purple-500 dark:text-light cursor-pointer">
@@ -50,6 +54,7 @@ export default function Footer({ msg }: iFooterProps) {
                         rel="noreferrer"
                     >
                         <i className="fa-2xl fa-brands fa-twitch"></i>
+                        <span>Twitch</span>
                     </a>
                 </li>
             </ul>

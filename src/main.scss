@@ -107,9 +107,6 @@ section {
     overflow: hidden;
 }
 
-.main__wrapper {
-}
-
 .main__header {
     height: 10vh;
     position: fixed;
@@ -276,6 +273,9 @@ section {
 .main__footer {
     width: 100%;
     min-height: 10vh;
+    & a span {
+        display: none;
+    }
 }
 
 @keyframes lds-ripple {
@@ -347,10 +347,16 @@ section {
 
 .goTop {
     position: fixed;
-    bottom: 32px;
+    bottom: 64px;
     right: 32px;
     z-index: 2000;
+    transition: bottom 0.3s $cubic;
 }
+
+.goTop.move {
+    bottom: -100px;
+}
+
 .first-text-animation {
     animation: first-text-animation;
     animation-duration: 0.5s;

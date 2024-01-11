@@ -1,10 +1,12 @@
 import React from 'react';
 import { scrollToTop } from '../../utils/scrollTop';
 
-export default function GoTop() {
+export default function GoTop({ state }: { state: boolean }) {
     return (
         <i
-            className="goTop fa-2xl fa-solid fa-circle-arrow-up cursor-pointer animate-bounce text-blue-500 opacity-25 hover:opacity-100"
+            className={`goTop ${
+                !state && 'move'
+            } fa-2xl fa-solid fa-circle-arrow-up cursor-pointer animate-bounce text-indigo-700 opacity-75 hover:opacity-100`}
             onClick={scrollToTop}
         ></i>
     );
