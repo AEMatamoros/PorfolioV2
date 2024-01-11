@@ -55,7 +55,9 @@ export default function App() {
 
     //Theme
     const { wrapperRef, handleTheme, currentTheme } = SelectThemeHook();
-
+    useLayoutEffect(() => {
+        handleTheme();
+    }, []);
     //Languaje
     const {
         currentLanguaje: texts,
