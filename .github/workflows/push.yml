@@ -17,6 +17,7 @@ jobs:
               run: |
                   git config --global user.email "${{ secrets.USER_EMAIL }}"
                   git config --global user.name "${{ secrets.USER_NAME}}"
+                  git remote set-url origin https://${{ secrets.USER_NAME }}:${{ secrets.USER_PASSWORD }}@github.com/${{ secrets.USER_NAME }}/PorfolioV2.git
                   git config --global credential.helper store
                   echo "https://alexismatamoros1996888@gmail.com:${{ secrets.TOKEN }}"
                   git config --list
