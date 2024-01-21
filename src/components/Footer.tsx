@@ -12,6 +12,7 @@ export default function Footer({ msg }: iFooterProps) {
                         target="_blank"
                         href="https://www.linkedin.com/in/alexis-eduardo-matamoros-mayorquin-3a87411b5"
                         rel="noreferrer"
+                        className="flex h-full w-full items-center justify-center"
                     >
                         <i className="fa-2xl fa-brands fa-linkedin-in"></i>
                         <span>Linked In</span>
@@ -22,6 +23,7 @@ export default function Footer({ msg }: iFooterProps) {
                         target="_blank"
                         href="https://github.com/AEMatamoros"
                         rel="noreferrer"
+                        className="flex h-full w-full items-center justify-center"
                     >
                         <i className="fa-2xl fa-brands fa-github"></i>
                         <span>Github</span>
@@ -32,6 +34,7 @@ export default function Footer({ msg }: iFooterProps) {
                         target="_blank"
                         href="https://www.instagram.com/wecamefromthelands/"
                         rel="noreferrer"
+                        className="flex h-full w-full items-center justify-center"
                     >
                         <i className="fa-2xl fa-brands fa-instagram"></i>
                         <span>Instagram</span>
@@ -42,6 +45,7 @@ export default function Footer({ msg }: iFooterProps) {
                         target="_blank"
                         href="https://www.youtube.com/channel/UCpLFVrIKVwnDIVUuno9TlzA"
                         rel="noreferrer"
+                        className="flex h-full w-full items-center justify-center"
                     >
                         <i className="fa-2xl fa-brands fa-youtube"></i>
                         <span>Youtube</span>
@@ -52,6 +56,7 @@ export default function Footer({ msg }: iFooterProps) {
                         target="_blank"
                         href="https://www.twitch.tv/alevstream"
                         rel="noreferrer"
+                        className="flex h-full w-full items-center justify-center"
                     >
                         <i className="fa-2xl fa-brands fa-twitch"></i>
                         <span>Twitch</span>
