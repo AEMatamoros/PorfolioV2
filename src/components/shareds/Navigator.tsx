@@ -20,17 +20,17 @@ export default function Navigator({
     };
 
     return (
-        <aside className={`fixed left-0 navigator  ${currentTheme}`}>
-            <ul className="hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex  flex-col gap-4 relative">
+        <aside className={`navigator fixed left-0  ${currentTheme}`}>
+            <ul className="relative hidden flex-col gap-4 sm:hidden md:hidden  lg:flex xl:flex 2xl:flex">
                 <li
                     onClick={() => {
                         handleScroll(heroRef.current);
                     }}
-                    className={`w-28  h-28 ${
+                    className={`h-28  w-28 ${
                         active == 'hero'
-                            ? 'text-dark dark:text-light transform scale-125 font-bold'
+                            ? 'scale-125 transform font-bold text-dark dark:text-light'
                             : 'text-blue-500'
-                    }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
+                    }  flex cursor-pointer items-center justify-center gap-x-8  hover:text-blue-500`}
                 >
                     <span>
                         <i className=" fa-brands fa-fort-awesome-alt"></i>
@@ -40,11 +40,11 @@ export default function Navigator({
                     onClick={() => {
                         handleScroll(aboutRef.current);
                     }}
-                    className={`w-28   h-28 ${
+                    className={`h-28   w-28 ${
                         active == 'about' || active == 'techs'
-                            ? 'text-dark dark:text-light transform scale-125 font-bold'
+                            ? 'scale-125 transform font-bold text-dark dark:text-light'
                             : 'text-blue-500'
-                    }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer transform -rotate-90`}
+                    }  flex -rotate-90 transform cursor-pointer items-center  justify-center gap-x-8 hover:text-blue-500`}
                 >
                     {/* <i className=" fa-regular fa-circle-user"></i> */}
                     <span>{texts.labels.mainTitle}</span>
@@ -53,11 +53,11 @@ export default function Navigator({
                     onClick={() => {
                         handleScroll(expRef.current);
                     }}
-                    className={`w-28   h-28 ${
+                    className={`h-28   w-28 ${
                         active == 'experience'
-                            ? 'text-dark dark:text-light transform scale-125 font-bold'
+                            ? 'scale-125 transform font-bold text-dark dark:text-light'
                             : 'text-blue-500'
-                    }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer transform -rotate-90`}
+                    }  flex -rotate-90 transform cursor-pointer items-center  justify-center gap-x-8 hover:text-blue-500`}
                 >
                     {/* <i className=" fa-solid fa-circle-dot"></i> */}
                     <span>{texts.labels.experience}</span>
@@ -66,11 +66,11 @@ export default function Navigator({
                     onClick={() => {
                         handleScroll(proyectsRef.current);
                     }}
-                    className={`w-28   h-28 ${
+                    className={`h-28   w-28 ${
                         active == 'portfolio'
-                            ? 'text-dark dark:text-light transform scale-125 font-bold'
+                            ? 'scale-125 transform font-bold text-dark dark:text-light'
                             : 'text-blue-500'
-                    }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer transform -rotate-90`}
+                    }  flex -rotate-90 transform cursor-pointer items-center  justify-center gap-x-8 hover:text-blue-500`}
                 >
                     {/* <i className=" fa-brands fa-connectdevelop"></i> */}
                     <span>{texts.labels.proyectsTitle}</span>
@@ -79,11 +79,11 @@ export default function Navigator({
                     onClick={() => {
                         handleContactformOpen();
                     }}
-                    className={`w-28  h-28 ${
+                    className={`h-28  w-28 ${
                         active == 'hero'
-                            ? 'text-dark dark:text-light transform scale-125 font-bold'
+                            ? 'scale-125 transform font-bold text-dark dark:text-light'
                             : 'text-blue-500'
-                    }  flex justify-center gap-x-8 items-center hover:text-blue-500  cursor-pointer`}
+                    }  flex cursor-pointer items-center justify-center gap-x-8  hover:text-blue-500`}
                 >
                     <span>
                         <i className="fa-regular fa-envelope"></i>

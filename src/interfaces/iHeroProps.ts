@@ -1,8 +1,8 @@
-import { RefObject } from "react";
+import { RefObject } from 'react';
 
 export interface iHeroProps {
-  title: string;
-  subtitle: string;
-  msg: string;
-  reference: RefObject<HTMLDivElement> | null;
+    title: string;
+    subtitle: string;
+    msg: string;
+    reference: RefObject<HTMLDivElement> | null;
 }

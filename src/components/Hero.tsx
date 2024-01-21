@@ -4,7 +4,7 @@ import { iHeroProps } from '../interfaces/iHeroProps';
 export default function Hero({ title, subtitle, msg, reference }: iHeroProps) {
     return (
         <section
-            className="main__hero flex flex-col justify-center w-full section-hidden p-8 sm:p-8 md:p-8 lg:p-20 xl:p-20"
+            className="main__hero section-hidden flex w-full flex-col justify-center p-8 sm:p-8 md:p-8 lg:p-20 xl:p-20"
             id="hero"
             ref={reference}
         >
@@ -19,7 +19,7 @@ interface iHeroContent {
 }
 export function HeroContent({ title, subtitle, msg }: iHeroContent) {
     return (
-        <section className="main__hero__text flex flex-col justify-center items-start container m-auto text-center md:text-left ">
+        <section className="main__hero__text container m-auto flex flex-col items-start justify-center text-center md:text-left ">
             <Title title={title}></Title>
             <Subtitle subtitle={subtitle}></Subtitle>
             <SectionDescription msg={msg}></SectionDescription>

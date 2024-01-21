@@ -68,11 +68,11 @@ export default function Contact({
         <section
             className={`main__contact ${
                 showEmailForm && 'show'
-            } bg-blue-500 w-full flex flex-col justify-center items-center p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16`}
+            } flex w-full flex-col items-center justify-center bg-blue-500 p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16`}
         >
             <div className="container">
                 <i
-                    className="fa-solid fa-circle-xmark fa-2xl close text-white hover:text-red-600 cursor-pointer"
+                    className="fa-solid fa-circle-xmark fa-2xl close cursor-pointer text-white hover:text-red-600"
                     onClick={() => {
                         handleContactformClose();
                     }}
@@ -83,20 +83,20 @@ export default function Contact({
                 />
 
                 <form
-                    className="max-w-sm mx-auto"
+                    className="mx-auto max-w-sm"
                     onSubmit={handleSubmit(onSubmit)}
                 >
                     <div className="mb-5">
                         <label
                             htmlFor="name"
-                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                         >
                             {texts.labels.contactFullName}
                         </label>
                         <input
                             type="text"
                             id="name"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
                             placeholder="Jon Doe"
                             {...register('name', { required: true })}
                         />
@@ -107,14 +107,14 @@ export default function Contact({
                         )}
                         <label
                             htmlFor="email"
-                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                         >
                             {texts.labels.contactEmail}
                         </label>
                         <input
                             type="email"
                             id="email"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
                             placeholder="doe@.com"
                             {...register('email', { required: true })}
                         />
@@ -127,13 +127,13 @@ export default function Contact({
                     <div className="mb-5">
                         <label
                             htmlFor="text"
-                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                         >
                             {texts.labels.contactSubject}
                         </label>
                         <textarea
-                            id="text"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                            id="text "
+                            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
                             {...register('subject', { required: true })}
                         ></textarea>
                         {errors.subject && (
@@ -144,7 +144,7 @@ export default function Contact({
                     </div>
                     <button
                         type="submit"
-                        className="text-white bg-green-500 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        className="focus:outline-none w-full rounded-lg bg-green-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-900 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
                         disabled={disable}
                     >
                         Submit

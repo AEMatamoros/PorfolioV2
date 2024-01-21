@@ -5,7 +5,7 @@ import { iAboutProps } from '../interfaces/iAboutProps';
 export default function About({ subtitle, msg, reference }: iAboutProps) {
     return (
         <section
-            className="flex main__about  justify-center items-center text-dark dark:text-white w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full sm:p-4 md:p-4 lg:p-8 xl:p-8 text-center section-hidden"
+            className="main__about section-hidden  flex w-full items-center justify-center text-center text-dark dark:text-white sm:w-full sm:p-4 md:w-full md:p-4 lg:w-full lg:p-8 xl:w-full xl:p-8 2xl:w-full"
             id="about"
             ref={reference}
         >
@@ -21,7 +21,7 @@ interface iAboutContent {
 
 export function AboutContent({ subtitle, msg }: iAboutContent) {
     return (
-        <div className="container main__about__text text-2xl p-12 flex flex-col gap-16">
+        <div className="main__about__text container flex flex-col gap-16 p-12 text-2xl">
             <SecondaryTitle subtitle={subtitle} />
             <SecondaryDescription msg={msg} />
         </div>

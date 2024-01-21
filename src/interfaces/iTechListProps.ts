@@ -1,7 +1,7 @@
 export interface iTechListProps {
-  placeTechs: string[];
+    placeTechs: string[];
 }
 
 export interface iTechName {
-  tec: string;
+    tec: string;
 }

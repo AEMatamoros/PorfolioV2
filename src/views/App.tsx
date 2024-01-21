@@ -107,7 +107,7 @@ export default function App() {
     };
     return (
         <main ref={wrapperRef} className="main">
-            <div className="bg-light dark:bg-dark text-dark dark:text-white flex flex-wrap relative">
+            <div className="relative flex flex-wrap bg-light text-dark dark:bg-dark dark:text-white ">
                 <SquaresEffect currentTheme={currentTheme} />
                 <Header
                     handleTheme={handleTheme}

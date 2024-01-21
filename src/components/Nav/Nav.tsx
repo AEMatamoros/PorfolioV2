@@ -67,14 +67,14 @@ function NavList({
     texts,
 }: iNavList) {
     return (
-        <ul className="flex justify-end items-center gap-8 ">
+        <ul className="flex items-center justify-end gap-8 ">
             <NavListTheme
                 handleTheme={handleTheme}
                 currentTheme={currentTheme}
             />
             <NavListLanguaje handleLanguaje={handleLanguaje} texts={texts} />
             <li className="block sm:block md:block lg:hidden xl:hidden 2xl:hidden">
-                <span className="ml-3 text-sm font-medium text-blue-500 dark:text-white text-center cursor-pointer">
+                <span className="ml-3 cursor-pointer text-center text-sm font-medium text-blue-500 dark:text-white">
                     <i
                         className="fa-regular fa-envelope"
                         onClick={handleContactformOpen}
@@ -94,7 +94,7 @@ function NavListTheme({ handleTheme, currentTheme }: iNavListOption) {
     return (
         <li>
             <span
-                className="ml-3 text-sm font-medium text-blue-500 dark:text-white text-center cursor-pointer"
+                className="ml-3 cursor-pointer text-center text-sm font-medium text-blue-500 dark:text-white"
                 onClick={handleTheme}
             >
                 {currentTheme !== 'dark' ? (
@@ -118,7 +118,7 @@ function NavListLanguaje({ handleLanguaje, texts }: iNavListLanguaje) {
     return (
         <li>
             <span
-                className="ml-3 text-blue-500 text-sm font-medium dark:text-white cursor-pointer"
+                className="ml-3 cursor-pointer text-sm font-medium text-blue-500 dark:text-white"
                 onClick={handleLanguaje}
             >
                 {texts.labels.languaje}

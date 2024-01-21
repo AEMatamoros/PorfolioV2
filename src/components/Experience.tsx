@@ -16,7 +16,7 @@ export default function Experience({
 }: iExperienceProps) {
     return (
         <section
-            className="main__exp w-full p-4 sm:p-4 md:p-4 lg:p-16 xl:p16 duration-75 flex flex-wrap gap-4 justify-center items-center section-hidden"
+            className="main__exp xl:p16 section-hidden flex w-full flex-wrap items-center justify-center gap-4 p-4 duration-75 sm:p-4 md:p-4 lg:p-16"
             id="experience"
             ref={reference}
         >
@@ -34,7 +34,7 @@ interface iExperienceContent {
 
 function ExperienceContent({ subtitle, currentLanguaje }: iExperienceContent) {
     return (
-        <div className="container flex flex-wrap gap-8 justify-center items-center">
+        <div className="container flex flex-wrap items-center justify-center gap-8">
             <SecondaryTitle subtitle={subtitle}></SecondaryTitle>
             {EXPERIENCE.map((place, index) => (
                 <ExperienceCard
@@ -55,10 +55,10 @@ export function ExperienceCard({
     currentLanguaje: string;
 }) {
     return (
-        <article className=" experience__card flex items-center justify-center p-6 sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 w-full h-auto text-dark dark:text-white ">
+        <article className=" experience__card flex h-auto w-full items-center justify-center p-6 text-dark dark:text-white sm:w-full md:w-6/12 lg:w-5/12 xl:w-4/12 ">
             <div className="flex flex-wrap items-center">
                 <ExperiencePlaceName placeName={place.name} />
-                <div className="h-full flex flex-col justify-between w-10/12">
+                <div className="flex h-full w-10/12 flex-col justify-between">
                     <ExpDescription
                         place={place}
                         currentLanguaje={currentLanguaje}
@@ -72,7 +72,7 @@ export function ExperienceCard({
 }
 function ExperiencePlaceName({ placeName }: IExperiencePlaceName) {
     return (
-        <h3 className="w-2/12 h-full exp-decoration font-bold text-2xl transform -rotate-90 text-center flex justify-center items-center">
+        <h3 className="exp-decoration flex h-full w-2/12 -rotate-90 transform items-center justify-center text-center text-2xl font-bold">
             {placeName}
         </h3>
     );
@@ -82,11 +82,11 @@ function ExpDescription({ place, currentLanguaje }: iExperienceDescription) {
     return (
         <>
             {currentLanguaje === 'ES' ? (
-                <p className="text-xl leading-relaxed text-center">
+                <p className="text-center text-xl leading-relaxed">
                     {place.descriptionES}
                 </p>
             ) : (
-                <p className="text-xl leading-relaxed text-center">
+                <p className="text-center text-xl leading-relaxed">
                     {place.descriptionEN}
                 </p>
             )}
@@ -96,7 +96,7 @@ function ExpDescription({ place, currentLanguaje }: iExperienceDescription) {
 
 function TechList({ placeTechs }: iTechListProps) {
     return (
-        <ul className="flex flex-wrap justify-center items-center text-center pt-2">
+        <ul className="flex flex-wrap items-center justify-center pt-2 text-center">
             {placeTechs.map(tec => (
                 <TechItem tec={tec} key={`tec-${tec}`} />
             ))}
@@ -106,7 +106,7 @@ function TechList({ placeTechs }: iTechListProps) {
 
 function TechItem({ tec }: iTechName) {
     return (
-        <li className="mr-2 mb-2 px-3 py-1 text-xs bg-blue-400 text-white opacity-70">
+        <li className="mb-2 mr-2 bg-blue-400 px-3 py-1 text-xs text-white opacity-70">
             {tec}
         </li>
     );
@@ -114,7 +114,7 @@ function TechItem({ tec }: iTechName) {
 
 function TimeList({ place, currentLanguaje }: iTimeList) {
     return (
-        <ul className="text-base mt-0 list-none list-inside  leading-relaxed">
+        <ul className="mt-0 list-inside list-none text-base  leading-relaxed">
             <TimeDescription
                 time={place.time}
                 timeEnd={place.timeEnd}
@@ -139,7 +139,7 @@ function TimeDescription({
 
 function TimeCurrent({ currentLanguaje }: { currentLanguaje: string }) {
     return (
-        <li className="text-blue-500 font-semibold text-center">
+        <li className="text-center font-semibold text-blue-500">
             {currentLanguaje == 'ES' ? 'Actualidad' : 'Current'}
         </li>
     );

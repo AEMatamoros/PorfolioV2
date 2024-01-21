@@ -1,7 +1,7 @@
-import { RefObject } from "react";
+import { RefObject } from 'react';
 
 export interface iAboutProps {
-  subtitle: string;
-  msg: string;
-  reference: RefObject<HTMLDivElement>;
+    subtitle: string;
+    msg: string;
+    reference: RefObject<HTMLDivElement>;
 }

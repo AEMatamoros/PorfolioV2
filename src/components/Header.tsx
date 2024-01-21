@@ -10,7 +10,7 @@ export default function Header({
     handleContactformOpen,
 }: iHeaderProps) {
     return (
-        <header className="main__header w-full   flex items-center justify-between p-8 sticky top-0 z-10">
+        <header className="main__header sticky   top-0 z-10 flex w-full items-center justify-between p-8">
             <Nav
                 scrollToTop={scrollToTop}
                 handleTheme={handleTheme}

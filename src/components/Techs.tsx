@@ -4,7 +4,7 @@ import { TECHS } from '../constants/Techs';
 export default function Techs({ subtitle }: { subtitle: string }) {
     return (
         <section
-            className="main__techs  flex justify-center items-center dark:text-blue-500 w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full sm:mt-8 md:mt-8 lg:mt-0 xl:mt-0 2xl:w-612 sm:p-4 md:p-4 lg:p-8 xl:p-8 text-center section-hidden"
+            className="main__techs  2xl:w-612 section-hidden flex w-full items-center justify-center text-center dark:text-blue-500 sm:mt-8 sm:w-full sm:p-4 md:mt-8 md:w-full md:p-4 lg:mt-0 lg:w-full lg:p-8 xl:mt-0 xl:w-full xl:p-8 2xl:w-full"
             id="techs"
         >
             <TechsContent subtitle={subtitle} />
@@ -28,7 +28,7 @@ function TechsContent({ subtitle }: iTechsContent) {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function TechsList({ techs }: { techs: any[] }) {
     return (
-        <ul className="tech-container  main__about__icons text-3xl flex flex-wrap justify-center items-center gap-4 p-4">
+        <ul className="tech-container  main__about__icons flex flex-wrap items-center justify-center gap-4 p-4 text-3xl">
             {techs.map((tec, index) => (
                 <TechItem tec={tec} key={`tecname-${tec}${index}`} />
             ))}
@@ -42,10 +42,10 @@ interface iTechItem {
 
 export function TechItem({ tec }: iTechItem) {
     return (
-        <li className="p-1 techs__standar " title={tec.name}>
+        <li className="techs__standar p-1 " title={tec.name}>
             <div
                 className={
-                    'tech-item h-full w-full card  cursor-pointer transition-all duration-300 flex flex-col justify-center items-center ' +
+                    'tech-item card flex h-full  w-full cursor-pointer flex-col items-center justify-center transition-all duration-300 ' +
                     tec.hoverColor
                 }
             >

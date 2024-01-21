@@ -25,13 +25,13 @@ export default function Portfolio({
     return (
         <>
             <section
-                className="main__work  w-full flex flex-col justify-center items-center p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16 section-hidden"
+                className="main__work  section-hidden flex w-full flex-col items-center justify-center p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16"
                 id="portfolio"
                 ref={reference}
             >
                 <div className="container">
                     <SecondaryTitle subtitle={subtitle} />
-                    <ul className="proyects-container flex flex-wrap justify-center items-center w-full proyects-container">
+                    <ul className="proyects-container proyects-container flex w-full flex-wrap items-center justify-center">
                         {currentItems.map((proyect, index) => (
                             <Card
                                 proyect={proyect}
@@ -43,7 +43,7 @@ export default function Portfolio({
                             />
                         ))}
                     </ul>
-                    <div className="flex justify-center items-center gap-4">
+                    <div className="flex items-center justify-center gap-4">
                         {Array.from(
                             { length: totalPages },
                             (_, index) => index + 1,
@@ -53,7 +53,7 @@ export default function Portfolio({
                                     currentPage == page
                                         ? 'bg-green-400'
                                         : 'bg-blue-400'
-                                } text-white  hover:bg-green-500 p-2 w-10 h-10`}
+                                } h-10  w-10 p-2 text-white hover:bg-green-500`}
                                 key={page}
                                 onClick={() => handlePageChange(page)}
                                 title={`${page}`}

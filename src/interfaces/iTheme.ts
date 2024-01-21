@@ -1,3 +1,3 @@
 export interface iTheme {
-    value: string
+    value: string;
 }

@@ -1,3 +1,3 @@
 export interface iFooterProps {
-  msg: string;
+    msg: string;
 }
