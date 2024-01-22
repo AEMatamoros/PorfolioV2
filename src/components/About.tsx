@@ -21,7 +21,7 @@ interface iAboutContent {
 
 export function AboutContent({ subtitle, msg }: iAboutContent) {
     return (
-        <div className="main__about__text container flex flex-col gap-16 p-12 text-2xl">
+        <div className="main__about__text test container flex flex-col gap-16 p-12 text-2xl">
             <SecondaryTitle subtitle={subtitle} />
             <SecondaryDescription msg={msg} />
         </div>
