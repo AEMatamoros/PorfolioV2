@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-import { iTheme } from '../interfaces/iTheme';
+import { iTheme } from '@Interfaces/index';
 
 const initialState: iTheme = {
     value: 'light',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AboutContent } from '../../components/About';
+import { AboutContent } from '@Components/index';
 const texts = {
     type: 'ES',
     labels: {

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { HeroContent } from '../../components/Hero';
+import { HeroContent } from '@Components/index';
 
 const meta = {
     title: 'App/Hero',

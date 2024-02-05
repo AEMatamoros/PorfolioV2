@@ -1,6 +1,6 @@
 import React from 'react';
-import { SecondaryTitle, SecondaryDescription } from '../components';
-import { iAboutProps } from '../interfaces/iAboutProps';
+import { SecondaryTitle, SecondaryDescription } from '@Components/index';
+import { iAboutProps } from '@Interfaces/index';
 
 export default function About({ subtitle, msg, reference }: iAboutProps) {
     return (

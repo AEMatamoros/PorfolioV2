@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { ExperienceCard } from '../../components/Experience';
+import { ExperienceCard } from '@Components/index';
 
 const meta = {
     title: 'App/ExpCard',

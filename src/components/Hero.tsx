@@ -1,6 +1,6 @@
 import React from 'react';
-import { Title, Subtitle, SectionDescription } from '../components';
-import { iHeroProps } from '../interfaces/iHeroProps';
+import { Title, Subtitle, SectionDescription } from '@Components/index';
+import { iHeroProps } from '@Interfaces/index';
 export default function Hero({ title, subtitle, msg, reference }: iHeroProps) {
     return (
         <section

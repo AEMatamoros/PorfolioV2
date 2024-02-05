@@ -1,7 +1,7 @@
 import React from 'react';
-import { iHeaderProps } from '../interfaces/iCommons';
-import { scrollToTop } from '../utils/scrollTop';
-import Nav from './Nav/Nav';
+import { iHeaderProps } from '@Interfaces/index';
+import { scrollToTop } from '@Utils/scrollTop';
+import { Nav } from '@Components/index';
 export default function Header({
     currentTheme,
     texts,

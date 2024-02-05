@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import SecondaryTitle from './shareds/SecondaryTitle';
-import axios from 'axios';
-import Swal from 'sweetalert2';
+import React from 'react';
+import { SecondaryTitle } from '@Components/index';
+import { useSubmit } from '@Hooks/index';
 export default function Contact({
     handleContactformClose,
     showEmailForm,
@@ -13,57 +11,9 @@ export default function Contact({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     texts: any;
 }) {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        reset,
-    } = useForm();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const onSubmit = (data: any) => {
-        setDisable(true);
-        axios
-            .post('https://portfolio-api-ten-sage.vercel.app/sendmail', {
-                html: `
-                <body>
-                  <p>Querido Alexis,</p>
-                
-                  <p>Espero que estés bien. Soy ${data.name}, ${data.email}. 
-                
-                  <p>${data.subject}</p>
-                </body>`,
-            })
-            .then(function (response) {
-                // handle success
-                console.log(response);
-                Swal.fire({
-                    position: 'top-end',
-                    icon: undefined,
-                    title: 'Thanks i will get in contact with you!',
-                    showConfirmButton: false,
-                    timer: 1500, // Tiempo en milisegundos antes de cerrar automáticamente
-                    timerProgressBar: true,
-                });
-                reset({ name: '', email: '', subject: '' });
-                handleContactformClose();
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'error',
-                    title: 'An Error ocurred',
-                    showConfirmButton: false,
-                    timer: 1500, // Tiempo en milisegundos antes de cerrar automáticamente
-                    timerProgressBar: true,
-                });
-            })
-            .finally(() => {
-                setDisable(false);
-            });
-    };
-    const [disable, setDisable] = useState(false);
+    const { register, handleSubmit, errors, onSubmit, disable } = useSubmit({
+        handleContactformClose,
+    });
     return (
         <section
             className={`main__contact ${
@@ -144,7 +94,7 @@ export default function Contact({
                     </div>
                     <button
                         type="submit"
-                        className="focus:outline-none w-full rounded-lg bg-green-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-900 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
+                        className={`focus:outline-none w-full rounded-lg bg-green-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-900 focus:ring-4 focus:ring-blue-300  dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto ${disable ? 'bg-gray-500 dark:bg-gray-500' : 'dark:bg-blue-600'}`}
                         disabled={disable}
                     >
                         Submit

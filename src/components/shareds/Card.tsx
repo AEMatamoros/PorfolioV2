@@ -1,6 +1,6 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { iCard } from '../../interfaces/iCard';
+import { iCard } from '@Interfaces/index';
 export default function Card({
     proyect,
     currentLanguaje,

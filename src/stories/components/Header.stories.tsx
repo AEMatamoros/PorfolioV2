@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Header } from '../../components';
+import { Header } from '@Components/index';
 const texts = {
     type: 'ES',
     labels: {

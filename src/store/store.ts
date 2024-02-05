@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import uiReducer from '../slices/uiSlice';
-import languajeReducer from '../slices/languajeSlice';
+import uiReducer from '@/slices/uiSlice';
+import languajeReducer from '@/slices/languajeSlice';
 
 export const store = configureStore({
     reducer: {

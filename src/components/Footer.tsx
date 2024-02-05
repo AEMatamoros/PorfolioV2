@@ -1,5 +1,5 @@
 import React from 'react';
-import { iFooterProps } from '../interfaces/iFooterProps';
+import { iFooterProps } from '@Interfaces/index';
 export default function Footer({ msg }: iFooterProps) {
     return (
         <footer className="main__footer z-10  flex flex-col items-center justify-center p-16 text-light">

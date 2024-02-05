@@ -1,7 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store/store';
-import { changeTheme } from '../slices/uiSlice';
+import { RootState } from '@/store/store';
+import { changeTheme } from '@/slices/uiSlice';
 
 export default function SelectThemeHook() {
     const currentTheme = useSelector((state: RootState) => state.ui.value);
@@ -18,6 +18,9 @@ export default function SelectThemeHook() {
             dispatch(changeTheme('dark'));
         }
     };
+    useLayoutEffect(() => {
+        handleTheme();
+    }, []);
     return {
         wrapperRef,
         handleTheme,

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Card } from './index';
-import { iPortfolioProps } from '../interfaces/iPortfolioProps';
-import { PROYECTS } from '../constants/Portfolio';
-import useLightbox from '../hooks/useLightbox';
-import SecondaryTitle from './shareds/SecondaryTitle';
+import { iPortfolioProps } from '@Interfaces/index';
+import { PROYECTS } from '@Constants/index';
+import { useLightbox } from '@Hooks/index';
+import { SecondaryTitle, Card } from '@Components/index';
 export default function Portfolio({
     subtitle,
     currentLanguaje,

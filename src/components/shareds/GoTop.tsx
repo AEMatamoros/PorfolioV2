@@ -1,5 +1,5 @@
 import React from 'react';
-import { scrollToTop } from '../../utils/scrollTop';
+import { scrollToTop } from '@Utils/scrollTop';
 
 export default function GoTop({ state }: { state: boolean }) {
     return (

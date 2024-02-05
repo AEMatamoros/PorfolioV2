@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-import { ESlabels } from '../languajes/ES';
+import { ESlabels } from '@/languajes/ES';
 
-import { iTexts } from '../interfaces/iTexts';
+import { iTexts } from '@Interfaces/index';
 
 const initialState: iTexts = {
     type: 'ES',

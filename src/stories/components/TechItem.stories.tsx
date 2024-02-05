@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TechItem } from '../../components/Techs';
+import { TechItem } from '@Components/index';
 
 const meta = {
     title: 'App/TechItem',

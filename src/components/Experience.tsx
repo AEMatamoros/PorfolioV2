@@ -1,14 +1,17 @@
 import React from 'react';
-import formatDate from '../utils/date';
-import SecondaryTitle from './shareds/SecondaryTitle';
+import formatDate from '@Utils/date';
+import { SecondaryTitle } from '@Components/index';
 import {
     iExperienceProps,
     iExperienceDescription,
     IExperiencePlaceName,
-} from '../interfaces/iExperienceProps';
-import { iTechListProps, iTechName } from '../interfaces/iTechListProps';
-import { iTimeDescriptionProps, iTimeList } from '../interfaces/iTime';
-import { EXPERIENCE } from '../constants/Experience';
+    iTechListProps,
+    iTechName,
+    iTimeDescriptionProps,
+    iTimeList,
+} from '@Interfaces/index';
+
+import { EXPERIENCE } from '@Constants/index';
 export default function Experience({
     subtitle,
     currentLanguaje,

@@ -1,16 +1,16 @@
-import AgendaIMG from '../assets/img/portfolio/agenda.jpg';
-import PhoenixStoreIMG from '../assets/img/portfolio/phoenixstore.jpg';
-import QrIMG from '../assets/img/portfolio/qr.jpg';
-import LecoIMG from '../assets/img/portfolio/leco.jpg';
-import WeatherImg from '../assets/img/portfolio/weather.jpg';
-import ExpenceFrontIMG from '../assets/img/portfolio/expencefront.jpg';
-import ExpenceBackIMG from '../assets/img/portfolio/expenceback.jpg';
-import CalendarIMG from '../assets/img/portfolio/calendar.jpg';
-import CalendarBIMG from '../assets/img/portfolio/calendarb.jpg';
-import PortalImg from '../assets/img/portfolio/portal.jpg';
-import FUTVIMG from '../assets/img/portfolio/futv.jpg';
-import Barber from '../assets/img/portfolio/barber.jpg';
-import NoImg from '../assets/img/portfolio/noimg.jpg';
+import AgendaIMG from '@Assets/img/portfolio/agenda.jpg';
+import PhoenixStoreIMG from '@Assets/img/portfolio/phoenixstore.jpg';
+import QrIMG from '@Assets/img/portfolio/qr.jpg';
+import LecoIMG from '@Assets/img/portfolio/leco.jpg';
+import WeatherImg from '@Assets/img/portfolio/weather.jpg';
+import ExpenceFrontIMG from '@Assets/img/portfolio/expencefront.jpg';
+import ExpenceBackIMG from '@Assets/img/portfolio/expenceback.jpg';
+import CalendarIMG from '@Assets/img/portfolio/calendar.jpg';
+import CalendarBIMG from '@Assets/img/portfolio/calendarb.jpg';
+import PortalImg from '@Assets/img/portfolio/portal.jpg';
+import FUTVIMG from '@Assets/img/portfolio/futv.jpg';
+import Barber from '@Assets/img/portfolio/barber.jpg';
+import NoImg from '@Assets/img/portfolio/noimg.jpg';
 export const PROYECTS = [
     {
         hoverColor: 'text-gray-500',

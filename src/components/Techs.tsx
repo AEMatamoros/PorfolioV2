@@ -1,6 +1,6 @@
 import React from 'react';
-import SecondaryTitle from './shareds/SecondaryTitle';
-import { TECHS } from '../constants/Techs';
+import { SecondaryTitle } from '@Components/index';
+import { TECHS } from '@Constants/index';
 export default function Techs({ subtitle }: { subtitle: string }) {
     return (
         <section
