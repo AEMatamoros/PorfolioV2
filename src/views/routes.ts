@@ -11,7 +11,7 @@ interface iRouter {
 }
 
 const lazyApp = lazy(() => import(/* webpackChunkName: "LazyHome" */ './App'));
-const lazyNotFound = lazy(() => import(/* webpackChunkName: "LazyHome" */ './NotFound'));
+const LazyNotFound = lazy(() => import(/* webpackChunkName: "LazyHome" */ './NotFound'));
 
 // Lazy Components
 // const lazyHome = lazy(
@@ -20,16 +20,19 @@ const lazyNotFound = lazy(() => import(/* webpackChunkName: "LazyHome" */ './Not
 
 export const routes: iRouter[] = [
     {
-        to: '*',
-        path: '*',
-        name: 'notfound',
-        Component: lazyNotFound
-    },
-    {
         to: '/',
-        path: '/PorfolioV2',
+        path: '/PorfolioV2/',
         name: 'main',
         Component: lazyApp,
+        nested: [
+            // { to: "", path: "", name: "Home", Component: lazyHome },
+        ],
+    },
+    {
+        to: '/notfound',
+        path: '/notfound',
+        name: 'notfound',
+        Component: LazyNotFound,
         nested: [
             // { to: "", path: "", name: "Home", Component: lazyHome },
         ],
