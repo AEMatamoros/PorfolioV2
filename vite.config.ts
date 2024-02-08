@@ -4,7 +4,7 @@ import pluginRewriteAll from 'vite-plugin-rewrite-all';
 import path from 'path';
 
 export default defineConfig({
-    base: '/PorfolioV2/',
+    base: '',
     plugins: [react(), pluginRewriteAll()],
     resolve: {
         alias: {

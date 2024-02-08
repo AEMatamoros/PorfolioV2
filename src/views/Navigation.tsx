@@ -1,10 +1,10 @@
 import React from 'react';
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { routes } from './routes';
 
 export default function Navigation() {
     return (
-        <HashRouter>
+        <BrowserRouter>
             {/* <Suspense fallback={
         <div className="loader-view bg-dark">
           <Loader />
@@ -33,6 +33,6 @@ export default function Navigation() {
                 />
             </Routes>
             {/* </Suspense> */}
-        </HashRouter>
+        </BrowserRouter>
     );
 }
