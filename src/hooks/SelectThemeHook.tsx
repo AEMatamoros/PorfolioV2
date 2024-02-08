@@ -1,10 +1,10 @@
 import { useRef, useLayoutEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '@/store/store';
 import { changeTheme } from '@/slices/uiSlice';
+import { getTheme } from '@/slices/selectors/uiSelectors';
 
 export default function SelectThemeHook() {
-    const currentTheme = useSelector((state: RootState) => state.ui.value);
+    const currentTheme = useSelector(getTheme);
     const dispatch = useDispatch();
 
     const wrapperRef = useRef<HTMLDivElement>(null);

@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { ESlabels, ENlabels } from '@/languajes/index';
-import { RootState } from '@/store/store';
 import { changeLenguaje } from '@/slices/languajeSlice';
+import { getLanguaje } from '@/slices/selectors/uiSelectors';
 
 export default function SelectLanguajeHook() {
-    const currentLanguaje = useSelector((state: RootState) => state.languaje);
+    const currentLanguaje = useSelector(getLanguaje);
     const dispatch = useDispatch();
 
     const handleLanguaje = () => {
