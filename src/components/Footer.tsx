@@ -7,17 +7,6 @@ export default function Footer({ msg }: iFooterProps) {
                 &copy; 2023 Alexis Matamoros
             </span>
             <ul className="lg:6/12 xl:6/12 2xl:6/12 mb-8 flex justify-center gap-4 sm:w-full md:w-full">
-                <li className="flex h-16 w-16 cursor-pointer items-center justify-center bg-blue-400 hover:bg-blue-500 dark:text-light">
-                    <a
-                        target="_blank"
-                        href="https://www.linkedin.com/in/alexis-eduardo-matamoros-mayorquin-3a87411b5"
-                        rel="noreferrer"
-                        className="flex h-full w-full items-center justify-center"
-                    >
-                        <i className="fa-2xl fa-brands fa-linkedin-in"></i>
-                        <span>Linked In</span>
-                    </a>
-                </li>
                 <li className="flex h-16 w-16 cursor-pointer items-center justify-center bg-blue-400 hover:bg-purple-500 dark:text-light">
                     <a
                         target="_blank"
@@ -29,7 +18,18 @@ export default function Footer({ msg }: iFooterProps) {
                         <span>Github</span>
                     </a>
                 </li>
-                <li className="flex h-16 w-16 cursor-pointer items-center justify-center gap-x-8 bg-blue-400 hover:bg-red-500 dark:text-light">
+                <li className="flex h-16 w-16 cursor-pointer items-center justify-center bg-blue-400 hover:bg-blue-500 dark:text-light">
+                    <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/alexis-eduardo-matamoros-mayorquin-3a87411b5"
+                        rel="noreferrer"
+                        className="flex h-full w-full items-center justify-center"
+                    >
+                        <i className="fa-2xl fa-brands fa-linkedin-in"></i>
+                        <span>Linked In</span>
+                    </a>
+                </li>
+                <li className="flex h-16 w-16 cursor-pointer items-center justify-center gap-x-8 bg-blue-400 hover:bg-purple-500 dark:text-light">
                     <a
                         target="_blank"
                         href="https://www.instagram.com/wecamefromthelands/"
@@ -51,7 +51,7 @@ export default function Footer({ msg }: iFooterProps) {
                         <span>Youtube</span>
                     </a>
                 </li>
-                <li className="flex h-16 w-16 cursor-pointer items-center justify-center gap-x-8 bg-blue-400 hover:bg-purple-500 dark:text-light">
+                {/* <li className="flex h-16 w-16 cursor-pointer items-center justify-center gap-x-8 bg-blue-400 hover:bg-purple-500 dark:text-light">
                     <a
                         target="_blank"
                         href="https://www.twitch.tv/alevstream"
@@ -61,7 +61,7 @@ export default function Footer({ msg }: iFooterProps) {
                         <i className="fa-2xl fa-brands fa-twitch"></i>
                         <span>Twitch</span>
                     </a>
-                </li>
+                </li> */}
             </ul>
             <span className=" w-full text-left text-dark dark:text-white">
                 {msg} - ❤️

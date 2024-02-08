@@ -1,15 +1,17 @@
 import React from 'react';
-import { SecondaryTitle } from '@Components/index';
+import { SecondaryTitle, SquaresEffect } from '@Components/index';
 import { useSubmit } from '@Hooks/index';
 export default function Contact({
     handleContactformClose,
     showEmailForm,
     texts,
+    currentTheme
 }: {
     handleContactformClose: () => void;
     showEmailForm: boolean;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     texts: any;
+    currentTheme: string
 }) {
     const { register, handleSubmit, errors, onSubmit, disable } = useSubmit({
         handleContactformClose,
@@ -20,13 +22,13 @@ export default function Contact({
                 showEmailForm && 'show'
             } flex w-full flex-col items-center justify-center bg-blue-500 p-4 sm:p-4 md:p-4 lg:p-16 xl:p-16`}
         >
-            <div className="container">
                 <i
                     className="fa-solid fa-circle-xmark fa-2xl close cursor-pointer text-white hover:text-red-600"
                     onClick={() => {
                         handleContactformClose();
                     }}
                 ></i>
+            <div className="container relative z-10">
                 <SecondaryTitle
                     subtitle={texts.labels.contactTitle}
                     color="text-white"
@@ -101,6 +103,8 @@ export default function Contact({
                     </button>
                 </form>
             </div>
+            <SquaresEffect currentTheme={currentTheme} />
+
         </section>
     );
 }

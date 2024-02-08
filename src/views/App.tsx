@@ -95,6 +95,7 @@ export default function App() {
                     handleContactformClose={handleContactformClose}
                     showEmailForm={showEmailForm}
                     texts={texts}
+                    currentTheme={currentTheme}
                 />
                 {currentTheme === 'dark' && <LampEffect />}
             </div>
