@@ -27,7 +27,7 @@ export const routes: iRouter[] = [
     },
     {
         to: '/',
-        path: '/',
+        path: '/PorfolioV2',
         name: 'main',
         Component: lazyApp,
         nested: [
