@@ -78,4 +78,9 @@ export const TECHS = [
         name: 'Docker',
         icon: `fa-brands fa-docker`,
     },
+    {
+        hoverColor: 'text-yellow-500',
+        name: 'Java',
+        icon: `fa-brands fa-java`,
+    },
 ];
