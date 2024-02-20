@@ -22,4 +22,6 @@ export const ENlabels = {
     contactFullName: 'Full Name',
     contactEmail: 'Your email',
     contactSubject: 'Tell me, how can i help you?',
+    notFoundText:"This place dosent exists, but dont worry i got u!😝",
+    notFoundLink:"Go Home..."
 };

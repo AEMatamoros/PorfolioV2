@@ -22,4 +22,6 @@ export const ESlabels = {
     contactFullName: 'Nombre',
     contactEmail: 'Correo',
     contactSubject: 'Dime, ¿Cómo puedo ayudarte?',
+    notFoundText:"Parece que tratas de acceder a un lugar que no existe no te precupes 😝",
+    notFoundLink:"Volver al Inicio..."
 };

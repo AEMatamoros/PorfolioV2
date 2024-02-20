@@ -20,7 +20,7 @@ const LazyNotFound = lazy(() => import(/* webpackChunkName: "LazyHome" */ './Not
 
 export const routes: iRouter[] = [
     {
-        to: '/',
+        to: '/PorfolioV2/',
         path: '/PorfolioV2/',
         name: 'main',
         Component: lazyApp,
