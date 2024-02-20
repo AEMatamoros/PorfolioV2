@@ -19,7 +19,7 @@ interface iHeroContent {
 }
 export function HeroContent({ title, subtitle, msg }: iHeroContent) {
     return (
-        <section className="main__hero__text container m-auto flex flex-col items-start justify-center text-center md:text-left ">
+        <section className="main__hero__text container m-auto flex flex-col items-start justify-center text-center md:text-left pl-4">
             <Title title={title}></Title>
             <Subtitle subtitle={subtitle}></Subtitle>
             <SectionDescription msg={msg}></SectionDescription>
